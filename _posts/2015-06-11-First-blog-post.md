@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Example content
+title: First blog post
 category: test
 ---
 
