@@ -22,5 +22,5 @@ paginate:         5
 # Custom vars
           
 
-github:
+github:           https://github.com/linbug
   repo:           https://github.com/poole/hyde
