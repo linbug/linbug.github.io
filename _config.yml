@@ -21,6 +21,6 @@ paginate:         5
 
 # Custom vars
           
-
-github:           https://github.com/linbug
+avatar:           https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+github:           linbug
 
