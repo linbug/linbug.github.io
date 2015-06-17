@@ -3,28 +3,13 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+####Who am I?
+Hello there. My name is Lin Taylor. I am a life scientist by training, now transitioning into the world of data science. This blog is an account of this process, and also hopefully a resource for others who want to make the jump from less conventional backgrounds.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+####What was I doing before?
+I am just in the process of completing a PhD from the University of Cambridge in molecular genetics. I was studying how plants have evolved to attract pollinators. You can read more about my research [here] (https://www.researchgate.net/profile/Lin_Taylor). Before my PhD, I spent a year working as a data analyst and researcher at the Royal Botanic Gardens in London. 
 
-There are currently two themes built on Poole:
+####Why data science?
+I am excited about the possibility of learning skills that there is currently a great need for, and which can potentially have a large impact on the world. Data science combines aspects of science, programming and storytelling, all things that I enjoy. Right now, this industry is growing fast, and there are a lot of opportunities opening up for people with the right skill set. It seems like the prime time to get stuck in.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Thanks for reading! If you have any questions, comments or suggestions, feel free to contact me at taylorxlin@gmail.com 
