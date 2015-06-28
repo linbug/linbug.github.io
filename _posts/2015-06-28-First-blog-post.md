@@ -9,7 +9,15 @@ Howdy! Welcome to my blog. A bit of background about who I am and where I am rig
 I'm a couple of weeks into this trip, so I thought I'd use this first post to outline what I've been doing so far, what tools I'm using, and what I want to achieve in the next few weeks. 
 
 ###Data science curriculum
-Self-directed learning comes with its benefits and its challenges. On the one hand, I can learn whatever I want, On the other hand, there are so many open source/freely-available learning tools on the internet right now, it has actually been difficult to pare them down and pick out what courses would be the best use of my time. It doesn't help that the data science landscape looks like [this]("http://nirvacana.com/thoughts/wp-content/uploads/2013/07/RoadToDataScientist1.png"). I've found it really useful reading the [blogs]("https://datascientistjourney.wordpress.com/category/data-science/") or [websites]("http://datasciencemasters.org/") of others who have done similar things in this space.
+There are so many open source/freely-available data science/programming/stats etc. learning tools on the internet right now, it has actually been difficult to pare them down and pick out what courses would be the best use of my time. It doesn't help that the data science landscape looks like [this]("http://nirvacana.com/thoughts/wp-content/uploads/2013/07/RoadToDataScientist1.png"). The [blogs]("https://datascientistjourney.wordpress.com/category/data-science/") and [websites]("http://datasciencemasters.org/") of others who have done similar things in this space have been useful guides through the fog. Even so, this feels overwhelming. I've put together my own [spreadsheet]("https://docs.google.com/spreadsheets/d/1IDNSt0ckSuv5Sw67cw17fJDuOELGa-pjCSR2vuWK8OA/edit?usp=sharing") of training resources that I'm interested in doing. 
+
+This summer, I'd be happy if I managed to get four courses completed before S2DS (which might be super optimistic):
+1. Harvard's [CS109 Data Science]("http://cs109.github.io/2014/") course 
+
+   I found this course because it was recommended on [here]("https://datascientistjourney.wordpress.com/2014/11/23/revised-plan-6-months-to-becoming-a-data-scientist/"). 
+
+2. Udacity's Introduction to Machine Learning
+2. ...
 
 ###Tools for work hacking
 I like to be organised with my work habits, so finding systems that maximise my efficiency and sustain my motivation are important to me (this seems to be a large part of what one learns during a PhD, especially during writing-up stages). I'm a fan of Cal Newport's [blog] ("http://calnewport.com/blog/"), where he writes extensively about finding space for [deep work]("http://calnewport.com/blog/2012/11/21/knowledge-workers-are-bad-at-working-and-heres-what-to-do-about-it/"). I'd like to try systematically applying some of these principles to my own work habits. It'll probaby take time and trial and error to work out the best system for me.
