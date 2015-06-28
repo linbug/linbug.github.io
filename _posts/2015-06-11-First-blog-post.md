@@ -4,10 +4,12 @@ title: First blog post
 category: test
 ---
 
+Howdy! Welcome to my blog. A bit of background about who I am and where I am right now: I'm finishing up a PhD in plant molecular genetics at the University of Cambridge (and by finishing up I mean I'm waiting for my supervisor to send me her final edits before I can submit for real!). I'm currently in Cambridge MA, just outside of Boston (it was difficult to get out of Cambridge...) where I'm spending the summer visiting friends and learning data science. I have a place on the [Science to Data Science] ("http://www.s2ds.org/") (otherwise known as 'S2DS') 2015 programme in London in August, which is essentially a summer school to help people with analytic PhDs transition into the data science industry. A big component of S2DS is about working with industry sponsors on real-world projects. I found out recently that I've been placed on the [Intelliflo] ("http://www.intelliflo.com/") team; Intelliflo make software for the finance industry.  
 
-<div class="message">
-  Howdy! This is my first blog post. Weee!
-</div>
+I'm a couple of weeks into this trip, so I thought I'd use this first post to outline what I've been doing so far, what tools I'm using, and what I want to achieve in the next few weeks. 
+
+##Tools for work hacking
+Maybe a strange place to start, but I like to be organised with my work habits, so finding systems that maximise my efficiency and sustain my motivation are important to me (this seems to be a large part of what one learns during a PhD, especially during writing-up stages). I'm breaking up my working hours using the 
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
 
