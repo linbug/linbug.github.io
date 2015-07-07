@@ -15,7 +15,7 @@ baseurl:          http://linbug.github.io
 
 author:
   name:           'Lin Taylor'
-  url:            http://linbug.github.io/
+  url:            http://linbug.github.io
 
 paginate:         5
 
