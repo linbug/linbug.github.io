@@ -10,7 +10,7 @@ relative_permalinks: true
 title:            Linbug
 tagline:          'A blog about data science'
 description:      'A blog about transitioning from life science to data science'
-url:              http://linbug.github.io
+url:              http://linbug.github.io/
 baseurl:          http://linbug.github.io/
 
 author:
