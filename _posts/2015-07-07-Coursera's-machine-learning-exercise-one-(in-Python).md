@@ -59,7 +59,7 @@ of the gradient descent (coming up next!) more convenient.
  
  In Python, here's how I programmed the cost function:
  
- {% highlight python %}
+{% highlight python %}
 
  # define a function that computes the cost function J()
  def costJ(X,y,theta):
@@ -98,11 +98,10 @@ $$\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j} J(\theta_0,\the
   and I don't quite understand it yet.)
   
   Here's how my gradient descent algorithm looks in Python:
-  # define a function that will implement the gradient descent algorithm
+  
+{% highlight python %}   
 def gradDesc(X,y,theta,alpha,num_iters):
     '''Implement the gradient descent algorithm, where alpha is the learning rate and num_iters is the number of iterations to run'''
-   
-{% highlight python %}   
     
     #initiate an empty list to store values of cost function after each cycle
     Jhistory = [] 
