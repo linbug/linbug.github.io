@@ -7,7 +7,7 @@ title: About
 Hi, I'm Lin. I'm a life scientist by training, now transitioning into the world of data science. This blog is an account of this process, and also hopefully a resource for others who are thinking of doing the same. 
 
 ####What was I doing before?
-I am just in the process of completing a PhD from the University of Cambridge in molecular genetics. I was studying [plant evolution](https://www.researchgate.net/profile/Lin_Taylor). Before my PhD, I spent a year working as a data analyst and researcher at the Royal Botanic Gardens in London. 
+I am just in the process of completing a PhD from the University of Cambridge in molecular genetics. I was studying [plant evolution.](https://www.researchgate.net/profile/Lin_Taylor) Before my PhD, I spent a year working as a data analyst and researcher at the Royal Botanic Gardens in London. 
 
 ####Why data science?
 There are several reasons why I'm starting down this road:
