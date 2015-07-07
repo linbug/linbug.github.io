@@ -4,7 +4,7 @@ title: Coursera's machine learning course (implemented in Python)
 category: data science tools
 ---
 
-![Boston has some nice libraries]({{ site.url }}/_downloads/library.jpg)
+<img src="https://github.com/linbug/linbug.github.io/blob/master/_downloads/library.jpg" width="300" align="middle">
 
 [Last week]({% post_url 2015-06-28-Getting-started %}) I started [Stanford's machine learning course](https://www.coursera.org/learn/machine-learning) (on Coursera). The course consists of video lectures, and programming exercises 
 to complete in Octave or MatLab. Contrary to what Ng says, the most popular languages for data science seem to be Python, R or Julia (high level languages), and Java, C++ or Scala/Clojure (low level languages). Ryan Orban of Zipfian Academy recommends you 
@@ -28,7 +28,7 @@ Since we have this training dataset, this is a [supervised learning](https://en.
 Our dataset includes the population sizes of the cities where we already have food trucks, and our profits from each of these cities. Since we only have one input variable (population size) per output variable that we're trying to predict (profits), this is univariate (as opposed to multivariate) linear regression. 
 Here's what the data looks like on a scatter plot
 
-![scatter graph]({{ site.url }}/_downloads/scatter1.png)
+![scatter graph](https://github.com/linbug/linbug.github.io/blob/master/_downloads/scatter1.png)
 
 As you can see, profits increase with increasing city size. But how can we predict how much profit future food trucks will make? We'll have to fit a regression line summarises our past data.
 
@@ -127,7 +127,7 @@ def gradDesc(X,y,theta,alpha,num_iters):
 {% endhighlight %}
 
 So, after all of that we end up with parameters of $\theta_0$ and $\theta_1$ that we can use to plot on our scatter graph.
-![scatter graph with gradient descent line]({{ site.url }}/_downloads/scatter2.png)
+![scatter graph with gradient descent line](https://github.com/linbug/linbug.github.io/blob/master/_downloads/scatter2.png)
 
 Woo! Gradient descent was able to find values of \(\theta_0\) and \(\theta_1\) to fit a nice regression line to our data. Now we can predict that if we send food trucks to Cambridge, UK (population ~128,500 during term time),
 we'll make ~$113574, whereas if we open up shop in Cambridge, MA (population ~107,300), we can expect to make ~$88,847.
