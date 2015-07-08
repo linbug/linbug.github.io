@@ -4,7 +4,7 @@ title: Coursera's machine learning course (implemented in Python)
 category: data science tools
 ---
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/library.jpg" title="Boston has some nice libraries" style="height: 400px;text-align:center;"/>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/library.jpg" title="Boston has some nice libraries" style="height: 400px;margin: 0 auto;"/>
 
 [Last week]({% post_url 2015-06-28-Getting-started %}) I started [Stanford's machine learning course](https://www.coursera.org/learn/machine-learning) (on Coursera). The course consists of video lectures, and programming exercises 
 to complete in Octave or MatLab. Contrary to what Ng says, the most popular languages for data science seem to be Python, R or Julia (high level languages), and Java, C++ or Scala/Clojure (low level languages). Ryan Orban of Zipfian Academy recommends you 
