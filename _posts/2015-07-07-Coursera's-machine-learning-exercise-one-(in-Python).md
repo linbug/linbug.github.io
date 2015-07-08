@@ -37,7 +37,7 @@ The standard equation for a line (with just one variable, x) is:
 
 $$y = mx + c$$
 
-We'll use machine learning to help us to find values for m and c (that is, the values for the gradient and y-intercept of the line) that best describe the data. From now on, I'll refer to c as \(theta_0\) and m as \(theta_1\) (this notation makes things easier when we start dealing with more than one variable).
+We'll use machine learning to help us to find values for m and c (that is, the values for the gradient and y-intercept of the line) that best describe the data. From now on, I'll refer to c as \\(theta_0\\) and m as \(theta_1\) (this notation makes things easier when we start dealing with more than one variable).
 Our machine learning algorithm will come up with values for \(\theta_0\) and \(\theta_1\) that we'll be able to use to plug into the linear equation, above, and so predict values of y (i.e. profit) for any values of x (i.e. population size) we so desire. 
 In machine learning lingo, these outputs are called **hypotheses**. For linear regression with one variable, our hypothesis function will be of the form:
 
