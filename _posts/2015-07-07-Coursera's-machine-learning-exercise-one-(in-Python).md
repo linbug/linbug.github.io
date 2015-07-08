@@ -13,7 +13,7 @@ to complete in Octave or MatLab. Contrary to what Ng says, the most popular lang
 ---------------------------------------------------------
 
 ##Week two programming assignment: linear regression
-The first assignment starts in week two and involves implementing the gradient descent algorithm on a dataset of house prices. At a theoretical level, [gradient descent](https://en.wikipedia.org/wiki/Gradient_descent) is an algorithm that is used to find the minimum of a function. That is, 
+The first assignment starts in week two and involves implementing the gradient descent algorithm on a dataset of company profits. At a theoretical level, [gradient descent](https://en.wikipedia.org/wiki/Gradient_descent) is an algorithm that is used to find the minimum of a function. That is, 
 given a function that is defined by a set of parameters, gradient descent iteratively changes the parameter values, so that the function is progressively minimised. This 'tuning' algorithm is used for lots of different machine learning applications. In this exercise, we were shown how to use gradient descent to find the best fit for a linear regression.  
 
 **I realise what I just said will sound like 
@@ -53,8 +53,8 @@ The cost function that we used here was the [mean squared error](https://en.wiki
 
 $$J(\theta_0,\theta_1) = \frac 1{2m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})^2$$
 
-Let's break this down. We can see that the cost function, \\(J\\), takes the values of \\(\theta_0\\) and \\(\theta_1\\) as inputs. The term \\(h_\theta(x^{(i)})-y^{(i)})\\) is finding the difference between the hypothesis value
- (estimated profit, under the proposed values of \\(\theta_0\\) and \\(\theta_1\\) and the actual value of y (actual profit) for each of the examples in our training dataset (identified by the superscript \\(i\\)). This is our error value; the bigger the difference 
+Let's break this down. We can see that the cost function, \\(J\\), takes the values of \\(\theta_0\\) and \\(\theta_1\\) as inputs. The term \\(h_\theta(x^{(i)})-y^{(i)}\\) is finding the difference between the hypothesis value
+ (estimated profit, under the proposed values of \\(\theta_0\\) and \\(\theta_1\\)) and the actual value of y (actual profit) for each of the examples in our training dataset (identified by the superscript \\(i\\)). This is our error value; the bigger the difference 
  between the estimated and actual values, the larger the error. 
  
  We then square each of the error values (this makes them all positive) and add them together. Then we find the average of these values by dividing by \\(\frac 1m\\). We also multiply by \\(\frac 12\\), as this makes computation
@@ -86,7 +86,7 @@ of the gradient descent (coming up next!) more convenient.
 $$\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j} J(\theta_0,\theta_1)$$
  
  The direction we should move to minimise the cost function is found by taking the derivative (the line tangent to) the cost function; this is what the term \\(\frac{\partial}{\partial\theta_j} J(\theta_0,\theta_1)\\) is doing.
- We then multiply this by the coefficient \\(\alpha\\) to work out how far we should move along this tangent. Update for both values of \\(\theta_0\\) and \\(\theta_1\\) before re-computing the cost function. Rinse and repeat until 
+ We then multiply this by the coefficient \\(\alpha\\) to work out how far we should move along this tangent, and update for both values of \\(\theta_0\\) and \\(\theta_1\\) before re-computing the cost function. Rinse and repeat until 
  the output of the cost function reaches a steady plateau. The step sizes we take at each iteration towards the minimum is determined by \\(\alpha\\). 
  
  When applied specifically to linear regression, the gradient descent algorithm can be derived like this:
@@ -99,8 +99,8 @@ $$\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j} J(\theta_0,\the
   \end{align}
   $$
   
-  where \\(\theta_0\\) and \\(\theta_1\\) are updated simultaneously until convergence. (If it seems like I just skipped over that derivation, it's because it's [really long](http://math.stackexchange.com/questions/70728/partial-derivative-in-gradient-descent-for-two-variables/189792#189792)
-  and I don't quite understand it yet.)
+  where \\(\theta_0\\) and \\(\theta_1\\) are updated simultaneously until convergence. Yes, I did just skip over that derivation, it's because it's [really long](http://math.stackexchange.com/questions/70728/partial-derivative-in-gradient-descent-for-two-variables/189792#189792)
+  and I don't quite understand it yet.
   
   Here's how my gradient descent algorithm looks in Python:
   
@@ -130,9 +130,9 @@ So, after all of that we end up with parameters of \\(\theta_0\\) and \\(\theta_
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/scatter2.png" title="scatter graph"  style="height: 400px;margin: 0 auto;"/>
 
 Woo! Gradient descent was able to find values of \\(\theta_0\\) and \\(\theta_1\\) to fit a nice regression line to our data. Now we can predict that if we send food trucks to Cambridge, UK (population ~128,500 during term time),
-we'll make ~$113574, whereas if we open up shop in Cambridge, MA (population ~107,300), we can expect to make ~$88,847.
+we'll make ~$113,574, whereas if we open up shop in Cambridge, MA (population ~107,300), we can expect to make ~$88,847.
 
 ---------------------------------------------------------
 
-I hope that this was a useful introduction to gradient descent. You can see my code [here](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex1.ipynb). We can also use gradient descent for multivariate linear regression
+I hope that this was a useful introduction to gradient descent. You can see my full code [here](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex1.ipynb). We can also use gradient descent for multivariate linear regression
 (I won't go into this here, maybe in another post). I expect we'll be using variations of this algorithm for other applications later in the course, since it seems to be a machine learning staple.
