@@ -37,8 +37,8 @@ The standard equation for a line (with just one variable, x) is:
 
 $$y = mx + c$$
 
-We'll use machine learning to help us to find values for m and c (that is, the values for the gradient and y-intercept of the line) that best describe the data. From now on, I'll refer to c as \\(theta_0\\) and m as \(theta_1\) (this notation makes things easier when we start dealing with more than one variable).
-Our machine learning algorithm will come up with values for \(\theta_0\) and \(\theta_1\) that we'll be able to use to plug into the linear equation, above, and so predict values of y (i.e. profit) for any values of x (i.e. population size) we so desire. 
+We'll use machine learning to help us to find values for m and c (that is, the values for the gradient and y-intercept of the line) that best describe the data. From now on, I'll refer to c as \\(\theta_0\\) and m as \\(\theta_1\\) (this notation makes things easier when we start dealing with more than one variable).
+Our machine learning algorithm will come up with values for \\(\theta_0\\) and \\(\theta_1\\) that we'll be able to use to plug into the linear equation, above, and so predict values of y (i.e. profit) for any values of x (i.e. population size) we so desire. 
 In machine learning lingo, these outputs are called **hypotheses**. For linear regression with one variable, our hypothesis function will be of the form:
 
 $$h_\theta(x) = \theta_0 + \theta_1x_1$$
@@ -46,18 +46,18 @@ $$h_\theta(x) = \theta_0 + \theta_1x_1$$
 which you can see is just a different representation of the equation above.
 
 ###The cost function
-How can we assess how good a particular hypothesis is? For this we need something called a [**cost function**](https://en.wikipedia.org/wiki/Loss_function) (otherwise known as a loss function), which quantifies how much our prediction \(h_\theta(x)\) 
-deviates from the actual value of \(y\). So we want to find the values for \(\theta_0\) and \(\theta_1\) that will make the output from our cost function as small as possible. 
+How can we assess how good a particular hypothesis is? For this we need something called a [**cost function**](https://en.wikipedia.org/wiki/Loss_function) (otherwise known as a loss function), which quantifies how much our prediction \\(h_\theta(x)\\) 
+deviates from the actual value of \\(y\\). So we want to find the values for \\(\theta_0\\) and \\(\theta_1\\) that will make the output from our cost function as small as possible. 
 
 The cost function that we used here was the [mean squared error](https://en.wikipedia.org/wiki/Mean_squared_error):
 
 $$J(\theta_0,\theta_1) = \frac 1{2m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})^2$$
 
-Let's break this down. We can see that the cost function, \(\J\), takes the values of \(\theta_0\) and \(\theta_1\) as inputs. The term \(h_\theta(x^{(i)})-y^{(i)}\) is finding the difference between the hypothesis value
- (estimated profit, under the proposed values of \(\theta_0\) and \(\theta_1\)) and the actual value of y (actual profit) for each of the examples in our training dataset (identified by the superscript \(\i\)). This is our error value; the bigger the difference 
+Let's break this down. We can see that the cost function, \\(J\\), takes the values of \\(\theta_0\\) and \\(\theta_1\\) as inputs. The term \\(h_\theta(x^{(i)})-y^{(i)}\\) is finding the difference between the hypothesis value
+ (estimated profit, under the proposed values of \\(\theta_0\\) and \\(\theta_1\\)) and the actual value of y (actual profit) for each of the examples in our training dataset (identified by the superscript \\(i\\)). This is our error value; the bigger the difference 
  between the estimated and actual values, the larger the error. 
  
- We then square each of the error values (this makes them all positive) and add them together. Then we find the average of these values by dividing by \(\frac 1m\). We also multiply by \(\frac 1m\), as this makes computation
+ We then square each of the error values (this makes them all positive) and add them together. Then we find the average of these values by dividing by \\(\frac 1m\\). We also multiply by \\(\frac 1m\\), as this makes computation
 of the gradient descent (coming up next!) more convenient. 
 
  So, altogether the cost function computes half of the average of the sum of squared errors. Phew!
@@ -80,14 +80,14 @@ of the gradient descent (coming up next!) more convenient.
 {% endhighlight %}
  
 ###Gradient descent
- How can we efficiently find values of \(\theta_0\)  and \(\theta_1\)  that minimise the cost function, you cry? Here's where gradient descent comes in. The gradient descent algorithm updates the values for \(\theta_0\)  and \(\theta_1\) 
- in the direction that minimises \(J(\theta_0, \theta_1)\):
+ How can we efficiently find values of \\(\theta_0\\)  and \\(\theta_1\\)  that minimise the cost function, you cry? Here's where gradient descent comes in. The gradient descent algorithm updates the values for \\(\theta_0\\)  and \\(\theta_1\\) 
+ in the direction that minimises \\(J(\theta_0, \theta_1)\\):
 
 $$\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j} J(\theta_0,\theta_1)$$
  
- The direction we should move to minimise the cost function is found by taking the derivative (the line tangent to) the cost function; this is what the term $\frac{\partial}{\partial\theta_j} J(\theta_0,\theta_1)$ is doing.
- We then multiply this by the coefficient \(\alpha\) to work out how far we should move along this tangent. Update for both values of \( \theta_0\ ) and \(\theta_1\) before re-computing the cost function. Rinse and repeat until 
- the output of the cost function reaches a steady plateau. The step sizes we take at each iteration towards the minimum is determined by \(\alpha\). 
+ The direction we should move to minimise the cost function is found by taking the derivative (the line tangent to) the cost function; this is what the term \\(\frac{\partial}{\partial\theta_j} J(\theta_0,\theta_1)\\) is doing.
+ We then multiply this by the coefficient \(\alpha\) to work out how far we should move along this tangent. Update for both values of \\(\theta_0\\) and \\(\theta_1\\) before re-computing the cost function. Rinse and repeat until 
+ the output of the cost function reaches a steady plateau. The step sizes we take at each iteration towards the minimum is determined by \\(\alpha\\). 
  
  When applied specifically to linear regression, the gradient descent algorithm can be derived like this:
  
@@ -99,7 +99,7 @@ $$\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j} J(\theta_0,\the
   \end{align}
   $$
   
-  where \(\theta_0\) and \(\theta_1\) are updated simultaneously until convergence. (If it seems like I just skipped over that derivation, it's because it's [really long](http://math.stackexchange.com/questions/70728/partial-derivative-in-gradient-descent-for-two-variables/189792#189792)
+  where \\(\theta_0\\) and \\(\theta_1\\) are updated simultaneously until convergence. (If it seems like I just skipped over that derivation, it's because it's [really long](http://math.stackexchange.com/questions/70728/partial-derivative-in-gradient-descent-for-two-variables/189792#189792)
   and I don't quite understand it yet.)
   
   Here's how my gradient descent algorithm looks in Python:
@@ -126,10 +126,10 @@ def gradDesc(X,y,theta,alpha,num_iters):
     return Jhistory, theta_update
 {% endhighlight %}
 
-So, after all of that we end up with parameters of $\theta_0$ and $\theta_1$ that we can use to plot on our scatter graph.
+So, after all of that we end up with parameters of \\(\theta_0\\) and \\(\theta_1\\) that we can use to plot on our scatter graph.
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/scatter2.png" title="scatter graph"  style="height: 400px;margin: 0 auto;"/>
 
-Woo! Gradient descent was able to find values of \(\theta_0\) and \(\theta_1\) to fit a nice regression line to our data. Now we can predict that if we send food trucks to Cambridge, UK (population ~128,500 during term time),
+Woo! Gradient descent was able to find values of \\(\theta_0\\) and \\(\theta_1\\) to fit a nice regression line to our data. Now we can predict that if we send food trucks to Cambridge, UK (population ~128,500 during term time),
 we'll make ~$113574, whereas if we open up shop in Cambridge, MA (population ~107,300), we can expect to make ~$88,847.
 
 ---------------------------------------------------------
