@@ -86,7 +86,7 @@ of the gradient descent (coming up next!) more convenient.
 $$\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j} J(\theta_0,\theta_1)$$
  
  The direction we should move to minimise the cost function is found by taking the derivative (the line tangent to) the cost function; this is what the term \\(\frac{\partial}{\partial\theta_j} J(\theta_0,\theta_1)\\) is doing.
- We then multiply this by the coefficient \(\alpha\) to work out how far we should move along this tangent. Update for both values of \\(\theta_0\\) and \\(\theta_1\\) before re-computing the cost function. Rinse and repeat until 
+ We then multiply this by the coefficient \\(\alpha\\) to work out how far we should move along this tangent. Update for both values of \\(\theta_0\\) and \\(\theta_1\\) before re-computing the cost function. Rinse and repeat until 
  the output of the cost function reaches a steady plateau. The step sizes we take at each iteration towards the minimum is determined by \\(\alpha\\). 
  
  When applied specifically to linear regression, the gradient descent algorithm can be derived like this:
