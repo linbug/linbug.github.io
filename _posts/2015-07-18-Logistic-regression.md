@@ -20,7 +20,7 @@ Ok, but why this function? Couldn’t we just choose to model the probability th
 
 Part of the reason that we don’t do this is that the **logistic function** (the function that we use in logistic regression to model probabilities, otherwise known as the **sigmoid function**) is better-suited to modelling probabilities than linear regression is. The logistic function is defined as:
 
-$$\delta(t) = \frac 1{1 + e^-t}$$
+$$\delta(t) = \frac 1{1 + e^{-t}}$$
 
 which when plotted on a graph, looks like this:
 
@@ -73,7 +73,7 @@ def sigmoid(z):
 
 {% endhighlight %}
 
-Our input z can be a scalar value or a matrix. The aim of our machine learning algorithm is to help us to choose parameters for \\(\theta\\)
+Our input z can be a scalar value or a matrix. The aim of our machine learning algorithm is to help us to choose parameters for \\(\theta\\).
 
 ###The cost function for logistic regression
 
@@ -81,7 +81,7 @@ In the last post, I explained how we need a cost function so that we can quantif
 
 $$Cost(h_\theta,y) = -ylog(h_\theta(x)) - (1-y)log(1-h_\theta(x))$$
 
-This looks complex, but let’s break it down. The terms on the left of the equals sign simply mean ‘the cost of the output \\(h_\theta\\) with respect to the actual values y’. The terms to the right of the equals sign will compute differently, depending on whether \\(y = 1\\) or \\(y = 0\\). If \\(y = 1\\), \\((1-y)log(1-h_\theta(x))\\) will cancel out to zero, just leaving \\(-log(h_\theta(x))\\). On the other hand, if \\(y = 0\\), \\(-ylog(h_\theta(x))\\) will equal zero, so you’re just left with \\(- log(1-h_\theta(x))\\). What’s good about this cost function is that if both \\(y=1\\) and \\(h_\theta(x) = 1\\), the cost will be zero (because \\(log(1) = 0\\)). Similarly, if both \\(y\\) and \\(h_\theta(x)\\) are zero, then the cost will also be zero (because \\(- log(1-0) = 0\\) again. However, if \\(y = 1\\) and \\(h_\theta = 0\\) and vice versa, the cost will be very high (\\(log(0)\\) tends towards \\(\infty\\)). Here’s how I implemented the cost function for logistic regression in Python:
+This looks complex, but let’s break it down. The terms on the left of the equals sign simply mean “the cost of the output $$h_\theta$$ with respect to the actual values y”	. The terms to the right of the equals sign will compute differently, depending on whether \\(y = 1\\) or \\(y = 0\\). If \\(y = 1\\), \\((1-y)log(1-h_\theta(x))\\) will cancel out to zero, just leaving \\(-log(h_\theta(x))\\). On the other hand, if \\(y = 0\\), \\(-ylog(h_\theta(x))\\) will equal zero, so you’re just left with \\(- log(1-h_\theta(x))\\). What’s good about this cost function is that if both \\(y=1\\) and \\(h_\theta(x) = 1\\), the cost will be zero (because \\(log(1) = 0\\)). Similarly, if both \\(y\\) and \\(h_\theta(x)\\) are zero, then the cost will also be zero (because \\(- log(1-0) = 0\\) again. However, if \\(y = 1\\) and \\(h_\theta = 0\\) and vice versa, the cost will be very high (\\(log(0)\\) tends towards \\(\infty\\)). Here’s how I implemented the cost function for logistic regression in Python:
 
 {% highlight python linenos %}
 
