@@ -7,7 +7,7 @@ category: machine learning
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/Darwins.JPG" title=“Darwin’s is a great cafe chain in Cambridge, MA” style="height: 600px;margin: 0 auto;"/>
 
 
-This is the second of a series of posts where I attempt to implement the exercises in [Stanford's machine learning course](https://www.coursera.org/learn/machine-learning) in Python. [Last week]({% post_url 2015-07-07-Coursera's-machine-learning-exercise-one-(in-Python) %}) I started with linear regression and gradient descent. This week (week three) we learned about how to apply a classification algorithm called [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression) to machine learning problems. We’re still on [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) here, as we still need a training set of data before we can run our algorithm. As before, [here](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex2.ipynb) is the ipython notebook of my code. 
+This is the second of a series of posts where I attempt to implement the exercises in [Stanford's machine learning course](https://www.coursera.org/learn/machine-learning) in Python. Last week I started with linear regression and gradient descent. This week (week three) we learned about how to apply a classification algorithm called [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression) to machine learning problems. We’re still on [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) here, as we still need a training set of data before we can run our algorithm. As before, [here](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex2.ipynb) is the ipython notebook of my code. 
 
 *Disclaimer: I am still learning this material, so there could be inaccuracies in the following explanation/code. I recommend if you’re learning this for the first time yourself that you also do your own research! Also, if you spot a mistake, I’d really appreciate it if you send me an email.* :D 
 
@@ -47,7 +47,7 @@ You can see a curve of where the boundary for admittance lies. We want to model 
 
 ###Hypothesis generation: the sigmoid function 
 
-You may recall from my [last post]{% post_url 2015-07-07-Coursera's-machine-learning-exercise-one-(in-Python) %}) that a **hypothesis** in machine learning refers to an output from our machine learning algorithm. We represent the logistic regression hypothesis mathematically as:
+You may recall from my last post that a **hypothesis** in machine learning refers to an output from our machine learning algorithm. We represent the logistic regression hypothesis mathematically as:
 
 $$h_\theta(x) = g(\theta^Tx)$$
 
