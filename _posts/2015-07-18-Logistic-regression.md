@@ -4,6 +4,9 @@ title: Coursera’s machine learning course week three (logistic regression)
 category: machine learning
 ---
 
+
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/Darwins.JPG" title="Darwin’s is a great cafe chain in Cambridge, MA" style="height: 600px;margin: 0 auto;"/>
+
 This is the second of a series of posts where I attempt to implement the exercises in [Stanford's machine learning course](https://www.coursera.org/learn/machine-learning) in Python. Last week I started with linear regression and gradient descent. This week (week three) we learned about how to apply a classification algorithm called [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression) to machine learning problems. We’re still on [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) here, as we still need a training set of data before we can run our algorithm. As before, [here](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex2.ipynb) is the ipython notebook of my code. 
 
 *Disclaimer: I am still learning this material, so there could be inaccuracies in the following explanation/code. I recommend if you’re learning this for the first time yourself that you also do your own research! Also, if you spot a mistake, I’d really appreciate it if you send me an email.* :D 
@@ -24,9 +27,9 @@ $$\delta(t) = \frac 1{1 + e^{-t}}$$
 
 which when plotted on a graph, looks like this:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" title="the logistic function" style="height: 600px;margin: 0 auto;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" title="the logistic function" style="height: 300px;margin: 0 auto;"/>
 
-what you’ll notice is that the logistic function, for any given input variable (on the x axis), only varies between 0 and 1 (on the y axis). If you were to extend these axis to \\(-\infty\\) and \\(+\infty\\) you would see that the line would continue to tend towards 0 and 1 on the y axis, respectively, but never reach them. This is very useful for describing probability, since the probability that an event can occur will never be greater than 1 or less than 0. If we were using a linear function, we *would* be able to get values greater than 1 and less than 0, which doesn’t make sense in probability terms. 
+What you’ll notice is that the logistic function, for any given input variable (on the x axis), only varies between 0 and 1 (on the y axis). If you were to extend these axis to \\(-\infty\\) and \\(+\infty\\) you would see that the line would continue to tend towards 0 and 1 on the y axis, respectively, but never reach them. This is very useful for describing probability, since the probability that an event can occur will never be greater than 1 or less than 0. If we were using a linear function, we *would* be able to get values greater than 1 and less than 0, which doesn’t make sense in probability terms. 
 
 Another reason to use the logistic function is that it nicely captures how changes in the input variable(s) over certain ranges have more influence on the probability (y axis) than over others. To use the tumour example again, it’s probably not true that if we keep doubling the size of the tumour, it’s going to be twice as likely to be malignant as it was before. After a certain point, a large tumour is highly likely to be malignant, and further increases in size won’t change the probability much. However, there’s going to be a middling range of tumour sizes over which a doubling of volume *will* have a big influence on the likelihood of malignancy. The logistic function shows this in the steep section in the middle of the curve. 
 
@@ -38,7 +41,7 @@ If you want a fuller background explanation into why logistic regression is used
 
 The first problem in this week’s programming assignment was about student admittance to university. Given two exam scores for students, we were tasked with predicting whether a given student got into a particular university or not. We have access to admissions data from previous years (which will form our training set). Here’s a scatter graph of the training data, with students that were admitted represented by green crosses, and with students that didn’t get admitted represented by blue circles:
 
- <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter1.png" title="A scatter graph of students’ exam scores" style="height: 300px;margin: 0 auto;"/>
+ <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter1.png" title="A scatter graph of students’ exam scores" style="height: 500px;margin: 0 auto;"/>
 
 You can see a curve of where the boundary for admittance lies. We want to model where this boundary is and use it to predict the admissions success of future hopefuls.
 
@@ -139,7 +142,7 @@ $$\theta_0 + \theta_1x1 + \theta_2x2 = 0$$
 
 then we can plot the decision boundary in Python like this:
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter2.png" title="decision boundary" style="height: 300px;margin: 0 auto;"/>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter2.png" title="decision boundary" style="height: 500px;margin: 0 auto;"/>
 
 Our machine learning algorithm predicts that any points that fall to the bottom left of the decision boundary are students that will not be admitted to university, whereas those falling to the top right will be admitted. As you can see from the distribution of dots and crosses in our training set compared to the decision boundary, our machine learning hypotheses are not 100% accurate. This is not necessarily a bad thing: we don’t want to [overfit](https://en.wikipedia.org/wiki/Overfitting) our data so that it’s no longer generalisable to other datasets. But maybe we could have picked a better function to describe the relationship between exam scores and admittance, for example one that would capture more of a curve to the data. We can work out how accurate our machine learning predictor is by feeding it the original dataset, and then comparing our predicted to the actual results. I defined a function that uses our optimum values of \\(\theta\\) from the BFGS algorithm to predict whether any given student will get into university or not:
 
