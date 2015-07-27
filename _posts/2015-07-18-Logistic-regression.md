@@ -24,7 +24,7 @@ $$\delta(t) = \frac 1{1 + e^{-t}}$$
 
 which when plotted on a graph, looks like this:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" title=“the logistic function“ style="height: 600px;margin: 0 auto;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" title="the logistic function" style="height: 600px;margin: 0 auto;"/>
 
 what you’ll notice is that the logistic function, for any given input variable (on the x axis), only varies between 0 and 1 (on the y axis). If you were to extend these axis to \\(-\infty\\) and \\(+\infty\\) you would see that the line would continue to tend towards 0 and 1 on the y axis, respectively, but never reach them. This is very useful for describing probability, since the probability that an event can occur will never be greater than 1 or less than 0. If we were using a linear function, we *would* be able to get values greater than 1 and less than 0, which doesn’t make sense in probability terms. 
 
@@ -38,7 +38,7 @@ If you want a fuller background explanation into why logistic regression is used
 
 The first problem in this week’s programming assignment was about student admittance to university. Given two exam scores for students, we were tasked with predicting whether a given student got into a particular university or not. We have access to admissions data from previous years (which will form our training set). Here’s a scatter graph of the training data, with students that were admitted represented by green crosses, and with students that didn’t get admitted represented by blue circles:
 
- <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter1.png" title=“A scatter graph of students’ exam scores” style="height: 300px;margin: 0 auto;"/>
+ <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter1.png" title="A scatter graph of students’ exam scores" style="height: 300px;margin: 0 auto;"/>
 
 You can see a curve of where the boundary for admittance lies. We want to model where this boundary is and use it to predict the admissions success of future hopefuls.
 
@@ -139,7 +139,7 @@ $$\theta_0 + \theta_1x1 + \theta_2x2 = 0$$
 
 then we can plot the decision boundary in Python like this:
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter2.png" title=“decision boundary” style="height: 300px;margin: 0 auto;"/>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter2.png" title="decision boundary" style="height: 300px;margin: 0 auto;"/>
 
 Our machine learning algorithm predicts that any points that fall to the bottom left of the decision boundary are students that will not be admitted to university, whereas those falling to the top right will be admitted. As you can see from the distribution of dots and crosses in our training set compared to the decision boundary, our machine learning hypotheses are not 100% accurate. This is not necessarily a bad thing: we don’t want to [overfit](https://en.wikipedia.org/wiki/Overfitting) our data so that it’s no longer generalisable to other datasets. But maybe we could have picked a better function to describe the relationship between exam scores and admittance, for example one that would capture more of a curve to the data. We can work out how accurate our machine learning predictor is by feeding it the original dataset, and then comparing our predicted to the actual results. I defined a function that uses our optimum values of \\(\theta\\) from the BFGS algorithm to predict whether any given student will get into university or not:
 
