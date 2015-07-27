@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Coursera's machine learning course: logistic regression
+title: Coursera’s machine learning course week three (logistic regression)
 category: machine learning
 ---
 
