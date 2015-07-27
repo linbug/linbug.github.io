@@ -4,14 +4,11 @@ title: Coursera’s machine learning course week three (logistic regression)
 category: machine learning
 ---
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/Darwins.JPG" title=“Darwin’s is a great cafe chain in Cambridge, MA” style="height: 600px;margin: 0 auto;"/>
-
-
 This is the second of a series of posts where I attempt to implement the exercises in [Stanford's machine learning course](https://www.coursera.org/learn/machine-learning) in Python. Last week I started with linear regression and gradient descent. This week (week three) we learned about how to apply a classification algorithm called [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression) to machine learning problems. We’re still on [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) here, as we still need a training set of data before we can run our algorithm. As before, [here](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex2.ipynb) is the ipython notebook of my code. 
 
 *Disclaimer: I am still learning this material, so there could be inaccuracies in the following explanation/code. I recommend if you’re learning this for the first time yourself that you also do your own research! Also, if you spot a mistake, I’d really appreciate it if you send me an email.* :D 
 
-—————————————————————
+**********************
 
 ## Logistic regression is a confusing name
 
@@ -51,7 +48,7 @@ You may recall from my last post that a **hypothesis** in machine learning refer
 
 $$h_\theta(x) = g(\theta^Tx)$$
 
-So the hypothesis function for logistic regression looks like an extension of the hypothesis function for linear regression, which was simply //(h_\theta(x) = \theta^Tx//). You can think of the //(g//) function as a wrapper that implements the logistic function:
+So the hypothesis function for logistic regression looks like an extension of the hypothesis function for linear regression, which was simply \\(h_\theta(x) = \theta^Tx\\). You can think of the \\(g\\) function as a wrapper that implements the logistic function:
 
 $$g(z)= \frac1{1 + e^{-z}}$$
 
@@ -76,15 +73,15 @@ def sigmoid(z):
 
 {% endhighlight %}
 
-Our input z can be a scalar value or a matrix. The aim of our machine learning algorithm is to help us to choose parameters for //(\theta//)
+Our input z can be a scalar value or a matrix. The aim of our machine learning algorithm is to help us to choose parameters for \\(\theta\\)
 
 ###The cost function for logistic regression
 
-In the last post, I explained how we need a cost function so that we can quantify how accurate our machine learning hypotheses are with respect to the real data. For logistic regression, we use a cost function to tell us what penalty should our learning algorithm pay if the hypothesis is //(h_\theta//) and the real value is //(y//). Mathematically, the logistic regression cost function is:
+In the last post, I explained how we need a cost function so that we can quantify how accurate our machine learning hypotheses are with respect to the real data. For logistic regression, we use a cost function to tell us what penalty should our learning algorithm pay if the hypothesis is \\(h_\theta\\) and the real value is \\(y\\). Mathematically, the logistic regression cost function is:
 
 $$Cost(h_\theta,y) = -ylog(h_\theta(x)) - (1-y)log(1-h_\theta(x))$$
 
-This looks complex, but let’s break it down. The terms on the left of the equals sign simply mean ‘the cost of the output //(h_\theta//) with respect to the actual values y’. The terms to the right of the equals sign will compute differently, depending on whether //(y = 1//) or //(y = 0//). If //(y = 1//), //((1-y)log(1-h_\theta(x))//) will cancel out to zero, just leaving //(-log(h_\theta(x))//). On the other hand, if //(y = 0//), //(-ylog(h_\theta(x))//) will equal zero, so you’re just left with //(- log(1-h_\theta(x))//). What’s good about this cost function is that if both //(y=1//) and //(h_\theta(x) = 1//), the cost will be zero (because //(log(1) = 0//)). Similarly, if both //(y//) and //(h_\theta(x)//) are zero, then the cost will also be zero (because //(- log(1-0) = 0//) again. However, if //(y = 1//) and //(h_\theta = 0//) and vice versa, the cost will be very high (//(log(0)//) tends towards //(\infty//)). Here’s how I implemented the cost function for logistic regression in Python:
+This looks complex, but let’s break it down. The terms on the left of the equals sign simply mean ‘the cost of the output \\(h_\theta\\) with respect to the actual values y’. The terms to the right of the equals sign will compute differently, depending on whether \\(y = 1\\) or \\(y = 0\\). If \\(y = 1\\), \\((1-y)log(1-h_\theta(x))\\) will cancel out to zero, just leaving \\(-log(h_\theta(x))\\). On the other hand, if \\(y = 0\\), \\(-ylog(h_\theta(x))\\) will equal zero, so you’re just left with \\(- log(1-h_\theta(x))\\). What’s good about this cost function is that if both \\(y=1\\) and \\(h_\theta(x) = 1\\), the cost will be zero (because \\(log(1) = 0\\)). Similarly, if both \\(y\\) and \\(h_\theta(x)\\) are zero, then the cost will also be zero (because \\(- log(1-0) = 0\\) again. However, if \\(y = 1\\) and \\(h_\theta = 0\\) and vice versa, the cost will be very high (\\(log(0)\\) tends towards \\(\infty\\)). Here’s how I implemented the cost function for logistic regression in Python:
 
 {% highlight python linenos %}
 
@@ -96,7 +93,7 @@ def costJ(theta, X, y):
 
 {% endhighlight %}
 
-Now if we feed the cost function values for a vector of parameters (//(theta//)), our feature matrix (//(X//)), and our vector of actual admissions (//(y//)), we can calculate the cost of this hypothesis. If our initial //(theta//) is set to a vector of zeros, we see that the cost is about 0.693.
+Now if we feed the cost function values for a vector of parameters (\\(theta\\)), our feature matrix (\\(X\\)), and our vector of actual admissions (\\(y\\)), we can calculate the cost of this hypothesis. If our initial \\(theta\\) is set to a vector of zeros, we see that the cost is about 0.693.
 
 ###The learning algorithm
 
@@ -104,7 +101,7 @@ So far, we haven’t actually done any machine learning. But if we want to find 
 
 The scipy equivalent of BFGS is Scipy.optimize.fmin_bfgs. In order to use this algorithm in Python (and fminunc in Matlab), you need to provide the function that you are trying to minimise (costJ, which I defined above) and you can also provide the gradient of the function, which is its [partial derivative](https://en.wikipedia.org/wiki/Partial_derivative). We were already told in our course notes what the partial derivative of our cost function was:
 
-$$\frac{\partialJ(\theta)}{\partial\theta_j}  = \frac1m\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$$
+$$\frac{\partial J(\theta)}{\partial\theta_j}  = \frac1m\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$$
 
 Here’s how my code for the gradient term looks in Python:
 
@@ -134,17 +131,17 @@ Result = sp.optimize.fmin_bfgs(f = costJ, x0 = initial_theta, fprime = gradient,
 
 ###The decision boundary
 
-Now that we have a set of values for our parameters //(\theta//) that minimise the cost function, we can plot on our graph of exam scores where the line is that divides students who will be admitted, and those who won’t be admitted, according to our machine learning predictions. This is called the [**decision boundary**](https://en.wikipedia.org/wiki/Decision_boundary). If there is one input feature, the decision boundary will be a point, if there are two features it will be a line, if there are three features it will be a three-dimensional plane, and so on. We had already been told that our decision boundary would be at //(h_\theta(x) = 0.5//). This means that any values that //(h_\theta(x)//) generates that are greater than or equal to 0.5, we will assign to class 1, in other words we will predict that these students **will be admitted to university**. The opposite prediction will be made if //(h_\theta(x)//) is less than 0.5  - we predict that these students will be **rejected**. Remember the **probability threshold** I mentioned way back at the start of this post, that turns logistic regression into a classification algorithm? This is it.
+Now that we have a set of values for our parameters \\(\theta\\) that minimise the cost function, we can plot on our graph of exam scores where the line is that divides students who will be admitted, and those who won’t be admitted, according to our machine learning predictions. This is called the [**decision boundary**](https://en.wikipedia.org/wiki/Decision_boundary). If there is one input feature, the decision boundary will be a point, if there are two features it will be a line, if there are three features it will be a three-dimensional plane, and so on. We had already been told that our decision boundary would be at \\(h_\theta(x) = 0.5\\). This means that any values that \\(h_\theta(x)\\) generates that are greater than or equal to 0.5, we will assign to class 1, in other words we will predict that these students **will be admitted to university**. The opposite prediction will be made if \\(h_\theta(x)\\) is less than 0.5  - we predict that these students will be **rejected**. Remember the **probability threshold** I mentioned way back at the start of this post, that turns logistic regression into a classification algorithm? This is it.
 
- We can plot the decision boundary by generating values for //(x//) and solving //(h_\theta(x) = 0.5//). Since the equation we’re using to relate our input features looks like [this](https://www.coursera.org/learn/machine-learning/discussions/jNrddfGsEeSkXCIAC4tJTg):
+ We can plot the decision boundary by generating values for \\(x\\) and solving \\(h_\theta(x) = 0.5\\). Since the equation we’re using to relate our input features looks like [this](https://www.coursera.org/learn/machine-learning/discussions/jNrddfGsEeSkXCIAC4tJTg):
 
-$$\theta_0 + \theta_1x1 + theta_2x2 = 0$$
+$$\theta_0 + \theta_1x1 + \theta_2x2 = 0$$
 
 then we can plot the decision boundary in Python like this:
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter2.png" title=“decision boundary” style="height: 300px;margin: 0 auto;"/>
 
-Our machine learning algorithm predicts that any points that fall to the bottom left of the decision boundary are students that will not be admitted to university, whereas those falling to the top right will be admitted. As you can see from the distribution of dots and crosses in our training set compared to the decision boundary, our machine learning hypotheses are not 100% accurate. This is not necessarily a bad thing: we don’t want to [overfit](https://en.wikipedia.org/wiki/Overfitting) our data so that it’s no longer generalisable to other datasets. But maybe we could have picked a better function to describe the relationship between exam scores and admittance, for example one that would capture more of a curve to the data. We can work out how accurate our machine learning predictor is by feeding it the original dataset, and then comparing our predicted to the actual results. I defined a function that uses our optimum values of //(\theta//) from the BFGS algorithm to predict whether any given student will get into university or not:
+Our machine learning algorithm predicts that any points that fall to the bottom left of the decision boundary are students that will not be admitted to university, whereas those falling to the top right will be admitted. As you can see from the distribution of dots and crosses in our training set compared to the decision boundary, our machine learning hypotheses are not 100% accurate. This is not necessarily a bad thing: we don’t want to [overfit](https://en.wikipedia.org/wiki/Overfitting) our data so that it’s no longer generalisable to other datasets. But maybe we could have picked a better function to describe the relationship between exam scores and admittance, for example one that would capture more of a curve to the data. We can work out how accurate our machine learning predictor is by feeding it the original dataset, and then comparing our predicted to the actual results. I defined a function that uses our optimum values of \\(\theta\\) from the BFGS algorithm to predict whether any given student will get into university or not:
 
 {% highlight python linenos %}
 
@@ -156,7 +153,7 @@ def predict(theta, X):
 
 When we feed this function our training dataset of features (X), and compare the output to the actual outcomes (y), we see that our machine learning predictor was accurate 89% of the time.
 
-—————————————————
+**********************
 
 ###Unanswered questions I have after week three
 
@@ -166,7 +163,7 @@ There’s still things about this week’s material that I don’t understand. I
 
 2. How do you decide which learning algorithm you’re going to use? Scipy has loads, and I implemented two (BFGS and Newton’s method) with similar results.
 
-—————————————————————————
+**********************
 
 If you made it this far, thanks for reading! My completion of Coursera’s machine learning course might go on to the back burner a bit in coming weeks, as I’m starting [S2DS](http://www.s2ds.org/) soon which will be a full-time bootcamp. So I’m expecting the next few posts to be about that :)
 
