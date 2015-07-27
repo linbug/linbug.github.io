@@ -10,7 +10,8 @@ This is the second of a series of posts where I attempt to implement the exercis
 
 *Disclaimer: I am still learning this material, so there could be inaccuracies in the following explanation/code. I recommend if you’re learning this for the first time yourself that you also do your own research! Also, if you spot a mistake, I’d really appreciate it if you send me an email.* :D 
 
-—————————————————————
+---------------------------------------------------------
+
 ## Logistic regression is a confusing name
 
 Here’s a thing that’s confusing: when I hear ‘regression’, I think of a model that is used to predict continuous response variables (as we were last week with predicting the profits of food trucks in various cities). However, in a machine learning context logistic regression is commonly used as a [classification algorithm](https://en.wikipedia.org/wiki/Statistical_classification). A classification algorithm is used to assign data into discrete categories, for example filtering our emails into spam or not spam, or diagnosing a tumour as malignant or benign. In its simplest form, we are considering just one outcome, which can be one of two states (e.g. is this email spam or [ham](https://en.wiktionary.org/wiki/ham_e-mail)?); this is called binary classification. Why then is this called logistic **regression** and not logistic **classification**? [Fundamentally](http://stats.stackexchange.com/questions/127042/why-isnt-logistic-regression-called-logistic-classification), the continuous variable that we are modelling with logistic regression in this context is the *probability* that our new input belongs to a particular class.  Logistic regression only becomes a classification algorithm when we also decide on a **probability threshold** for assignment into one category or another (more on this later).  In fact, logistic regression wasn’t even developed for this purpose, and is still widely used for things other than classification problems.
@@ -24,6 +25,7 @@ Part of the reason that we don’t do this is that the **logistic function** (th
 $$\delta(t) = \frac 1{1 + e^-t}$$
 
 which when plotted on a graph, looks like this:
+
 <img src="https://www.google.com/search?q=logistic+regression&espv=2&biw=1280&bih=728&source=lnms&tbm=isch&sa=X&ved=0CAgQ_AUoA2oVChMInsny-YrlxgIVkJuICh2uYQv_&dpr=2#imgrc=DozXYToqzQkvzM%3A" title=“the logistic function“ style="height: 600px;margin: 0 auto;"/>
 
 what you’ll notice is that the logistic function, for any given input variable (on the x axis), only varies between 0 and 1 (on the y axis). If you were to extend these axis to \\(-\infty\\) and \\(+\infty\\) you would see that the line would continue to tend towards 0 and 1 on the y axis, respectively, but never reach them. This is very useful for describing probability, since the probability that an event can occur will never be greater than 1 or less than 0. If we were using a linear function, we *would* be able to get values greater than 1 and less than 0, which doesn’t make sense in probability terms. 
@@ -37,6 +39,7 @@ If you want a fuller background explanation into why logistic regression is used
 ##Week three programming assignment: logistic regression
 
 The first problem in this week’s programming assignment was about student admittance to university. Given two exam scores for students, we were tasked with predicting whether a given student got into a particular university or not. We have access to admissions data from previous years (which will form our training set). Here’s a scatter graph of the training data, with students that were admitted represented by green crosses, and with students that didn’t get admitted represented by blue circles:
+
  <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter1.png” title=“A scatter graph of students’ exam scores” style="height: 300px;margin: 0 auto;"/>
 
 You can see a curve of where the boundary for admittance lies. We want to model where this boundary is and use it to predict the admissions success of future hopefuls.
@@ -149,7 +152,8 @@ def predict(theta, X):
 {% end highlight%}
 
 When we feed this function our training dataset of features (X), and compare the output to the actual outcomes (y), we see that our machine learning predictor was accurate 89% of the time.
-—————————————————
+
+---------------------------------------------------------
 
 ###Unanswered questions I have after week three
 
@@ -159,7 +163,8 @@ There’s still things about this week’s material that I don’t understand. I
 
 2. How do you decide which learning algorithm you’re going to use? Scipy has loads, and I implemented two (BFGS and Newton’s method) with similar results.
 
-—————————————————————————
+---------------------------------------------------------
+
 If you made it this far, thanks for reading! My completion of Coursera’s machine learning course might go on to the back burner a bit in coming weeks, as I’m starting [S2DS](http://www.s2ds.org/) soon which will be a full-time bootcamp. So I’m expecting the next few posts to be about that :)
 
 
