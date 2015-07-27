@@ -26,7 +26,7 @@ which when plotted on a graph, looks like this:
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" title=“the logistic function“ style="height: 600px;margin: 0 auto;"/>
 
-what you’ll notice is that the logistic function, for any given input variable (on the x axis), only varies between 0 and 1 (on the y axis). If you were to extend these axis to \\(-\infty\\) and \\(+\infty\\) you would see that the line would continue to tend towards 0 and 1 on the y axis, respectively, but never reach them. This is very useful for describing probability, since the probability that an event can occur will never be greater than 1 or less than 0. If we were using a linear function, we *would* be able to get values greater than 1 and less than 0, which doesn’t make sense in probability terms. 
+what you’ll notice is that the logistic function, for any given input variable (on the x axis), only varies between 0 and 1 (on the y axis). If you were to extend these axis to $$-\infty$$ and $$+\infty$$ you would see that the line would continue to tend towards 0 and 1 on the y axis, respectively, but never reach them. This is very useful for describing probability, since the probability that an event can occur will never be greater than 1 or less than 0. If we were using a linear function, we *would* be able to get values greater than 1 and less than 0, which doesn’t make sense in probability terms. 
 
 Another reason to use the logistic function is that it nicely captures how changes in the input variable(s) over certain ranges have more influence on the probability (y axis) than over others. To use the tumour example again, it’s probably not true that if we keep doubling the size of the tumour, it’s going to be twice as likely to be malignant as it was before. After a certain point, a large tumour is highly likely to be malignant, and further increases in size won’t change the probability much. However, there’s going to be a middling range of tumour sizes over which a doubling of volume *will* have a big influence on the likelihood of malignancy. The logistic function shows this in the steep section in the middle of the curve. 
 
@@ -48,7 +48,7 @@ You may recall from my last post that a **hypothesis** in machine learning refer
 
 $$h_\theta(x) = g(\theta^Tx)$$
 
-So the hypothesis function for logistic regression looks like an extension of the hypothesis function for linear regression, which was simply \\(h_\theta(x) = \theta^Tx\\). You can think of the \\(g\\) function as a wrapper that implements the logistic function:
+So the hypothesis function for logistic regression looks like an extension of the hypothesis function for linear regression, which was simply $$h_\theta(x) = \theta^Tx$$. You can think of the $$g$$ function as a wrapper that implements the logistic function:
 
 $$g(z)= \frac1{1 + e^{-z}}$$
 
@@ -73,15 +73,15 @@ def sigmoid(z):
 
 {% endhighlight %}
 
-Our input z can be a scalar value or a matrix. The aim of our machine learning algorithm is to help us to choose parameters for \\(\theta\\).
+Our input z can be a scalar value or a matrix. The aim of our machine learning algorithm is to help us to choose parameters for $$\theta$$.
 
 ###The cost function for logistic regression
 
-In the last post, I explained how we need a cost function so that we can quantify how accurate our machine learning hypotheses are with respect to the real data. For logistic regression, we use a cost function to tell us what penalty should our learning algorithm pay if the hypothesis is \\(h_\theta\\) and the real value is \\(y\\). Mathematically, the logistic regression cost function is:
+In the last post, I explained how we need a cost function so that we can quantify how accurate our machine learning hypotheses are with respect to the real data. For logistic regression, we use a cost function to tell us what penalty should our learning algorithm pay if the hypothesis is $$h_\theta$$ and the real value is $$y$$. Mathematically, the logistic regression cost function is:
 
 $$Cost(h_\theta,y) = -ylog(h_\theta(x)) - (1-y)log(1-h_\theta(x))$$
 
-This looks complex, but let’s break it down. The terms on the left of the equals sign simply mean “the cost of the output $$h_\theta$$ with respect to the actual values y”	. The terms to the right of the equals sign will compute differently, depending on whether \\(y = 1\\) or \\(y = 0\\). If \\(y = 1\\), \\((1-y)log(1-h_\theta(x))\\) will cancel out to zero, just leaving \\(-log(h_\theta(x))\\). On the other hand, if \\(y = 0\\), \\(-ylog(h_\theta(x))\\) will equal zero, so you’re just left with \\(- log(1-h_\theta(x))\\). What’s good about this cost function is that if both \\(y=1\\) and \\(h_\theta(x) = 1\\), the cost will be zero (because \\(log(1) = 0\\)). Similarly, if both \\(y\\) and \\(h_\theta(x)\\) are zero, then the cost will also be zero (because \\(- log(1-0) = 0\\) again. However, if \\(y = 1\\) and \\(h_\theta = 0\\) and vice versa, the cost will be very high (\\(log(0)\\) tends towards \\(\infty\\)). Here’s how I implemented the cost function for logistic regression in Python:
+This looks complex, but let’s break it down. The terms on the left of the equals sign simply mean “the cost of the output $$h_\theta$$ with respect to the actual values y”	. The terms to the right of the equals sign will compute differently, depending on whether $$y = 1$$ or $$y = 0$$. If $$y = 1$$, $$(1-y)log(1-h_\theta(x))$$ will cancel out to zero, just leaving $$-log(h_\theta(x))$$. On the other hand, if $$y = 0$$, $$-ylog(h_\theta(x))$$ will equal zero, so you’re just left with $$- log(1-h_\theta(x))$$. What’s good about this cost function is that if both $$y=1$$ and $$h_\theta(x) = 1$$, the cost will be zero (because $$log(1) = 0$$). Similarly, if both $$y$$ and $$h_\theta(x)$$ are zero, then the cost will also be zero (because $$- log(1-0) = 0$$ again. However, if $$y = 1$$ and $$h_\theta = 0$$ and vice versa, the cost will be very high ($$log(0)$$ tends towards $$\infty$$). Here’s how I implemented the cost function for logistic regression in Python:
 
 {% highlight python linenos %}
 
@@ -93,7 +93,7 @@ def costJ(theta, X, y):
 
 {% endhighlight %}
 
-Now if we feed the cost function values for a vector of parameters (\\(theta\\)), our feature matrix (\\(X\\)), and our vector of actual admissions (\\(y\\)), we can calculate the cost of this hypothesis. If our initial \\(theta\\) is set to a vector of zeros, we see that the cost is about 0.693.
+Now if we feed the cost function values for a vector of parameters ($$theta$$), our feature matrix ($$X$$), and our vector of actual admissions ($$y$$), we can calculate the cost of this hypothesis. If our initial $$theta$$ is set to a vector of zeros, we see that the cost is about 0.693.
 
 ###The learning algorithm
 
@@ -131,9 +131,9 @@ Result = sp.optimize.fmin_bfgs(f = costJ, x0 = initial_theta, fprime = gradient,
 
 ###The decision boundary
 
-Now that we have a set of values for our parameters \\(\theta\\) that minimise the cost function, we can plot on our graph of exam scores where the line is that divides students who will be admitted, and those who won’t be admitted, according to our machine learning predictions. This is called the [**decision boundary**](https://en.wikipedia.org/wiki/Decision_boundary). If there is one input feature, the decision boundary will be a point, if there are two features it will be a line, if there are three features it will be a three-dimensional plane, and so on. We had already been told that our decision boundary would be at \\(h_\theta(x) = 0.5\\). This means that any values that \\(h_\theta(x)\\) generates that are greater than or equal to 0.5, we will assign to class 1, in other words we will predict that these students **will be admitted to university**. The opposite prediction will be made if \\(h_\theta(x)\\) is less than 0.5  - we predict that these students will be **rejected**. Remember the **probability threshold** I mentioned way back at the start of this post, that turns logistic regression into a classification algorithm? This is it.
+Now that we have a set of values for our parameters $$\theta$$ that minimise the cost function, we can plot on our graph of exam scores where the line is that divides students who will be admitted, and those who won’t be admitted, according to our machine learning predictions. This is called the [**decision boundary**](https://en.wikipedia.org/wiki/Decision_boundary). If there is one input feature, the decision boundary will be a point, if there are two features it will be a line, if there are three features it will be a three-dimensional plane, and so on. We had already been told that our decision boundary would be at $$h_\theta(x) = 0.5$$. This means that any values that $$h_\theta(x)$$ generates that are greater than or equal to 0.5, we will assign to class 1, in other words we will predict that these students **will be admitted to university**. The opposite prediction will be made if $$h_\theta(x)$$ is less than 0.5  - we predict that these students will be **rejected**. Remember the **probability threshold** I mentioned way back at the start of this post, that turns logistic regression into a classification algorithm? This is it.
 
- We can plot the decision boundary by generating values for \\(x\\) and solving \\(h_\theta(x) = 0.5\\). Since the equation we’re using to relate our input features looks like [this](https://www.coursera.org/learn/machine-learning/discussions/jNrddfGsEeSkXCIAC4tJTg):
+ We can plot the decision boundary by generating values for $$x$$ and solving $$h_\theta(x) = 0.5$$. Since the equation we’re using to relate our input features looks like [this](https://www.coursera.org/learn/machine-learning/discussions/jNrddfGsEeSkXCIAC4tJTg):
 
 $$\theta_0 + \theta_1x1 + \theta_2x2 = 0$$
 
@@ -141,7 +141,7 @@ then we can plot the decision boundary in Python like this:
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter2.png" title=“decision boundary” style="height: 300px;margin: 0 auto;"/>
 
-Our machine learning algorithm predicts that any points that fall to the bottom left of the decision boundary are students that will not be admitted to university, whereas those falling to the top right will be admitted. As you can see from the distribution of dots and crosses in our training set compared to the decision boundary, our machine learning hypotheses are not 100% accurate. This is not necessarily a bad thing: we don’t want to [overfit](https://en.wikipedia.org/wiki/Overfitting) our data so that it’s no longer generalisable to other datasets. But maybe we could have picked a better function to describe the relationship between exam scores and admittance, for example one that would capture more of a curve to the data. We can work out how accurate our machine learning predictor is by feeding it the original dataset, and then comparing our predicted to the actual results. I defined a function that uses our optimum values of \\(\theta\\) from the BFGS algorithm to predict whether any given student will get into university or not:
+Our machine learning algorithm predicts that any points that fall to the bottom left of the decision boundary are students that will not be admitted to university, whereas those falling to the top right will be admitted. As you can see from the distribution of dots and crosses in our training set compared to the decision boundary, our machine learning hypotheses are not 100% accurate. This is not necessarily a bad thing: we don’t want to [overfit](https://en.wikipedia.org/wiki/Overfitting) our data so that it’s no longer generalisable to other datasets. But maybe we could have picked a better function to describe the relationship between exam scores and admittance, for example one that would capture more of a curve to the data. We can work out how accurate our machine learning predictor is by feeding it the original dataset, and then comparing our predicted to the actual results. I defined a function that uses our optimum values of $$\theta$$ from the BFGS algorithm to predict whether any given student will get into university or not:
 
 {% highlight python linenos %}
 
