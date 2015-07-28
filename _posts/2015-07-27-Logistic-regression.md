@@ -80,7 +80,7 @@ Our input z can be a scalar value or a matrix. The aim of our machine learning a
 
 ###The cost function for logistic regression
 
-In the last post, I explained how we need a cost function so that we can quantify how accurate our machine learning hypotheses are with respect to the real data. For logistic regression, we use a cost function to tell us what penalty should our learning algorithm pay if the hypothesis is \\(h_\theta\\) and the real value is \\(y\\). Mathematically, the logistic regression cost function is:
+In the last post, I explained how we need a cost function so that we can quantify how accurate our machine learning hypotheses are with respect to the real data. For logistic regression, we use a cost function to tell us what penalty should our learning algorithm pay if the hypothesis is \\(h_\theta\\) (remember, these are the predicted probabilities for each student that our machine learning algorithm gives us) and the real value is \\(y\\) (1 or 0 for if a student is admitted or not). Mathematically, the logistic regression cost function is:
 
 $$Cost(h_\theta,y) = -ylog(h_\theta(x)) - (1-y)log(1-h_\theta(x))$$
 
@@ -96,17 +96,30 @@ def costJ(theta, X, y):
 
 {% endhighlight %}
 
-Now if we feed the cost function values for a vector of parameters (\\(\theta\\)), our feature matrix (\\(X\\)), and our vector of actual admissions (\\(y\\)), we can calculate the cost of this hypothesis. If our initial \\(\theta\\) is set to a vector of zeros, we see that the cost is about 0.693.
+Now if we feed the cost function values for a vector of parameters (\\(\theta\\)), our feature matrix (\\(X\\)), and our vector of actual admissions (\\(y\\)), we can calculate the cost of this hypothesis. If our initial \\(\theta\\) is set to a vector of zeros, you can see in the [ipython notebook](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex2.ipynb) that the cost is about 0.693.
 
 ###The learning algorithm
 
 So far, we haven’t actually done any machine learning. But if we want to find the values of the parameter that minimise the cost function, we need to use a machine learning algorithm to do this. Last week, we coded our own function to implement the gradient descent algorithm. However, outside of a machine learning course, it’s very unlikely that we’d sit down and code our own optimisation algorithms; in fact it’s a bad idea unless you really know what you’re doing. There are other optimisation algorithms that are more sophisticated and more scalable than gradient descent, but which are more tricky to understand, let alone code ourselves. Fortunately, there’s about [a bazillion](http://docs.scipy.org/doc/scipy-0.15.1/reference/optimize.html) optimisation algorithms available pre-prepared for Python in the Scipy library.  This week, we were told to use the [fminunc](http://www.mathworks.com/help/optim/ug/fminunc.html) function in MatLab.  fminunc finds the minimum of an unconstrained multivariate function (unconstrained means that the input to the function we are trying to minimise can take on any value). According to [this](http://octave.1599824.n4.nabble.com/algorithm-for-fminunc-td4648956.html), fminunc is a version of the [BFGS](https://en.wikipedia.org/wiki/Broyden%E2%80%93Fletcher%E2%80%93Goldfarb%E2%80%93Shanno_algorithm) algorithm. 
 
-The scipy equivalent of BFGS is Scipy.optimize.fmin_bfgs. In order to use this algorithm in Python (and fminunc in Matlab), you need to provide the function that you are trying to minimise (costJ, which I defined above) and you can also provide the gradient of the function, which is its [partial derivative](https://en.wikipedia.org/wiki/Partial_derivative). We were already told in our course notes what the partial derivative of our cost function was:
+The scipy equivalent of BFGS is Scipy.optimize.fmin_bfgs. I’ll start by showing you what the fmin_bfgs function looks like in python:
+
+{% highlight python linenos %}
+
+Result = sp.optimize.fmin_bfgs(
+f = costJ, 
+x0 = initial_theta, 
+args = (X,y), 
+maxiter = 400,
+fprime = gradient)
+
+{% endhighlight %}
+
+You can see that I’ve specified five keyword arguments. Firstly, in order to use this algorithm in Python (and fminunc in Matlab), you need to provide the function (f) that you are trying to minimise (costJ, which I defined above). You also give the function starting values of $$\theta$$ (x0), tell it which additional arguments are taken by your function (args) and specify the maximum number of iterations that it should perform (maxiter).  You can also optionally provide the gradient of the function, which is its [partial derivative](https://en.wikipedia.org/wiki/Partial_derivative). We were already told in our course notes what the partial derivative of our cost function was:
 
 $$\frac{\partial J(\theta)}{\partial\theta_j}  = \frac1m\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$$
 
-Here’s how my code for the gradient term looks in Python:
+The gradient argument is itself a function for finding that partial derivative of the cost function. Here’s how my code for the gradient term looks in Python:
 
 {% highlight python linenos %}
 
@@ -124,17 +137,15 @@ def gradient(theta,X,y):
 
 {% endhighlight %}
 
-Now we can use the costJ and gradient functions with Scipy.optimize.fmin_bfgs to compute the optimum values for theta:
-
-{% highlight python linenos %}
-
-Result = sp.optimize.fmin_bfgs(f = costJ, x0 = initial_theta, fprime = gradient, args = (X,y), maxiter = 400)
-
-{% endhighlight %}
+How the BFGS algorithm actually works is a bit of a black box to me. In the course videos Ng says that we don’t need to know how they work to use them effectively, but I’d still like a broad understanding of what’s going on; maybe I’ll cover this in another post. 
 
 ###The decision boundary
 
-Now that we have a set of values for our parameters \\(\theta\\) that minimise the cost function, we can plot on our graph of exam scores where the line is that divides students who will be admitted, and those who won’t be admitted, according to our machine learning predictions. This is called the [**decision boundary**](https://en.wikipedia.org/wiki/Decision_boundary). If there is one input feature, the decision boundary will be a point, if there are two features it will be a line, if there are three features it will be a three-dimensional plane, and so on. We had already been told that our decision boundary would be at \\(h_\theta(x) = 0.5\\). This means that any values that $$h_\theta(x)$$  generates that are greater than or equal to 0.5, we will assign to class 1, in other words we will predict that these students **will be admitted to university**. The opposite prediction will be made if $$h_\theta(x)$$  is less than 0.5  - we predict that these students will be **rejected**. Remember the **probability threshold** I mentioned way back at the start of this post, that turns logistic regression into a classification algorithm? This is it.
+Now that we have a set of values for our parameters \\(\theta\\) that minimise the cost function, we can plot on our graph of exam scores where the line is that divides students who will be admitted, and those who won’t be admitted, according to our machine learning predictions. This is called the [**decision boundary**](https://en.wikipedia.org/wiki/Decision_boundary). To give you an idea of what a decision boundary looks like, here is the decision boundary for our exam data, plotted using the minimum values of $$\theta$$ that we got from our BFGS algorithm: 
+
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/ex2scatter2.png" title="decision boundary" style="height: 500px;margin: 0 auto;"/>
+
+You can see that on our two-dimensional scatter plot, the decision boundary is represented as a line. If there was only one input feature, the decision boundary would have been a point, and if there had been three input features it would have been a plane in the three-dimensional space, and so on. We had already been told that our decision boundary would be at \\(h_\theta(x) = 0.5\\). This means that any values that $$h_\theta(x)$$  generates that are greater than or equal to 0.5, we will assign to class 1, in other words we will predict that these students **will be admitted to university**. The opposite prediction will be made if $$h_\theta(x)$$  is less than 0.5  - we predict that these students will be **rejected**. Remember the **probability threshold** I mentioned way back at the start of this post, that turns logistic regression into a classification algorithm? This is it.
 
  We can plot the decision boundary by generating values for \\(x\\) and solving \\(h_\theta(x) = 0.5\\). Since the equation we’re using to relate our input features looks like [this](https://www.coursera.org/learn/machine-learning/discussions/jNrddfGsEeSkXCIAC4tJTg):
 
