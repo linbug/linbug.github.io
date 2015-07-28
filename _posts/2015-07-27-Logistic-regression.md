@@ -57,7 +57,7 @@ $$g(z)= \frac1{1 + e^{-z}}$$
 
 so in combination, the hypothesis function for logistic regression looks like this:
 
-$$h_\theta(x) = \frac 1{1 + e^{-\theta}}$$
+$$h_\theta(x) = \frac 1{1 + e^{-\theta^Tx}}$$
 
 How do we interpret the outputs of this function? In the context of logistic regression, our hypotheses refer to the probabilities that our inputs belong to a particular class. So, in this example if we have a student’s exam results for both exam 1 and exam 2 (corresponding to features X1 and X2 in our training set), our hypothesis function will return the **probability that y = 1**, which is the probability that this student will be admitted to university. Since this is binary classification, the probability that the same student *won’t* be admitted is simply 1 minus this value. This statement can be otherwise be represented as:
 
@@ -84,7 +84,7 @@ In the last post, I explained how we need a cost function so that we can quantif
 
 $$Cost(h_\theta,y) = -ylog(h_\theta(x)) - (1-y)log(1-h_\theta(x))$$
 
-This looks complex, but let’s break it down. The terms on the left of the equals sign simply mean “the cost of the output $$h_\theta$$ with respect to the actual values y”	. The terms to the right of the equals sign will compute differently, depending on whether $$y = 1$$ or $$y = 0$$. If $$y = 1$$, $$(1-y)log(1-h_\theta(x))$$ will cancel out to zero, just leaving $$-log(h_\theta(x))$$. On the other hand, if $$y = 0$$ , $$ -ylog(h_\theta(x))$$  will equal zero, so you’re just left with $$ - log(1-h_\theta(x))$$ . What’s good about this cost function is that if both $$ y=1$$  and $$ h_\theta(x) = 1$$ , the cost will be zero (because $$ log(1) = 0$$). Similarly, if both $$y$$  and $$ h_\theta(x)$$  are zero, then the cost will also be zero (because $$ - log(1-0) = 0$$  again. However, if $$y = 1$$  and $$h_\theta = 0$$  and vice versa, the cost will be very high $$log(0)$$  tends towards $$\infty$$. Here’s how I implemented the cost function for logistic regression in Python:
+This looks complex, but let’s break it down. The terms on the left of the equals sign simply mean ‘the cost of the output $$h_\theta$$ with respect to the actual values y’	. The terms to the right of the equals sign will compute differently, depending on whether $$y = 1$$ or $$y = 0$$. If $$y = 1$$, $$(1-y)log(1-h_\theta(x))$$ will cancel out to zero, just leaving $$-log(h_\theta(x))$$. On the other hand, if $$y = 0$$ , $$ -ylog(h_\theta(x))$$  will equal zero, so you’re just left with $$ - log(1-h_\theta(x))$$ . What’s good about this cost function is that if both $$ y=1$$  and $$ h_\theta(x) = 1$$ , the cost will be zero (because $$ log(1) = 0$$). Similarly, if both $$y$$  and $$ h_\theta(x)$$  are zero, then the cost will also be zero (because $$ - log(1-0) = 0$$  again. However, if $$y = 1$$  and $$h_\theta = 0$$  and vice versa, the cost will be very high, because $$log(0)$$  tends towards $$\infty$$. So if our algorithm predicts an outcome with such certainty, and it turns out to be wrong, the penalty will be extremely high. Here’s how I implemented the cost function for logistic regression in Python:
 
 {% highlight python linenos %}
 
@@ -96,7 +96,7 @@ def costJ(theta, X, y):
 
 {% endhighlight %}
 
-Now if we feed the cost function values for a vector of parameters (\\(theta\\)), our feature matrix (\\(X\\)), and our vector of actual admissions (\\(y\\)), we can calculate the cost of this hypothesis. If our initial \\(theta\\) is set to a vector of zeros, we see that the cost is about 0.693.
+Now if we feed the cost function values for a vector of parameters (\\(\theta\\)), our feature matrix (\\(X\\)), and our vector of actual admissions (\\(y\\)), we can calculate the cost of this hypothesis. If our initial \\(\theta\\) is set to a vector of zeros, we see that the cost is about 0.693.
 
 ###The learning algorithm
 
