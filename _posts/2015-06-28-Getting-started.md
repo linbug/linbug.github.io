@@ -38,7 +38,6 @@ For the time being, I'm breaking up my working hours using the [pomodoro techini
 ###Blogging
 Blogging is a nice way to get keep a track of what I've been working on, and tell others about it. I've done an introduction to web development course with [CodeFirst Girls](http://www.codefirstgirls.org.uk/). However, I'm making this blog in [Jekyll](http://jekyllrb.com/) and hosting it on [Github](https://github.com/linbug/linbug.github.io), which means I can write it all in markdown and never have to touch any HTML or CSS :p. Jekyll was built for static blogs and has a lot of nice functionality for this, which you an read about [here](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/ ) and  [here](http://jekyllbootstrap.com/lessons/jekyll-introduction.html). I am using the [hyde](http://hyde.getpoole.com/) theme.
 
-% if page.comments %
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
@@ -52,4 +51,4 @@ Blogging is a nice way to get keep a track of what I've been working on, and tel
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-% endif %
+
