@@ -2,6 +2,7 @@
 layout: post
 title: Getting started
 category: data science tools
+comments: true
 ---
 
 Howdy! Welcome to my blog. A bit of background about who I am and where I am right now: I'm finishing up a PhD in plant molecular genetics at the University of Cambridge (and by finishing up I mean I'm waiting for my supervisor to send me her final edits before I can submit for real!). I'm currently in the other Cambridge (MA, just outside of Boston) where I'm spending the summer visiting friends and learning data science. I have a place on the [Science to Data Science](http://www.s2ds.org/)(otherwise known as 'S2DS') 2015 programme in London in August, which is essentially a summer school to help people with analytic PhDs transition into the data science industry. A big component of S2DS is about working with industry sponsors on real-world projects. It's going to be a really good opportunity to get some hands-on experience in data analytics.  
@@ -36,3 +37,21 @@ For the time being, I'm breaking up my working hours using the [pomodoro techini
 
 ###Blogging
 Blogging is a nice way to get keep a track of what I've been working on, and tell others about it. I've done an introduction to web development course with [CodeFirst Girls](http://www.codefirstgirls.org.uk/). However, I'm making this blog in [Jekyll](http://jekyllrb.com/) and hosting it on [Github](https://github.com/linbug/linbug.github.io), which means I can write it all in markdown and never have to touch any HTML or CSS :p. Jekyll was built for static blogs and has a lot of nice functionality for this, which you an read about [here](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/ ) and  [here](http://jekyllbootstrap.com/lessons/jekyll-introduction.html). I am using the [hyde](http://hyde.getpoole.com/) theme.
+
+% if page.comments %
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linbug';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+% endif %
