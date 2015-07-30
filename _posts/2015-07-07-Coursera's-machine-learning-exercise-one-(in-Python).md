@@ -2,6 +2,7 @@
 layout: post
 title: Coursera's machine learning course (implemented in Python)
 category: data science tools
+comments: true
 ---
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/library.jpg" title="Boston has some nice libraries" style="height: 600px;margin: 0 auto;"/>
@@ -137,3 +138,16 @@ we'll make ~$113574, whereas if we open up shop in Cambridge, MA (population ~10
 I hope that this was a useful introduction to gradient descent. You can see my code [here](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex1.ipynb). We can also use gradient descent for multivariate linear regression
 (I won't go into this here, maybe in another post). I expect we'll be using variations of this algorithm for other applications later in the course, since it seems to be a machine learning staple.
 
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linbug';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

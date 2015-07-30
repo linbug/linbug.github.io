@@ -2,6 +2,7 @@
 layout: post
 title: Coursera’s machine learning course week three (logistic regression)
 category: machine learning
+comments: true
 ---
 
 
@@ -115,7 +116,7 @@ fprime = gradient)
 
 {% endhighlight %}
 
-You can see that I’ve specified five keyword arguments. Firstly, in order to use this algorithm in Python (and fminunc in Matlab), you need to provide the function (f) that you are trying to minimise (costJ, which I defined above). You also give the function i) starting values of $$\theta$$ (x0), ii) additional arguments are taken by your function (args) and iii) the maximum number of iterations that it should perform (maxiter).  You can also optionally provide the gradient of the function, which is its [partial derivative](https://en.wikipedia.org/wiki/Partial_derivative). We were already told in our course notes what the partial derivative of our cost function was:
+You can see that I’ve specified five keyword arguments. Firstly, in order to use this algorithm in Python (and fminunc in Matlab), you need to provide the function (f) that you are trying to minimise (costJ, which I defined above). You also give the function i) starting values of $$\theta$$ (x0), ii) additional arguments are taken by your function (args) and iii) the maximum number of iterations that it should perform (maxiter).  You can also optionally provide the gradient of the function (fprime), which is its [partial derivative](https://en.wikipedia.org/wiki/Partial_derivative). We were already told in our course notes what the partial derivative of our cost function was:
 
 $$\frac{\partial J(\theta)}{\partial\theta_j}  = \frac1m\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$$
 
@@ -178,3 +179,17 @@ There’s still things about this week’s material that I don’t understand. I
 **********************
 
 If you made it this far, thanks for reading! My completion of Coursera’s machine learning course might go on to the back burner a bit in coming weeks, as I’m starting [S2DS](http://www.s2ds.org/) soon which will be a full-time bootcamp. So I’m expecting the next few posts to be about that :)
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linbug';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
