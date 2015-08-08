@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 A short post about relational databases\
+\
+This will be a short post (hopefully) about my early experiences learning SQL. I haven\'92t previously used databases, so I wanted to get some experience with them before starting S2DS. Here\'92s a beginner\'92s guide if you\'92ve never met them before.\
+\
+##What is a relational database?\
+A [relational database]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Relational_database"}}{\fldrslt https://en.wikipedia.org/wiki/Relational_database}}) is a digital database organised according to the [relational model]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Relational_model"}}{\fldrslt https://en.wikipedia.org/wiki/Relational_model}}) of data: a simple set of concepts that allows us to build very complex data structures. In essence, relational databases contain one or more tables with rows and columns, where each row has a unique key for identification. Rows in one table can be linked to rows in another table by storing the value of the row key to be linked to. A useful analogy I saw [here]({\field{\*\fldinst{HYPERLINK "http://sql.learncodethehardway.org/book/introduction.html"}}{\fldrslt http://sql.learncodethehardway.org/book/introduction.html}}) is that a database is analogous to a whole Excel spreadsheet file, whereas the individual database tables are like the tabs/worksheets in that Excel file.\
+\
+Different relationships can link columns within and between tables in a relational database. You can have [one-to-one]({\field{\*\fldinst{HYPERLINK "http://www.databaseprimer.com/pages/relationship_1to1/"}}{\fldrslt http://www.databaseprimer.com/pages/relationship_1to1/}}) relationships, [one-to-many]({\field{\*\fldinst{HYPERLINK "http://www.databaseprimer.com/pages/relationship_1tox/"}}{\fldrslt http://www.databaseprimer.com/pages/relationship_1tox/}}) relationships and [many-to-many]({\field{\*\fldinst{HYPERLINK "http://www.databaseprimer.com/pages/relationship_xtox/"}}{\fldrslt http://www.databaseprimer.com/pages/relationship_xtox/}}) relationships between rows in different tables. We illustrate these relationships using the famous [Microsoft Northwind]({\field{\*\fldinst{HYPERLINK "https://northwinddatabase.codeplex.com/"}}{\fldrslt https://northwinddatabase.codeplex.com/}}) database, a database from a fictitious company which imports and exports specialty foods from around the world. Here is a schema of the whole database:\
+\
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/northwind.jpg\'94 title="Darwin\'92s is a great cafe chain in Cambridge, MA" style="height: 600px;margin: 0 auto;"/>\
+\
+\
+##Advantages of relational databases\
+Why not just use one big flat table? Why bother with linking between different spreadsheets? There are several advantages to relational databases compared to a standard flat file, like an Excel spreadsheet:\
+\
+1. Data is only stored once\
+You don\'92t need to have multiple records for a single entity. Let\'92s say for example you have a database of ten friends in your address book, and these ten friends collectively live in four different cities. You can have two tables in your database, one for friend names and street address, and one for cities. You can create links between rows in your cities and friends tables without the need to duplicate any information. This is good for several reasons:\
+\
+- Less duplication means the database takes up less space and so is more memory efficient.\
+\
+- Since there\'92s no duplication, you also eliminate possible inconsistencies, for example if you had a column in a single flat table for city, you might end up with some items misspelled (e.g. \'91Londn\'92 instead of \'91London\'92). \
+\
+-It should also be much easier to change information if it only exists in one place, e.g. if for some bizarre reason the UK decided to change the name of London to \'92Jabberwocky\'92, you\'92d only have to update this information once in our fictitious relational database of addresses.\
+\
+2. Data has a fixed type\
+This means that your text will always be interpreted as text, your numbers as numbers, your dates as dates. You can avoid typos like *iO* instead of 10.\
+\
+3. You can apply complex queries to the database to pull out exactly the information you want, from multiple tables at once. You can use these queries for further analysis without having to duplicate your data, as you might do in an Excel spreadsheet, thus cutting out the middle man.\
+\
+4. It\'92s easier to maintain security\
+By splitting the data up into separate tables, you can ensure that in certain situations, only part of the data can be made accessible to a particular individual. For example, if you are using a database for a web application, you might want to restrict an individual user to their own information, instead of giving them access to all of the email addresses of everyone signed up to your service. \
+\
+5. You can cater to future requirements\
+It\'92s easy to add more data that are not yet needed, but might be in the future. For example, you might be going to a cheese rolling convention in Manhattan, where you anticipate making lots of new friends from around the world. In preparation for your trip, you could expand your cities table in you friend address database to include all of the cities in the world. You can\'92t do this with a flat table.\
+\
+##Why use SQL instead of Pandas?\
+As I was writing the above, I kept thinking: \'91but a lot of this stuff you can do in the python pandas library!\'92. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://www.reddit.com/r/Python/comments/1tqjt4/why_do_you_use_pandas_instead_of_sql/"}}{\fldrslt \cf0 http://www.reddit.com/r/Python/comments/1tqjt4/why_do_you_use_pandas_instead_of_sql/}}\
+\
+\
+##Interacting with relational databases\
+Data manipulation in relational databases is performed by making queries in Structured Query Language (SQL). You can ask your data \
+\
+For an amusing example of the difficulty of rational database design, I highly recommend reading [this]({\field{\*\fldinst{HYPERLINK "http://qntm.org/gay"}}{\fldrslt http://qntm.org/gay}}) blog post about creating a *really flexible and egalitarian* marriage database.}
