@@ -4,20 +4,37 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh13220\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\f0\fs24 \cf0 Data cleaning and data munging\
+\f0\fs24 \cf0 ---\
+layout: post\
+title: S2DS week two update\
+category: data science\
+comments: true\
+---\
 \
-It\'92s been a busy couple of weeks, and there\'92s not been much time for blog writing in between lectures, working and evening events. So far I haven\'92t written about the specific project that my team is working on. This post gives an introduction to the project, the challenges we\'92ve experienced so far with the data, and where we are up to.\
+It\'92s been a busy couple of weeks, and there\'92s not been much time for blog writing in between lectures, working and evening events. This post gives an introduction to the data project I\'92ve been working on, the challenges we\'92ve experienced so far with the data, and where we are up to.\
 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 ##The project\
-The project I\'92ve been working on here at S2DS is for [Intellifo]({\field{\*\fldinst{HYPERLINK "http://www.intelliflo.com/"}}{\fldrslt http://www.intelliflo.com/}}). Intelliflo provide IT services to financial advisers. A financial adviser is someone who provides clients with advice on money matters, making sure they are aware of the services that best it their needs, and then perhaps selling them a financial product. For example, they might be selling employee pension schemes to companies, or offering mortgage or pension advice to people like you and me. The whole process of selling someone a financial product involves lots of bits of administrivia: an adviser will need to collect information about a client and keep this up-to-date, do research to find information about the market, store quotes from search engines, model  how risky an investment is, and create reports for their client. Intelliflo\'92s major product is a piece of software called \'91Intelligent Office\'92 that allows an adviser to store all of the client and product data and do all of these tasks in one place. Through Intelligent Office, Intelliflo have access to information about their clients (the financial advisers) and their clients\'92 clients (people like you and me).\
+The project I\'92ve been working on here at S2DS is for [Intellifo]({\field{\*\fldinst{HYPERLINK "http://www.intelliflo.com/"}}{\fldrslt http://www.intelliflo.com/}}). Intelliflo provide IT services to financial advisers. A financial adviser is someone who provides clients with advice on money matters, makes sure they are aware of the services that best fit their needs, and then perhaps sells them a financial product. For example, they might be selling employee pension schemes to companies, or offering mortgage or pension advice to people like you and me. The whole process of selling someone a financial product involves lots of bits of administrivia: an adviser will need to collect information about a client and keep this up-to-date, do research to find information about the market, store quotes from search engines, model how risky an investment is, and create reports for their client. Intelliflo\'92s major product is a piece of software called \'91Intelligent Office\'92 that allows an adviser to store all of the client and product data and do all of these tasks in one place. Through Intelligent Office, Intelliflo have access to real-time information about their clients (the financial advisers) and their clients\'92 clients (people like you and me).\
+Our mentors at Intelliflo were flexible with letting us come up with a data product/research question for our project. After some discussion we decided it would be interesting to come up with a [recommendation system]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Recommender_system"}}{\fldrslt https://en.wikipedia.org/wiki/Recommender_system}}) that would be able to recommend combinations of financial products to new clients based on their profile. \
 \
+###The dataset\
+Intelliflo initially provided us with an anonymised master dataset of clients and their financial products. This was in the form of a Microsoft SQL server database, with three tables: one containing information about the client (with columns like age, gender, salary etc.), one table containing information about the financial products (what type of product it is, when it was taken out, how much it\'92s currently worth, when it will mature etc.) and a final, much smaller table that links the clients to their financial plans. Some clients in the database are associated with multiple plans, some have just one plan, and most have none at all. \
+\
+The dataset is much bigger than anything I\'92ve ever worked with. When the client and product tables are combined, there are over X million records. The database itself is ~75GB, but when exported to csv it\'92s well over 100GB. We had some fun in the first week trying to work out how to open and query the database with the tools we had. Ideally we\'92d be hosting the database on a [server]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Database_server"}}{\fldrslt https://en.wikipedia.org/wiki/Database_server}}), which would do all the heavy lifting of data analysis, storage and manipulation. Unfortunately, we didn\'92t have server access and so had to problem-solve how to do our initial data exploration. Ultimately we ended up exporting a 0.01% random sample of the data to csv  so that we could each individually load this into memory, and figure out if there was anything we could cut out. \
+\
+##Dimensionality reduction\
+\
+It was soon apparent that many of the columns had very little data in them:\
+\
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/client_popn_hist.png\'94 title=\'93cells filled in the client dataset\'94 style="height: 600px;margin: 0 auto;"/>\
+\
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/plan_popn_hist.png" title="cells filled in the plan dataset" style="height: 600px;margin: 0 auto;"/>\
+\
+As you can see, for both the client and the financial plan tables, the majority of columns were less than 5% populated. To get rid of some columns, we arbitrarily discarded any columns with <5% cells populated, unless our company mentors thought they\'92d be particularly valuable.\
 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-##The dataset\
-Intelliflo initially provided us with an anonymised dataset of \
 \
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 ##Data munging and cleaning\
 In one of our lectures this week, we were told to expect that in a typical data science project, you will spend **80% of your time on data preparation**. This means housekeeping duties \
 \
