@@ -15,17 +15,18 @@ It\'92s been a busy couple of weeks, and there\'92s not been much time for blog 
 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 ##The project\
-The project I\'92ve been working on here at S2DS is for [Intellifo]({\field{\*\fldinst{HYPERLINK "http://www.intelliflo.com/"}}{\fldrslt http://www.intelliflo.com/}}). Intelliflo provide IT services to financial advisers. A financial adviser is someone who provides clients with advice on money matters, makes sure they are aware of the services that best fit their needs, and then perhaps sells them a financial product. For example, they might be selling employee pension schemes to companies, or offering mortgage or pension advice to people like you and me. The whole process of selling someone a financial product involves lots of bits of administrivia: an adviser will need to collect information about a client and keep this up-to-date, do research to find information about the market, store quotes from search engines, model how risky an investment is, and create reports for their client. Intelliflo\'92s major product is a piece of software called \'91Intelligent Office\'92 that allows an adviser to store all of the client and product data and do all of these tasks in one place. Through Intelligent Office, Intelliflo have access to real-time information about their clients (the financial advisers) and their clients\'92 clients (people like you and me).\
-Our mentors at Intelliflo were flexible with letting us come up with a data product/research question for our project. After some discussion we decided it would be interesting to come up with a [recommendation system]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Recommender_system"}}{\fldrslt https://en.wikipedia.org/wiki/Recommender_system}}) that would be able to recommend combinations of financial products to new clients based on their profile. \
+The project I\'92ve been working on here at S2DS is for [Intellifo]({\field{\*\fldinst{HYPERLINK "http://www.intelliflo.com/"}}{\fldrslt http://www.intelliflo.com/}}). Intelliflo provide IT services to financial advisers. A financial adviser is someone who provides clients with advice on money matters, makes sure they are aware of the services that best fit their needs, and then perhaps sells them a financial product. For example, they might be selling employee pension schemes to companies, or offering mortgage or pension advice to people like you and me. The whole process of selling someone a financial product involves lots of bits of administrivia: an adviser will need to collect information about a client and keep this up-to-date, do research to find information about the market, store quotes from search engines, model how risky an investment is, and create reports for their client. Intelliflo\'92s major product is a piece of software called \'91Intelligent Office\'92 that allows an adviser to store all of the client and product data and do all of these tasks in one place. Through Intelligent Office, Intelliflo have access to real-time information about their clients (the financial advisers) and their clients\'92 clients (people like you and me). Intelligent office is a popular product in the UK financial sector, and so there is potentially a lot of interesting information about how different groups of people buy financial products. After some discussion with our mentors, we decided it would be interesting to use this information to try to come up with a [recommendation system]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Recommender_system"}}{\fldrslt https://en.wikipedia.org/wiki/Recommender_system}}) that would be able to recommend combinations of financial products to new clients based on their profile. \
 \
 ###The dataset\
-Intelliflo initially provided us with an anonymised master dataset of clients and their financial products. This was in the form of a Microsoft SQL server database, with three tables: one containing information about the client (with columns like age, gender, salary etc.), one table containing information about the financial products (what type of product it is, when it was taken out, how much it\'92s currently worth, when it will mature etc.) and a final, much smaller table that links the clients to their financial plans. Some clients in the database are associated with multiple plans, some have just one plan, and most have none at all. \
+Intelliflo initially provided us with a master dataset of clients (all anonymised) and their financial plans. This was in the form of a Microsoft SQL server database, with three tables: one containing information about the client (with columns like age, gender, salary etc.), another table containing information about the financial products (what type of product it is, when it was taken out, how much it\'92s currently worth, when it will mature etc.) and a final, much smaller table that linked the clients to their financial plans. Some clients in the database are associated with multiple plans, some have just one plan, and most have none at all. \
 \
-The dataset is much bigger than anything I\'92ve ever worked with. When the client and product tables are combined, there are over X million records. The database itself is ~75GB, but when exported to csv it\'92s well over 100GB. We had some fun in the first week trying to work out how to open and query the database with the tools we had. Ideally we\'92d be hosting the database on a [server]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Database_server"}}{\fldrslt https://en.wikipedia.org/wiki/Database_server}}), which would do all the heavy lifting of data analysis, storage and manipulation. Unfortunately, we didn\'92t have server access and so had to problem-solve how to do our initial data exploration. Ultimately we ended up exporting a 0.01% random sample of the data to csv  so that we could each individually load this into memory, and figure out if there was anything we could cut out. \
+The dataset is much bigger than anything I\'92ve ever worked with. When the client and product tables are combined, there are over X million records. The database itself is ~75GB, but when exported to csv it\'92s well over 100GB. We had some fun in the first week trying to work out how to open and query the database with the tools we had to hand. Ideally we\'92d be hosting the database on a [server]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Database_server"}}{\fldrslt https://en.wikipedia.org/wiki/Database_server}}), which would do all the heavy lifting of data analysis, storage and manipulation. Unfortunately, we didn\'92t have server access and so had to problem-solve how to do our initial data exploration. Ultimately we ended up exporting a 0.01% random sample of the data to csv  so that we could each individually load this into memory, and figure out what we wanted to do next.\
 \
 ##Dimensionality reduction\
 \
-It was soon apparent that many of the columns had very little data in them:\
+It was soon apparent that we were not lacking for features in our data: our combined dataset had over 300 columns. The first task we set ourselves was to cut out anything that didn\'92t seem useful.\
+\
+many of the columns had very little data in them:\
 \
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/client_popn_hist.png\'94 title=\'93cells filled in the client dataset\'94 style="height: 600px;margin: 0 auto;"/>\
 \
@@ -33,18 +34,24 @@ It was soon apparent that many of the columns had very little data in them:\
 \
 As you can see, for both the client and the financial plan tables, the majority of columns were less than 5% populated. To get rid of some columns, we arbitrarily discarded any columns with <5% cells populated, unless our company mentors thought they\'92d be particularly valuable.\
 \
+We also \
+\
+Finally, we decided that initially we\'92d only work with clients that had only one financial plan (~X% of the data). \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
 ##Data munging and cleaning\
-In one of our lectures this week, we were told to expect that in a typical data science project, you will spend **80% of your time on data preparation**. This means housekeeping duties \
+In one of our lectures this week, we were told to expect that in a typical data science project, you will spend **80% of your time on data preparation**. This means housekeeping duties like making sure that your dates are in the right format, . To clean our dataset, we eyeballed every column, and wrote a python script where we needed to that would \
 \
+We also noticed that there were a lot of funky \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 ##Skills I\'92ve learned so far\
+\
+#### Size matters\
 \
 #### Collaborating on github\
 I\'92ve had limited experience working in a team on this platform. As a lone worker, you rarely have to deal with things many of the more complicated git features, like remembering to pull from the remote to update your local copy with whatever your team mate did, or resolving merge conflicts. In my team, we had a lack of understanding about committing, pulling and pushing workflows, and ended up with some really messy commit histories as a result. Getting a thorough understanding of how git works beyond the basics seems to be something people acquire after years of experience, rather than After some useful conversations with @ \'85. about best practices (he recommend we branch often, or get used to \
 \
 #### Teamwork, teamwork, teamwork\
-\
+We\'92ve been working side by side almost all of the time. I really enjoy this element -  it means that successes are shared and problems can be brainstormed with others. However, it does mean that a much higher degree of mindfulness about \
 \
 }
