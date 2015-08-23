@@ -71,7 +71,7 @@ Specifically I got tripped up by trying to convert a pandas series of dates (in 
 
  a) if you want Pandas to throw an error when converting to datetime objects, you need to set the ‘errors’ kwarg to ‘raise’      
 
- b) if you want Pandas to force errors to NaT, then you need to set ‘coerce’ to True  
+ b) if you want Pandas to force errors to `NaT`, then you need to set the ‘coerce’ kwarg to True  
 
  c) Pandas timestamps are limited to a range of approximately [584 years](http://pandas.pydata.org/pandas-docs/stable/gotchas.html#timestamp-limitations). If you try and convert a series of dates (in string format) into a series of datetime objects, and the date range exceeds 584 years, Pandas will just refuse.  
 
