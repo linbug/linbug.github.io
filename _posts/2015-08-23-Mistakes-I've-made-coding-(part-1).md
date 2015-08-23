@@ -39,18 +39,18 @@ It won't like it and will refuse to open, and then you'll have to edit it manual
 
 I was in a situation where I wanted to halve all the values in an array, and reassign this to the old array. For some reason I decided to do this with a `for` loop. Even when I used `from __future__ import division` at the  start of my code, this:
 
-   {% highlight python linenos %}
-   a = np.array([1,2,3])
-   for i in range(len(a)):
-         a[i] = a[i]/2
-   print a
-   {% endhighlight %}
+{% highlight python linenos %}
+a = np.array([1,2,3])
+for i in range(len(a)):
+	a[i] = a[i]/2
+print a
+{% endhighlight %}
 
-   returned:
+returned:
 
-   {% highlight python %}
-   [0 1 1]
-   {% endhighlight %}
+{% highlight python %}
+[0 1 1]
+{% endhighlight %}
 
 If I had remembered to check `a.dtype`, I would have seen that `a` was an `int64` array. I should have specified the type when I created the array, or specified at least one of the elements as a float, which would have upcast(ed?) the entire array. This leads me on to....
 
