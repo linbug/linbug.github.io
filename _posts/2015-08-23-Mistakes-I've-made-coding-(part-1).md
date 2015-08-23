@@ -44,7 +44,7 @@ print a
 
 returned:
 
-{% highlight python}
+{% highlight python %}
 
 [0 1 1]
 
