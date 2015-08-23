@@ -33,22 +33,22 @@ Noticing when you did something wrong, or at least sub optimally, is an importan
 
 3. Check the dtype of your numpy arrays before doing operations on them. I was in a situation where I wanted to halve all the values in an array, and reassign this to the old array. For some reason I decided to do this with a `for` loop. Even when I used `from __future__ import division` at the  start of my code, this:
 
-	{% highlight python linenos %}
+            {% highlight python linenos %}
 
-	a = np.array([1,2,3])
-	for i in range(len(a)):
-  		a[i] = a[i]/2
-	print a
+            a = np.array([1,2,3])
+            for i in range(len(a)):
+                   	a[i] = a[i]/2
+	    print a
 
-	{% endhighlight %}
+	    {% endhighlight %}
 
 returned:
 
-	{% highlight python %}
+	    {% highlight python %}
 
-	[0 1 1]
+	    [0 1 1]
 
-	{% endhighlight %}
+	    {% endhighlight %}
 
 If I had remembered to check `a.dtype`, I would have seen that `a` was an `int64` array. I should have specified the type when I created the array, or specified at least one of the elements as a float, which would have upcast(ed?) the entire array. This leads me on to....
 
@@ -63,14 +63,14 @@ a/2
 
 5. Beware of [gotchas](http://pandas.pydata.org/pandas-docs/stable/gotchas.html) in Pandas. Specifically I got tripped up by trying to convert a pandas series of dates (in unicode format) into datetime objects, using `pd.to_datetime()`. Pandas didn’t throw an error but silently refused to do what I wanted. Finally after much hair pulling and enlisting the help of a team mate, we worked out that 
 
-  a) if you want Pandas to throw an error when converting to datetime objects, you need to set the ‘errors’ kwarg to ‘raise’ 
+    a) if you want Pandas to throw an error when converting to datetime objects, you need to set the ‘errors’ kwarg to ‘raise’  
 
-  b) if you want Pandas to force errors to NaT, then you need to set ‘coerce’ to True  
+    b) if you want Pandas to force errors to NaT, then you need to set ‘coerce’ to True   
 
-  c) Pandas timestamps are limited to a range of approximately [584 years](http://pandas.pydata.org/pandas-docs/stable/gotchas.html#timestamp-limitations). If you try and convert a series of dates (in string format) into a series of datetime objects, and the date range exceeds 584 years, Pandas will just refuse.  
-  I think it’s fair to say that these issues were not obvious without reading the documentation.
+    c) Pandas timestamps are limited to a range of approximately [584 years](http://pandas.pydata.org/pandas-docs/stable/gotchas.html#timestamp-limitations). If you try and convert a series of dates (in string format) into a series of datetime objects, and the date range exceeds 584 years, Pandas will just refuse.  
+    I think it’s fair to say that these issues were not obvious without reading the documentation.  
 
-> <!---->6. If you’re really stuck, ask Stack Overflow. I spent several hours on [this problem](http://stackoverflow.com/questions/32137330/pandas-error-creating-timedeltas-from-datetime-operation) the other day. When I finally caved in and asked a question on SO (my first!) I got an answer that worked within half an hour. I still don’t know what the problem was, but at least I had a solution and could get on with my day. 
+6. If you’re really stuck, ask Stack Overflow. I spent several hours on [this problem](http://stackoverflow.com/questions/32137330/pandas-error-creating-timedeltas-from-datetime-operation) the other day. When I finally caved in and asked a question on SO (my first!) I got an answer that worked within half an hour. I still don’t know what the problem was, but at least I had a solution and could get on with my day. 
 
 That’s it for now. If anyone has good strategies for avoiding getting stuck in a coding quagmire, I’d love to hear them.
 
