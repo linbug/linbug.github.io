@@ -5,27 +5,26 @@ category: coding
 comments: true
 ---
 
-#S2DS update
+*A quick S2DS update as preamble…*
 
 Week three of S2DS has been and gone, and there’s been little time for blog writing - we’ve been kept busy! I’m having a lot of fun though, and my team have been making good progress. For the first couple of weeks we were attending a lot of lectures about coding, databases, business etc., but now we’re almost exclusively working on our team projects. There have also been quite a few evening events, some in the city, and some on campus. I’m planning on writing a post that gets into the specific details of my team’s project, but for now, know that there’s been a bit of this:
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/cafe.jpg” title=“Cafe style” style="height: 600px;margin: 0 auto;"/>
+<img src= "https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/cafe.jpg" title="Cafe style" style="height: 600px;margin: 0 auto;"/>
 
 a bit of this:
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/skygarden.jpg” title=“View from the sky garden” style="height: 600px;margin: 0 auto;"/>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/skygarden.jpg" title="View from the sky garden" style="height: 600px;margin: 0 auto;"/>
 
 and quite a bit of this:
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/beers.jpg” title=“beers in the park” style="height: 600px;margin: 0 auto;"/>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/beers.jpg" title="beers in the park" style="height: 600px;margin: 0 auto;"/>
 
 —————————————————————————————————————
+##Mistakes I've made coding (part 1)
 
 Now for the meat of this post.
 
 Noticing when you did something wrong, or at least sub optimally, is an important part of the learning process. I especially like it when [organisations](http://www.givewell.org/about/shortcomings) [do it](https://80000hours.org/about/credibility/evaluations/mistakes/). While I’m building my skills, I thought I’d keep track of coding mistakes I’ve made along the way. Whereas many of these seem obvious in hindsight, they each swallowed up tens of minutes or even hours of my time as I tried to figure out why I wasn’t getting the result I expected. I know that these aren’t exactly difficult ‘confessions’ to make, but some are at least mildly embarrassing, and will hopefully become more so as I continue my progression towards coding greatness :). 
-
-#Mistakes I've made coding (part 1)
 
 1. Don’t ignore the structure of an array. `np.array([[0], [1]])` is NOT the same as `np.array([0, 1])`. For some reason I tend to have array blindness when I’m in the middle of a problem.
 
@@ -37,7 +36,7 @@ Noticing when you did something wrong, or at least sub optimally, is an importan
 
 a = np.array([1,2,3])
 for i in range(len(a)):
-	a[i] = a[i]/2
+  a[i] = a[i]/2
 print a
 
 {% endhighlight %}
