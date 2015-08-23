@@ -34,23 +34,19 @@ Noticing when you did something wrong, or at least sub optimally, is an importan
 * Check the dtype of your numpy arrays before doing operations on them. I was in a situation where I wanted to halve all the values in an array, and reassign this to the old array. For some reason I decided to do this with a `for` loop. Even when I used `from __future__ import division` at the  start of my code, this:
 
    {% highlight python linenos %}
-
    a = np.array([1,2,3])
    for i in range(len(a)):
          a[i] = a[i]/2
    print a
-
    {% endhighlight %}
 
    returned:
 
    {% highlight python %}
-
    [0 1 1]
-
    {% endhighlight %}
 
-   If I had remembered to check `a.dtype`, I would have seen that `a` was an `int64` array. I should have specified the type when I created the array, or specified at least one of the elements as a float, which would have upcast(ed?) the entire array. This leads me on to....
+  If I had remembered to check `a.dtype`, I would have seen that `a` was an `int64` array. I should have specified the type when I created the array, or specified at least one of the elements as a float, which would have upcast(ed?) the entire array. This leads me on to....
 
 * Make use of numpy’s vectorisation potential. The following code is both cleaner and more [efficient](http://quantess.net/2013/09/30/vectorization-magic-for-your-computations/), and *will* return an array of floats (as long as you remember to use `from __future__ import division`) :
 
