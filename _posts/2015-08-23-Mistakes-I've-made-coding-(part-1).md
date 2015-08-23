@@ -42,7 +42,7 @@ Noticing when you did something wrong, or at least sub optimally, is an importan
 
 	    {% endhighlight %}
 
-   returned:
+        returned:
 
 	    {% highlight python %}
 
@@ -50,7 +50,7 @@ Noticing when you did something wrong, or at least sub optimally, is an importan
 
 	    {% endhighlight %}
 
-   If I had remembered to check `a.dtype`, I would have seen that `a` was an `int64` array. I should have specified the type when I created the array, or specified at least one of the elements as a float, which would have upcast(ed?) the entire array. This leads me on to....
+        If I had remembered to check `a.dtype`, I would have seen that `a` was an `int64` array. I should have specified the type when I created the array, or specified at least one of the elements as a float, which would have upcast(ed?) the entire array. This leads me on to....
 
 4. Make use of numpy’s vectorisation potential. The following code is both cleaner and more [efficient](http://quantess.net/2013/09/30/vectorization-magic-for-your-computations/), and *will* return an array of floats (as long as you remember to use `from __future__ import division`) :
 
