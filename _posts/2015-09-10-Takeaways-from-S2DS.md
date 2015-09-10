@@ -13,7 +13,7 @@ Conclusion: thesis writing = bad for coding. (Note: most of the past few weeks�
 
 Our last week was tiring. To get ready for our final presentations, my team ended up working all day, eating take-out dinner in front of our screens, and finishing up with a late-night work party in the kitchen. Over the following few days we gave two presentations (one to our cohort and one to our sponsor company), and had two celebratory nights out (one in a nice pub in Harrow-on-the-Hill, and one in the bar in the Oxo tower). I slept all weekend.
 
-<iframe src="//giphy.com/embed/ohqwEPmfK3Ouc" width="480" height="260" frameBorder="0" position=“center” class="giphy-embed" allowFullScreen></iframe>
+<iframe src="//giphy.com/embed/ohqwEPmfK3Ouc" width="480" height="260" frameBorder="0" align = "centre" class="giphy-embed" allowFullScreen></iframe>
 
 So, what were my main takeaways from the course?
 
