@@ -13,11 +13,11 @@ Conclusion: thesis writing = bad for coding. (Note: most of the past few weeks�
 
 Our last week was tiring. To get ready for our final presentations, my team ended up working all day, eating take-out dinner in front of our screens, and finishing up with a late-night work party in the kitchen. Over the following few days we gave two presentations (one to our cohort and one to our sponsor company), and had two celebratory nights out (one in a nice pub in Harrow-on-the-Hill, and one in the bar in the Oxo tower). I slept all weekend.
 
-<iframe src="//giphy.com/embed/ohqwEPmfK3Ouc" width="480" height="260" frameBorder="0" style="margin: 0 auto;" class="giphy-embed" allowFullScreen></iframe>
+<iframe src="//giphy.com/embed/ohqwEPmfK3Ouc" width="480" height="260" frameBorder="0" position=“center” class="giphy-embed" allowFullScreen></iframe>
 
 So, what were my main takeaways from the course?
 
-————————————————————————————————————————————
+**********************
 
 ### Size matters
 I’ve never previously had to work with data that wouldn’t fit into memory. A lot of the issues we had in my team during the first couple of weeks was deciding how to deal with a large dataset (>100 GB if we’d exported to csv). I was somehow (naively) surprised by this. Our solution (export small, randomised chunks to csvs) was fine for exploratory analyses and building our model, but if we’d have wanted to work routinely with much larger datasets we might have started using cluster computing big data tools like Hadoop and Spark. We had lectures about these technologies, but I haven’t got my head around how they work yet, how they relate to each other and when it’s appropriate to use them. Similarly, it was clear that databases are used much more in industry than they are in academia; SQL has been promoted to the top of my ’skills I need to brush up on’ list.
@@ -36,7 +36,8 @@ It’s a cliché, but it’s true: it doesn’t matter how great your data analy
 
 ### Don’t be too picky with your first job
 This advice was repeated several times by different data scientists that spoke to us, so it must bear mentioning here: it’s ok if you don’t get the perfect job first time. Better to try something, get the experience, and move on after a few months, than wait around forever- as long as you can justify to a new employer why you left your old position (maybe you didn’t enjoy that industry/wanted more mentorship from senior data scientists etc.).But you shouldn’t be moving around too much otherwise it doesn’t look good.
-————————————————————————————————————————————
+
+**********************
 
 I’ll wrap up there. Thanks for reading!
 
