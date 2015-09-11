@@ -131,6 +131,8 @@ void setup() {
   size(mapSize+2*borderSize, mapSize+2*borderSize);
   woman = new Pac (width/2, height/2, gridSize, speed);
   maze = new Maze (width/2, height/2, 30, 10);
+  /* @pjs preload="level_image7.jpg"; */
+  
   colMapImage = loadImage("level_image7.jpg");
   collisionArray();
   makeFoods();
