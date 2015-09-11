@@ -165,7 +165,7 @@ class Pac {
           gridY+=1;
         }
       }
-      delay(200);
+      //delay(200);
     }
   }
 }
