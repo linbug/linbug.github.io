@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh13220\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww25100\viewh13080\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
 \f0\fs24 \cf0 ---\
@@ -11,7 +11,11 @@ category: data science\
 comments: true\
 ---\
 \
-It\'92s been a busy couple of weeks, and there\'92s not been much time for blog writing in between lectures, working and evening events. This post gives an introduction to the data project I\'92ve been working on, the challenges we\'92ve experienced so far with the data, and where we are up to.\
+After five weeks of data science in London, S2DS is over. I think my Github contributions over the past few months are a good summary of what I\'92ve been up to. \
+\
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/Github_contributions.png\'94 title=\'93Github summer\'94 style="height: 600px;margin: 0 auto;"/>\
+\
+I mentioned last time that I was going to write a post about the data project I\'92ve been working on.\
 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 ##The project\
@@ -20,11 +24,11 @@ The project I\'92ve been working on here at S2DS is for [Intellifo]({\field{\*\f
 ###The dataset\
 Intelliflo initially provided us with a master dataset of clients (all anonymised) and their financial plans. This was in the form of a Microsoft SQL server database, with three tables: one containing information about the client (with columns like age, gender, salary etc.), another table containing information about the financial products (what type of product it is, when it was taken out, how much it\'92s currently worth, when it will mature etc.) and a final, much smaller table that linked the clients to their financial plans. Some clients in the database are associated with multiple plans, some have just one plan, and most have none at all. \
 \
-The dataset is much bigger than anything I\'92ve ever worked with. When the client and product tables are combined, there are over X million records. The database itself is ~75GB, but when exported to csv it\'92s well over 100GB. We had some fun in the first week trying to work out how to open and query the database with the tools we had to hand. Ideally we\'92d be hosting the database on a [server]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Database_server"}}{\fldrslt https://en.wikipedia.org/wiki/Database_server}}), which would do all the heavy lifting of data analysis, storage and manipulation. Unfortunately, we didn\'92t have server access and so had to problem-solve how to do our initial data exploration. Ultimately we ended up exporting a 0.01% random sample of the data to csv  so that we could each individually load this into memory, and figure out what we wanted to do next.\
+The dataset was much bigger than anything I\'92ve ever worked with. When the client and product tables are combined, there were X columns and several million records. If we\'92d have exported the whole database to csv (which we never did) it would have been well over 100GB. We had some fun in the first week trying to work out how to open and query the database with the tools we had to hand. Ideally we\'92d be hosting the database on a [server]({\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Database_server"}}{\fldrslt https://en.wikipedia.org/wiki/Database_server}}), which would do all the heavy lifting of data analysis, storage and manipulation. Unfortunately, we didn\'92t have server access and so had to problem-solve how to do our initial data exploration. Ultimately we ended up exporting a 0.01% random sample of the data to csv  so that we could each individually load this into memory, and figure out what we wanted to do next.\
 \
 ##Dimensionality reduction\
 \
-It was soon apparent that we were not lacking for features in our data: our combined dataset had over 300 columns. The first task we set ourselves was to cut out anything that didn\'92t seem useful.\
+It was soon apparent that we were not lacking for features in our data: our combined dataset had over 300 columns. The first task we set ourselves was to distil what we had into the \
 \
 many of the columns had very little data in them:\
 \
@@ -44,14 +48,16 @@ In one of our lectures this week, we were told to expect that in a typical data 
 \
 We also noticed that there were a lot of funky \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-##Skills I\'92ve learned so far\
+##Data exploration\
 \
-#### Size matters\
 \
-#### Collaborating on github\
-I\'92ve had limited experience working in a team on this platform. As a lone worker, you rarely have to deal with things many of the more complicated git features, like remembering to pull from the remote to update your local copy with whatever your team mate did, or resolving merge conflicts. In my team, we had a lack of understanding about committing, pulling and pushing workflows, and ended up with some really messy commit histories as a result. Getting a thorough understanding of how git works beyond the basics seems to be something people acquire after years of experience, rather than After some useful conversations with @ \'85. about best practices (he recommend we branch often, or get used to \
 \
-#### Teamwork, teamwork, teamwork\
-We\'92ve been working side by side almost all of the time. I really enjoy this element -  it means that successes are shared and problems can be brainstormed with others. However, it does mean that a much higher degree of mindfulness about \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+##Machine learning\
+\
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
 }
