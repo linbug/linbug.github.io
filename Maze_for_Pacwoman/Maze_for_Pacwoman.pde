@@ -173,7 +173,7 @@ class Pac {
 /////////////////////
 
 void setup() {
-  surface.setSize(mapSize+2*borderSize, mapSize+2*borderSize);
+  size(mapSize+2*borderSize, mapSize+2*borderSize);
   noStroke();
   rect(borderSize-20, borderSize-20, mapSize+40, mapSize+40);
   woman = new Pac (1, 1, gridSize);
