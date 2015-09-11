@@ -132,7 +132,7 @@ void setup() {
   woman = new Pac (width/2, height/2, gridSize, speed);
   maze = new Maze (width/2, height/2, 30, 10);
   /* @pjs preload="Arty_PacWoman/level_image7.jpg"; */
-  PImage colMapImage;
+  //PImage colMapImage;
   colMapImage = loadImage("Arty_PacWoman/level_image7.jpg");
   collisionArray();
   makeFoods();
