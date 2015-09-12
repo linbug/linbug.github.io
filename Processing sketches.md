@@ -2,6 +2,7 @@
 layout: page
 title: Processing sketches
 ---
+</script><script src="processing.js"></script>
 
 I first got into programming by making interactive games in [Processing](https://processing.org/). Processing is built on Java, but has a simplified syntax and a GUI where you can run your sketches. I found it to be a fun way to learn object-oriented programming principles.
 
