@@ -133,7 +133,7 @@ void setup() {
   maze = new Maze (width/2, height/2, 30, 10);
   /* @pjs preload="https://raw.githubusercontent.com/linbug/linbug.github.io/master/Arty_PacWoman/level_image7.jpg"; */
   //PImage colMapImage;
-  colMapImage = loadImage("https://raw.githubusercontent.com/linbug/linbug.github.io/master/Arty_PacWoman/level_image7.jpg");
+  PImage colMapImage = loadImage("https://raw.githubusercontent.com/linbug/linbug.github.io/master/Arty_PacWoman/level_image7.jpg");
   collisionArray();
   makeFoods();
 }
