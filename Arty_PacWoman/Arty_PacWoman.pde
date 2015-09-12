@@ -131,7 +131,7 @@ void setup() {
   size(mapSize+2*borderSize, mapSize+2*borderSize);
   woman = new Pac (width/2, height/2, gridSize, speed);
   maze = new Maze (width/2, height/2, 30, 10);
-  /* @pjs preload="Arty_PacWoman/level_image7.jpg"; */
+  /* @pjs preload="{{ site.base-url }}/Arty_PacWoman/level_image7.jpg"; */
   //PImage colMapImage;
   colMapImage = loadImage("{{ site.base-url }}/Arty_PacWoman/level_image7.jpg");
   collisionArray();
