@@ -15,10 +15,10 @@ Here are a couple of my sketches, based on the classic Pacman game (I call her P
 
 In this first sketch, I generated the maze by specifying an array of blocks where thePac and food can be generated.
 
-<canvas data-processing-sources="Maze_for_Pacwoman/Maze_for_Pacwoman.pde"></canvas>
+<canvas data-processing-sources="https://raw.githubusercontent.com/linbug/linbug.github.io/master/Maze_for_Pacwoman/Maze_for_Pacwoman.pde"></canvas>
 
 ##PacWoman with image maze
 
 This one is a little more freeform. The maze is an image I made in Adobe Illustrator, and Pac and food are not allowed to go wherever the teal coloured pixels are. This one allows me to generate funky angular maps :)  
 
-<canvas data-processing-sources="Arty_PacWoman/Arty_PacWoman.pde"></canvas>
+<canvas data-processing-sources="https://raw.githubusercontent.com/linbug/linbug.github.io/master/Arty_PacWoman/Arty_PacWoman.pde"></canvas>
