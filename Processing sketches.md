@@ -2,7 +2,8 @@
 layout: page
 title: Processing sketches
 ---
-<script src="processing.js">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.16/processing.min.js">
 
 </script>
 
