@@ -131,9 +131,9 @@ void setup() {
   size(mapSize+2*borderSize, mapSize+2*borderSize);
   woman = new Pac (width/2, height/2, gridSize, speed);
   maze = new Maze (width/2, height/2, 30, 10);
-  /* @pjs preload="https://raw.githubusercontent.com/linbug/linbug.github.io/master/Arty_PacWoman/level_image7.jpg"; */
+  /* @pjs preload="/Arty_PacWoman/level_image7.jpg"; */
   //PImage colMapImage;
-  PImage colMapImage = loadImage("https://raw.githubusercontent.com/linbug/linbug.github.io/master/Arty_PacWoman/level_image7.jpg");
+  colMapImage = loadImage("/Arty_PacWoman/level_image7.jpg");
   collisionArray();
   makeFoods();
 }

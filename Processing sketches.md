@@ -21,4 +21,4 @@ In this first sketch, I generated the maze by specifying an array of blocks wher
 
 This one is a little more freeform. The maze is an image I made in Adobe Illustrator, and Pac and food are not allowed to go wherever the teal coloured pixels are. This one allows me to generate funky angular maps :)  
 
-<canvas data-processing-sources="{{ site.base-url }}/Arty_PacWoman/Arty_PacWoman.pde"></canvas>
+I can't get this sketch to load correctly in this page, so [here](http://linbug.github.io/processing2) is a link.
