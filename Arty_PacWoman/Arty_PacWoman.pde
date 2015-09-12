@@ -133,7 +133,7 @@ void setup() {
   maze = new Maze (width/2, height/2, 30, 10);
   /* @pjs preload="Arty_PacWoman/level_image7.jpg"; */
   //PImage colMapImage;
-  colMapImage = loadImage("Arty_PacWoman/level_image7.jpg");
+  colMapImage = loadImage("{{ site.base-url }}/Arty_PacWoman/level_image7.jpg");
   collisionArray();
   makeFoods();
 }

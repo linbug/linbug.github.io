@@ -11,13 +11,13 @@ I first got into programming by making interactive games in [Processing](https:/
 
 Here are a couple of my sketches, based on the classic Pacman game (I call her PacWoman). Click on the sketch and use your arrow keys to control Pac. Source code [here](https://github.com/linbug/Maze_for_PacWoman).
 
-##[PacWoman with array maze](http://linbug.github.io/processing1) 
+##PacWoman with array maze
 
 In this first sketch, I generated the maze by specifying an array of blocks where thePac and food can be generated.
 
 <canvas data-processing-sources="{{ site.base-url }}/Maze_for_Pacwoman/Maze_for_Pacwoman.pde"></canvas>
 
-##[PacWoman with image maze]((http://linbug.github.io/processing2) 
+##PacWoman with image maze
 
 This one is a little more freeform. The maze is an image I made in Adobe Illustrator, and Pac and food are not allowed to go wherever the teal coloured pixels are. This one allows me to generate funky angular maps :)  
 
