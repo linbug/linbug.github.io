@@ -5,10 +5,12 @@ category: web scraping
 comments: true
 ---
 
-An advantage of knowing how to code is that you can build things to make your digital life better. A nice analogy I've heard is that coding is like building structures out of Lego, except you never run out of bricks.
+An advantage of knowing how to code is that you can build things to make your digital life better. A nice analo	gy I've heard is that coding is like building structures out of Lego, except you never run out of bricks.
 
 > Remember that Lego tool you could buy to help you pry bricks apart? Imagine if you could build that tool out of Lego bricks. 
 > We can use the skills we have for writing software to improve the tools we work with.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Lego_tower.jpg" title="There are a lot of pictures of lego on this blog" style="height: 600px;margin: 0 auto;"/>
 
 (from [here](http://blog.samstokes.co.uk/blog/2014/05/01/what-programming-is-like/))
 
@@ -18,7 +20,11 @@ Recently, a friend asked me to build a tool for him that would take his day's po
 
 [Beeminder](https://www.beeminder.com/) is goal tracking with commitment contracts. You set a quantifiable goal (in this case, 'earn X Fitocracy points every week') and keep track of your progress on the app. If you fall off the wagon (you can define what 'the wagon' is), you pledge money not to fall off next time. If you go off track again, you pay Beeminder some money. This threat of paying a small amount of money is better than willpower alone for incentivising people to work on their goals. There's a little more complexity to it, but that's it in a nutshell.
 
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/beeminder.png" title="Beeminder" style="margin: 0 auto;"/>
+
 One of the coolest Beeminder functionalities in my opinion is their built-in interaction with other sites or apps. For example, you can set up Beeminder to automatically track your Github pushes, you Gmail inbox size, or your Duolingo practice (amongst other things). All of this is achieved throught the magic of APIs.
+
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/beeminder2.png" title="Beeminder can interact with all these apps" style="margin: 0 auto;"/>
 
 ### What's an API?
 
