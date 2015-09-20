@@ -20,6 +20,7 @@ Recently, a friend asked me to build a tool for him that would take his day's po
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/fitocracy.png" title="Fitocracy (don't judge my points)" style="margin: 0 auto;"/>
 
+
 [Beeminder](https://www.beeminder.com/) is goal tracking with commitment contracts. You set a quantifiable goal (in this case, 'earn X Fitocracy points every week') and keep track of your progress on the app. If you fall off the wagon (you can define what 'the wagon' is), you pledge money not to fall off next time. If you go off track again, you pay Beeminder some money. This threat of paying a small amount of money is better than willpower alone for incentivising people to work on their goals. There's a little more complexity to it, but that's it in a nutshell.
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/beeminder.png" title="Beeminder" style="margin: 0 auto;"/>
