@@ -38,6 +38,7 @@ I used Selenium webdriver to scrape the data from Fitocracy. [Selenium](http://w
 
 ###FitBee
 
+My little program is called [FitBee](https://github.com/linbug/FitBee).
 I started by importing dependencies, and opening up an instance of webdriver in Chrome:
 
 {% highlight python linenos %}
@@ -104,7 +105,7 @@ my_beeminder.create_datapoint(
 
 Compared with the earlier complications of logging into Fitocracy and scraping the page, sending points to Beeminder via its API is beautifully simple. 
 
-You can see my full code and documentation for this project[here](https://github.com/linbug/FitBee).
+You can see my full code and documentation for this project [here](https://github.com/linbug/FitBee).
 
 -------------------------------------------------------------------------------------------------------------------
 
