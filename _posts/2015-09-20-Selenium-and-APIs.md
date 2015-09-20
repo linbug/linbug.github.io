@@ -1,11 +1,11 @@
 ---
 layout: post
-title: web scraping with Selenium and APIs
+title: Web scraping with Selenium and APIs
 category: web scraping
 comments: true
 ---
 
-An advantage of knowing how to code is that you can build things to make your digital life better. A nice analagy I've heard is that coding is like building structures out of Lego, except you never run out of bricks.
+An advantage of knowing how to code is that you can build things to make your digital life better. A nice analogy I've heard is that coding is like building structures out of Lego, except you never run out of bricks.
 
 > Remember that Lego tool you could buy to help you pry bricks apart? Imagine if you could build that tool out of Lego bricks. 
 > We can use the skills we have for writing software to improve the tools we work with.
@@ -39,6 +39,7 @@ I used Selenium webdriver to scrape the data from Fitocracy. [Selenium](http://w
 ###FitBee
 
 My little program is called [FitBee](https://github.com/linbug/FitBee).
+
 I started by importing dependencies, and opening up an instance of webdriver in Chrome:
 
 {% highlight python linenos %}
@@ -109,7 +110,7 @@ You can see my full code and documentation for this project [here](https://githu
 
 -------------------------------------------------------------------------------------------------------------------
 
-Although this little hack works ok, it's not optimum. Selenium opens a browser window every time and loads all the elements, which is slow and unnecessary, since we don't need to watch what it's doing. Memory-wise and stylistically, a [headless](https://en.wikipedia.org/wiki/Headless_browser) browser instance (without a graphical interface) would be preferable. I tried making my browser headless using [PhantomJS](http://phantomjs.org/), but ran into issues which I still haven't resolved (see [here](http://stackoverflow.com/questions/32521196/phantomjs-cannot-find-an-element-where-chromedriver-can) and [here](http://stackoverflow.com/questions/32629265/use-phantomjs-evaluate-function-from-within-selenium). This is an ongoing project - if you can help with my headless issues please get in touch!
+Although this little hack works ok, it's not optimum. Selenium opens a browser window every time and loads all the elements, which is slow and unnecessary, since we don't need to watch what it's doing. Memory-wise and stylistically, a [headless](https://en.wikipedia.org/wiki/Headless_browser) browser instance (without a graphical interface) would be preferable. I tried making my browser headless using [PhantomJS](http://phantomjs.org/), but ran into issues which I still haven't resolved (see [here](http://stackoverflow.com/questions/32521196/phantomjs-cannot-find-an-element-where-chromedriver-can) and [here](http://stackoverflow.com/questions/32629265/use-phantomjs-evaluate-function-from-within-selenium)). This is an ongoing project - if you can help with my headless issues please get in touch!
 
 <iframe src="//giphy.com/embed/lmIqAkw7nfBm0" width="480" height="247" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
