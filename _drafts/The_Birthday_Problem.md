@@ -11,17 +11,25 @@ I'm currently on lecture 5, and so far we've covered counting and combinatronics
 
 ##The Birthday Problem
 The Birthday Problem asks: 
-*How many people do we need in a room before there is a 50/50 chance that two of them share a birthday?*
+*How many people do we need at a party before there is a 50/50 chance that two of them share a birthday?*
 
 Two people sharing a birthday is awkward, especially if you share a group of friends with that person. The Birthday Problem is an example of probability problem where the answer contradicts our intuitions. At first glance it seems like you would need loads of people before before there is a 50% chance that two will share the same birthday. 100 maybe? The actual answer is *23* (that is, assuming that all birthdays are equally likely, and excluding people born on [Feb 29](https://en.wikipedia.org/wiki/February_29), which only happens once every 4 years).
 
 How can we explain this seemingly unintuitive result? 
-Joe explains it in terms of 
 
-First, let's think about how many people we'd need to be absolutely certain that two people have the same birthday. Using the [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle), we know that if we have 365 'holes' (birthdays) that people can fit into, then with 366+ 'pigeons' (people born on a specific day)
+First, let's think about how many people we'd need to be absolutely certain that two people have the same birthday. Using the [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle), imagine that we have 365 pigeon boxes in an aviary, each of which is labelled with a date. So box one is labelled, 'Jan 1', box two is labelled 'Jan 2', and so on. Now, if we have a large pigeon collection, with over 366+ birds, we know that at least two pigeons are going to have to share a box. (people born on a specific day) at least two pigeons/people will have to inhabit the same hole. By the same token, if we have over 365 people at a party, by default two will share the same birthday.
 
-<iframe src="//giphy.com/embed/TlK63Eu0ViBklB4v5RK" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/boxes.jpg" title="Holes for pigeons" style="height: 600px;margin: 0 auto;"/>
 
-So if \\k\\ represents our group of people, if \\k > 365\\, then the probability of having a dual 
+Using our mathematical notation, if \\k\\ represents our group of people, when \\k > 365\\ then the probability of having a dual birthday is 1 (it's absolutely guaranteed to happen).
+
+At the opposite extreme, if we have only one pigeon, it's absolutely impossible that it's going to share a hole with another pigeon. There just aren't enough pigeons! :( So this time if \\k = 1\\ then the probability of a shared birthday is 0.
+
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/lonely.jpg" title="Dinner for one?" style="height: 600px;margin: 0 auto;"/>
+
+What if the number of people at our party is between 2 and 365? How do we calculate the probability that there will be a shared birthday? It's easier to first work out what is the probability that *noone* will share a birthday, and then simply take this value away from one to find the probability that at least two people will share a birthday (this is one of the [axioms of probability](https://onlinecourses.science.psu.edu/stat414/node/8))
+
+So for \\k\\ people, the total number of possible combiations of birthdays that we could have is just \\365^k\\, because we have 365 possible days for each person, and each person's birthday is independent of every other's so we just use the multiplication rule to calculate the number of possible permutations. 
+probability that noone will share a birthday will be 
 
 If you're taking this course, I can recommend William Chen's [cheat sheet](https://datastories.quora.com/The-Only-Probability-Cheatsheet-Youll-Ever-Need).
