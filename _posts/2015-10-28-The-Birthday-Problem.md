@@ -39,7 +39,7 @@ In order to work this out, we'll use what Joe calls the [naive definition of pro
 
 $$P(A) = \frac{number \;of\;outcomes\;possible\;for\;A}{number\;of\;total\;possible\;outcomes}$$
 
-I'll break this down into two parts; the numerator and the denominator.
+In this case, \\(A\\) is the event that noone will share a birthday at the party. I'll break this down into two parts; the numerator and the denominator.
 
 ###The denominator: number of total possible outcomes
 
@@ -151,18 +151,18 @@ It's all well and good accepting this proof, but it's also fun to test this out 
 
 I exported all 340 of my facebook friend's birthdays to .ics format, and then loaded this into pandas. Some munging was needed but it's not very interesting; if you care about it you can see the ipython notebook [here](http://nbviewer.ipython.org/github/linbug/linbug.github.io/blob/master/_downloads/Birthdays.ipynb). 
 
-I plotted out the birthdays on a histogram:
+I plotted out the frequency of birthdays per day on a histogram:
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/birthday_hist.png" title="facebook friends' birthdays" style="margin: 0 auto;"/>
 
-The dates are in the format mm/dd along the x axis. There seems to me to be a pretty even distribution of birthdays throughout the year. August 8 is a particularly birthday-rich day amongst my facebook friends.
+The dates are in the format mm/dd along the x axis. There seems to me to be a pretty even distribution of birthdays throughout the year. August 8 is a particularly birthday-rich day amongst my facebook friends. Note that days with no birthdays are not shown.
 
 Now let's do some [bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) to generate fake parties with randomised groups of my facebook friends (can you imagine organising parties like this in real life? It would probably be really awkward).
 
 <iframe src="//giphy.com/embed/aTUAoYk7Tj87S" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 
-Here's a function that repeatedly resamples a group of \\(k\\) people from my facebook friends 1000x (with replacement after each party), and figures out whether or not there are any shared birthdays within each group:
+Here's a function that repeatedly resamples a group of \\(k\\) people from my facebook friends 1000x (with replacement after each party), and figures out whether or not there are any shared birthdays within each group. It then calculates the proportion of the 1000 terribly awkward parties that contained participants with shared birthdays:
 
 {% highlight python linenos %}
 
