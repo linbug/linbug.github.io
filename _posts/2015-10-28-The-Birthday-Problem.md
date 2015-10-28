@@ -207,7 +207,7 @@ You can see that there's the same general shape as before. Aren't you glad that 
 
 ---------------------------------------------------------------------------------------------------------------
 
-My ipython notebook for these analyses are available [here](http://nbviewer.ipython.org/github/linbug/linbug.github.io/blob/master/_downloads/Birthdays.ipynb). If you're taking this course, I can recommend William Chen's great [cheat sheet](https://datastories.quora.com/The-Only-Probability-Cheatsheet-Youll-Ever-Need). Thanks for reading!
+My ipython notebook for these analyses is available [here](http://nbviewer.ipython.org/github/linbug/linbug.github.io/blob/master/_downloads/Birthdays.ipynb). If you're taking this course, I can recommend William Chen's great [cheat sheet](https://datastories.quora.com/The-Only-Probability-Cheatsheet-Youll-Ever-Need). Thanks for reading!
 
 <div id="disqus_thread"></div>
 <script>
