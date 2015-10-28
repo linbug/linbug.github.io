@@ -25,7 +25,7 @@ How did we arrive at the answer 23?
 
 First, let's think about how many people we'd need to be absolutely certain that two people have the same birthday. Using the [pigeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle), imagine that we have 365 pigeon boxes in an aviary, each of which is labelled with a date. So box one is labelled, 'Jan 1', box two is labelled 'Jan 2', and so on. Now, if we have a large pigeon collection, with over 366+ birds, we know that at least two pigeons are going to have to share a box. By the same token, if we have over 365 people at a party, by default two will share the same birthday.
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/boxes.jpg" title="Holes for pigeons" style="height: 600pxmargin: 0 auto;"/>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/boxes.jpg" title="Holes for pigeons" style="height: 600px;margin: 0 auto;"/>
 
 Using mathematical notation, if \\(k\\) represents how many people are at the party, when \\(k > 365\\) then the probability of having a dual birthday is 1 (i.e. it's absolutely guaranteed to happen).
 
@@ -33,7 +33,7 @@ At the opposite extreme, if we have only one pigeon, it's absolutely impossible 
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/lonely.jpg" title="Dinner for one?" style="height: 600px;margin: 0 auto;"/>
 
-So we know that our probabilities will range from 0 (when \\(k = 1\\)) to 1 (when \\(k >= 365\\)). What if the number of people at our party is between 2 and 365? How do we calculate the probability that there will be a shared birthday? In this case, it's easier to first work out what is the probability that *noone* will share a birthday, and then simply take this value away from one to find the probability that at least two people will share a birthday (this rule is one of the [axioms of probability](https://onlinecourses.science.psu.edu/stat414/node/8)).
+So we know that our probabilities will range from 0 (when \\(k = 1\\)) to 1 (when \\(k >= 365\\)). What if the number of people at our party is between 2 and 365? How do we calculate the probability that there will be a shared birthday with an intermediate number of people? In this case, it's easier to first work out what is the probability that *noone* will share a birthday, and then simply take this value away from one to find the probability that at least two people will share a birthday (this rule is one of the [axioms of probability](https://onlinecourses.science.psu.edu/stat414/node/8)).
 
 In order to work this out, we'll use what Joe calls the [naive definition of probability](http://www.eecs.harvard.edu/~dcai/notes/stat110.pdf). Very simply, this is just the version of probability most people are familiar with from school:
 
@@ -61,13 +61,15 @@ If we generalise this to all values of \\(k\\), we get:
 
 $$365\times 364\times 363 \times \cdots (365 - k + 1)$$
 
+This is how many possible combinations of non-matching birthdays there are if there are \\(k\\) people at the party.
+
 ###Putting it all together
 
 If we put our numerator and our denominator together, the general rule for finding the probability that *no people* in a party of \\(k\\) people will share the same birthday is:
 
 $$\frac{365\times 364\times 363 \times \cdots (365 - k + 1)}{365^k}$$
 
-So the probability that within a group of \\(k\\) people *at least 2 people* will share the same birthday is:
+So, using the axiom of probability I mentioned above, the probability that within a group of \\(k\\) people *at least 2 people* will share the same birthday is:
 
 $$1 - \dfrac{365\times 364\times 363 \times \cdots (365 - k + 1)}{365^k}$$
 
@@ -77,9 +79,9 @@ Which, if we plug in \\(k = 23\\) returns just over 0.5.
 
 ##Thinking about intuition
 
-Ok, ok, so maybe that explanation still doesn't feel all that intuitive yet. Try thinking about it like this: consider the number of *pairs* of people as the party size increases. For any group of people of size \\(k\\), there are \\(\binom{k}{2}\\) possible pairs (using the [binomial coefficient](https://www.khanacademy.org/math/probability/probability-and-combinatorics-topic/combinations-combinatorics/v/combination-formula)). So if there are 2 people at the party there is \\(\binom{2}{2} = 1\\) possible pairing, with 10 people there are \\(\binom{10}{2} = 45\\) possible pairings, and with 23 people there are \\(\binom{23}{2} = 253\\) possible pairings. So, at a party of 23 people, there are 253 opportunities for two people to share a birthday. Now that 50% likelihood probability doesn't seem so unintuitive.
+Ok, ok, so maybe that explanation still doesn't feel all that intuitive yet. Try thinking about it like this: consider the number of *pairs* of people as the party size increases. For any group of people of size \\(k\\), there are \\(\binom{k}{2}\\) possible pairs (using the [binomial coefficient](https://www.khanacademy.org/math/probability/probability-and-combinatorics-topic/combinations-combinatorics/v/combination-formula)). So if there are 2 people at the party there is only \\(\binom{2}{2} = 1\\) possible pairing, with 10 people there are \\(\binom{10}{2} = 45\\) possible pairings, and with 23 people there are \\(\binom{23}{2} = 253\\) possible pairings. So, at a party of 23 people, there are 253 opportunities for two people to share a birthday. Now that 50% likelihood probability doesn't seem so unintuitive after all.
 
-Another way to think about it is that when many people hear the birthday problem for the first time, they interpret it as 'what is the probability that *I* will share a birthday with someone at the party?'. That is a different problem than the one that was asked, and the likelihood of that is of course much lower. But it's not all about you! There's also all the possible pairs involving the other people at the party. Their shared birthdays are also important :D
+Another way to think about it is that when many people hear the birthday problem for the first time, they interpret it as 'what is the probability that *I* will share a birthday with someone at the party?'. That is a different problem than the one that was asked, and the likelihood of that is of course much lower. But it's not all about you! There's also all the possible pairs involving the other people at the party, each of which could result in a shared birthday. Their special days are also important :D
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -110,7 +112,7 @@ birthdays['k'] = birthdays.index
 
 {% endhighlight %}
 
-Then I make a function that will calculate the probability of a shared birthday for a given group of people:
+Then I make a function that will calculate the probability of a shared birthday for a given group of \\(k\\) people:
 
 {% highlight python linenos %}
 
@@ -160,7 +162,7 @@ Now let's do some [bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(s
 <iframe src="//giphy.com/embed/aTUAoYk7Tj87S" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 
-Here's a function that repeatedly resamples a group of k people from my facebook friends 1000x (with replacement after each party), and figures out whether or not there are any shared birthdays within each group:
+Here's a function that repeatedly resamples a group of \\(k\\) people from my facebook friends 1000x (with replacement after each party), and figures out whether or not there are any shared birthdays within each group:
 
 {% highlight python linenos %}
 
@@ -201,7 +203,7 @@ plt.savefig("fb_probabilities")
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/fb_probabilities.png" title="Awkward fb parties" style="margin: 0 auto;"/>
 
-You can see that there's the same general shape as before. Maths FTW! (Note: although we get pretty close to a likelihood of 1 after 50 people, it never reaches 1 because I don't have enough fb friends D:)
+You can see that there's the same general shape as before. Aren't you glad that we didn't have to have thousands of actual parties to figure that out? Programming FTW! 
 
 ---------------------------------------------------------------------------------------------------------------
 
