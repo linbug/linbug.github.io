@@ -5,6 +5,8 @@ category: programming
 comments: true
 ---
 
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/new-york-snow.jpg” title=“Squeeee!” style="height: 600px;margin: 0 auto;"/>
+
 A short post - more of a status update really. I have a big project coming up over the next coming months: I’m going to be attending the Winter 1 batch at the [Recurse Centre](https://www.recurse.com/), an educational retreat for programmers!  Today I flew into New York, and tomorrow is the first day of three months’ intensive programming (as well as meeting lots of interesting people!).
 
 The Recurse Centre is entirely self-directed; you can work on whatever you like whilst you're there, as long as you're getting better at programming. They place a great emphasis on diving deep into topics, and taking the time to learn things that you wouldn't normally (due to other commitments getting in the way). You are also encouraged to work collaboratively, and apparently many projects arise spontaneously.  I'm joining a cohort (known as a 'batch') of 15-30 people from lots of different backgrounds and experience levels. Batches overlap, so that traditions can be passed on between cohorts.
