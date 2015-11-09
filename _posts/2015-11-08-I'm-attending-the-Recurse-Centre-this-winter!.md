@@ -5,7 +5,7 @@ category: programming
 comments: true
 ---
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/new-york-snow.jpg” title=“Squeeee!” style="height: 600px;margin: 0 auto;"/>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/new-york-snow.jpg" title="Squeeee!" style="height: 600px;margin: 0 auto;"/>
 
 A short post - more of a status update really. I have a big project coming up over the next coming months: I’m going to be attending the Winter 1 batch at the [Recurse Centre](https://www.recurse.com/), an educational retreat for programmers!  Today I flew into New York, and tomorrow is the first day of three months’ intensive programming (as well as meeting lots of interesting people!).
 
