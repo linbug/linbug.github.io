@@ -4,14 +4,14 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
+
 
 # Setup
 title:            Linbug
 tagline:          'A blog about data science'
 description:      'From life science to data science'
 url:              http://linbug.github.io/
-baseurl:          http://linbug.github.io/
+baseurl:          ""
 
 author:
   name:           'Lin Taylor'
@@ -24,3 +24,4 @@ paginate:         5
 avatar:           https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 github:           linbug
 
+gems: [jekyll-paginate]
