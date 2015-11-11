@@ -24,3 +24,4 @@ paginate:         5
 avatar:           https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 github:           linbug
 
+gems: [jekyll-paginate]
