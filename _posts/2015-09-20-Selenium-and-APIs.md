@@ -60,7 +60,7 @@ driver = webdriver.Chrome(executable_path = path_to_chromedriver)
 
 {% endhighlight %}
 
-I need `time` for adding wait steps, `selenium` for interacting with Fitocracy and `beeminderpy` for interacting with the Beemider API.
+I need `time` for adding wait steps, `selenium` for interacting with Fitocracy and `beeminderpy` for interacting with the Beeminder API.
 
 I then open up Fitocracy in my browser window, and login:
 
