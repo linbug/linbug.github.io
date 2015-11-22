@@ -71,8 +71,8 @@ Endless hours of fun! I tried encoding a tune with this but I think the output s
 
 
 <script src = "http://d3js.org/d3.v3.min.js"></script>
-<script src = "riffwave.js"></script>
-<script src = "pianoviz.js"></script>
+<script src = "{{ site.base-url }}/riffwave.js"></script>
+<script src = "{{ site.base-url }}/pianoviz.js"></script>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
