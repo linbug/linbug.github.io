@@ -4,7 +4,6 @@ title: Thanksgiving tweets
 categories: []
 tags: []
 comments: true
-
 ---
 
 This week, I've been exploring scraping tweets using Twitter's API. I wrote previously about APIs [here](http://linbug.github.io/web%20scraping/2015/09/20/Selenium-and-APIs/). 
