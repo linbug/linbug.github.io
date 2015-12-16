@@ -20,7 +20,6 @@ author:
 paginate:         5
 
 # Custom vars
-          
 avatar:           https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 github:           linbug
 
