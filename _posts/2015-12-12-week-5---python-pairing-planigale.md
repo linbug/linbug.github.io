@@ -1,9 +1,8 @@
 ---
-layout:
+layout: post
 title: Week 5 - Python, Pairing, Planigale
 categories: []
 tags: []
-
 ---
 
 Last week was my most productive so far at RC, both in terms of outputs and in terms of learning. I decided I wanted a break from Twitter, and so I paired all week with [Dave](https://github.com/dvndrsn) on a matching game in Python. The original aim was to practice and get better at Python, but along the way we've also learned about APIs, object-oriented programming, git workflows and Flask apps. I'll highlight in this blog post whenever I'm talking about a concept that was new to me personally.
