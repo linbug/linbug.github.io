@@ -12,7 +12,7 @@ We also have [GoogleAnalytics](https://www.google.com/analytics/) so we can see 
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/google_analytics0.png" title="World level" style="margin: 0 auto;"/>
 
-You can also see where in the world people are who are playing! Creepy.
+You can also see where in the world people are playing! Creepy.
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/google_analytics.png" title="World level" style="margin: 0 auto;"/>
 
