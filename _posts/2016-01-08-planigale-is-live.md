@@ -10,7 +10,7 @@ tags: [victory]
 
 We also have [GoogleAnalytics](https://www.google.com/analytics/) so we can see statistics about visitors to our site. Here's the breakdown of sessions played since we went live on Wednesday:
 
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/google_analytics0.png" title="World level" style="margin: 0 auto;"/>
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/google_analytics0.png" title="Google stats" style="margin: 0 auto;"/>
 
 You can also see where in the world people are playing! Creepy.
 
