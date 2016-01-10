@@ -8,7 +8,7 @@ tags: [victory]
 
 ***VICTORY POINTS UPDATE***:  **[Dave](http://dvndrsn.com/) and I finally got [Planigale](http://planigale.dvndrsn.com/) up and running!**
 
-We also have [GoogleAnalytics](https://www.google.com/analytics/) so we can statistics about visitors to our site. Here's the breakdown of sessions played since we went live on Wednesday:
+We also have [GoogleAnalytics](https://www.google.com/analytics/) so we can see statistics about visitors to our site. Here's the breakdown of sessions played since we went live on Wednesday:
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/google_analytics0.png" title="World level" style="margin: 0 auto;"/>
 
