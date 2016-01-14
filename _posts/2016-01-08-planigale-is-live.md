@@ -6,7 +6,11 @@ tags: [victory]
 
 ---
 
-***VICTORY POINTS UPDATE***:  **[Dave](http://dvndrsn.com/) and I finally got [Planigale](http://planigale.dvndrsn.com/) up and running!**
+***UBER VICTORY POINTS UPDATE 11/1/2016***: **Planigale was featured on [Jerry Coyne's blog!!](https://whyevolutionistrue.wordpress.com/2016/01/11/a-fun-and-educational-wildlife-quiz/)**
+
+---------------------------------------------------------------
+
+[Dave](http://dvndrsn.com/) and I finally got [Planigale](http://planigale.dvndrsn.com/) up and running!
 
 We also have [Google Analytics](https://www.google.com/analytics/) so we can see statistics about visitors to our site. Here's the breakdown of sessions played since we went live on Wednesday:
 
