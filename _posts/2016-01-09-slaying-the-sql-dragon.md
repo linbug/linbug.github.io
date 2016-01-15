@@ -1,12 +1,12 @@
 ---
-layout:
+layout: post
 title: Slaying the SQL dragon
 categories: [SQL, databases]
 tags: []
 
 ---
 
-I think every developer has tools or techniques that they're scared of using. Some magic that doesn't make sense, so you avoid using it in the hopes it will go away. Maybe for some people it is multiple inheritence, for others functional programming. For me, it's databases. I'm not really sure where my fear of databases came from. Maybe it's because you have to use a special alien language to speak to them. Maybe it's because they can be large and unwieldy and difficult to look at all at once. I don't really know. All I know is, it's time to slay this dragon. Or rather, not slay it, but learn how to speak to it nicely so that it will give me gold :D. What follows below is my brief introduction to <s>dragons</s> relational databases.
+I think many developers have tools or techniques that they're scared of using. Some magic that doesn't make sense, so they avoid using it in the hopes it will go away. Maybe for some people it is multiple inheritence, for others functional programming. For me, it's databases. I'm not really sure where my fear of databases came from. Maybe it's because you have to use a special alien language to speak to them. Maybe it's because they can be large and unwieldy and difficult to look at all at once. I don't really know. All I know is, it's time to slay this dragon. Or rather, not slay it, but learn how to speak to it nicely so that it will give me gold :D. What follows below is my brief introduction to <s>dragons</s> relational databases.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/19360-black-chinese-dragon-1920x1080-artistic-wallpaper.jpg" title= "here be SQL" style="margin: 0 auto;"/>
 
@@ -19,7 +19,8 @@ Different relationships can link columns within and between tables in a relation
 Why not just use one big flat table? Why bother with linking between different tables? There are several advantages to relational databases compared to a standard flat file:
 
 1. Data is only stored once
-You don’t need to have multiple records for a single entity. Let’s say for example you have a database of ten friends in your address book, and these ten friends collectively live in four different cities. You can have two tables in your database, one for friend names and street address, and one for cities. You can create links between rows in your cities and friends tables without the need to duplicate any information. This is good for several reasons:
+
+    You don’t need to have multiple records for a single entity. Let’s say for example you have a database of ten friends in your address book, and these ten friends collectively live in four different cities. You can have two tables in your database, one for friend names and street address, and one for cities. You can create links between rows in your cities and friends tables without the need to duplicate any information. This is good for several reasons:
 
     - Less duplication means the database takes up less space and so is more memory efficient.
 
@@ -28,15 +29,20 @@ You don’t need to have multiple records for a single entity. Let’s say for e
     - It should also be much easier to change information if it only exists in one place, e.g. if for some bizarre reason the UK decided to change the name of London to ’Jabberwocky’, you’d only have to update this information once in our fictitious relational database of addresses.
 
 2. Data has a fixed type
-This means that your text will always be interpreted as text, your numbers as numbers, your dates as dates. You can avoid typos like *iO* instead of 10.
 
-3. You can apply complex queries to the database to pull out exactly the information you want, from multiple tables at once. You can use these queries for further analysis without having to duplicate your data, as you might do in an Excel spreadsheet, thus cutting out the middle man.
+    This means that your text will always be interpreted as text, your numbers as numbers, your dates as dates. You can avoid typos like *iO* instead of 10.
+
+3. You can apply complex queries
+
+    ...to pull out exactly the information you want, from multiple tables at once. You can use these queries for further analysis without having to duplicate your data, as you might do in an Excel spreadsheet, thus cutting out the middle man.
 
 4. It’s easier to maintain security
-By splitting the data up into separate tables, you can ensure that in certain situations, only part of the data can be made accessible to a particular individual. For example, if you are using a database for a web application, you might want to restrict an individual user to their own information, instead of giving them access to all of the email addresses of everyone signed up to your service.
+
+    By splitting the data up into separate tables, you can ensure that in certain situations, only part of the data can be made accessible to a particular individual. For example, if you are using a database for a web application, you might want to restrict an individual user to their own information, instead of giving them access to all of the email addresses of everyone signed up to your service.
 
 5. You can cater to future requirements
-It’s easy to add more data that are not yet needed, but might be in the future. For example, you might be going to a cheese rolling convention in Manhattan, where you anticipate making lots of new friends from around the world. In preparation for your trip, you could expand your cities table in you friend address database to include all of the cities in the world, even though they aren't being referenced by anything yet. You can’t do this with a flat table. Of course, designing a database from scratch that is extensible and maintainable can be really tricky, as demonstrated in this fun blog post about [designing the most egalitarian marriage database](http://qntm.org/gay).
+
+    It’s easy to add more data that are not yet needed, but might be in the future. For example, you might be going to a cheese rolling convention in Manhattan, where you anticipate making lots of new friends from around the world. In preparation for your trip, you could expand your cities table in you friend address database to include all of the cities in the world, even though they aren't being referenced by anything yet. You can’t do this with a flat table. Of course, designing a database from scratch that is extensible and maintainable can be really tricky, as demonstrated in this fun blog post about [designing the most egalitarian marriage database](http://qntm.org/gay).
 
 ##Interacting with relational databases
 Data manipulation in relational databases is performed by making queries in Structured Query Language (SQL). All SQL operations do one of four fundamental types of operation:
@@ -51,7 +57,7 @@ Data manipulation in relational databases is performed by making queries in Stru
 
 These all add up to the delightful acronym 'CRUD'.
 
-Wikipedia says that SQL is based on [relational algebra](https://en.wikipedia.org/wiki/Relational_algebra) and [tuple relational calculus](https://en.wikipedia.org/wiki/Tuple_relational_calculus). I don't know what those are, but what I should take from that is that SQL's roots are in mathematics, and not programming. Thus, you're not allowed to get annoyed if SQL isn't like you're favourite programming language. It's a fundamentally different thing.
+Wikipedia says that SQL is based on [relational algebra](https://en.wikipedia.org/wiki/Relational_algebra) and [tuple relational calculus](https://en.wikipedia.org/wiki/Tuple_relational_calculus). I don't know what those are, but what I should take from that is that SQL's roots are in mathematics. It is not a programming language. Thus, you're not allowed to get annoyed if SQL isn't like you're favourite programming language. It's a fundamentally different thing.
 
 Learning SQL syntax is a whole massive topic in itself. I found the following resources to be helpful:
 
@@ -66,7 +72,7 @@ Sigh. Just when you thought you were getting the hang of things, you find out th
 
 ---------------------------------------------------------------------------------------------------------------
 
-Thus ends my short introduction to relational databases. I'm currently working on a project to build an API for some [NASA rainfall data](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=TRMM_3B43D&date=2015-09-01). This involves working with GIS data, which is another level of complexity. I'll write up this project in another post.
+Thus ends my very short introduction to relational databases. I'm currently learning to speak SQL by working on a project to build an API for some [NASA rainfall data](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=TRMM_3B43D&date=2015-09-01). This involves working with GIS data, which is another level of complexity. I'll write up this project in another post.
 
 
 
