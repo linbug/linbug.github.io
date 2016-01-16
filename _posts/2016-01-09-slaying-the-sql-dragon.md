@@ -22,7 +22,7 @@ Why not just use one big flat table? Why bother with linking between different t
 
     You don’t need to have multiple records for a single entity. Let’s say for example you have a database of ten friends in your address book, and these ten friends collectively live in four different cities. You can have two tables in your database, one for friend names and street address, and one for cities. You can create links between rows in your cities and friends tables without the need to duplicate any information. This is good for several reasons:
 
-    - Less duplication means the database takes up less space and so is more memory efficient.
+    - Less duplication means the database takes up less space and so is more storage efficient.
 
     - Since there’s no duplication, you also eliminate possible inconsistencies, for example if you had a column in a single flat table for city, you might end up with some items misspelled (e.g. ‘Londn’ instead of ‘London’).
 
@@ -42,7 +42,7 @@ Why not just use one big flat table? Why bother with linking between different t
 
 5. You can cater to future requirements
 
-    It’s easy to add more data that are not yet needed, but might be in the future. For example, you might be going to a cheese rolling convention in Manhattan, where you anticipate making lots of new friends from around the world. In preparation for your trip, you could expand your cities table in you friend address database to include all of the cities in the world, even though they aren't being referenced by anything yet. You can’t do this with a flat table. Of course, designing a database from scratch that is extensible and maintainable can be really tricky, as demonstrated in this fun blog post about [designing the most egalitarian marriage database](http://qntm.org/gay).
+    It’s easy to add more data that are not yet needed, but might be in the future. For example, you might be going to a cheese rolling convention in Manhattan, where you anticipate making lots of new friends from around the world. In preparation for your trip, you could expand your cities table in you friend address database to include all of the cities in the world, even though they aren't being referenced by anything yet. You can’t do this with a flat table (well, you could, but not without adding a lot of ugly null values). Of course, designing a database from scratch that is extensible and maintainable can be really tricky, as demonstrated in this fun blog post about [designing the most egalitarian marriage database](http://qntm.org/gay).
 
 ##Interacting with relational databases
 Data manipulation in relational databases is performed by making queries in Structured Query Language (SQL). All SQL operations do one of four fundamental types of operation:
@@ -65,7 +65,7 @@ Learning SQL syntax is a whole massive topic in itself. I found the following re
 - [SQL zoo](http://sqlzoo.net/w/index.php?title=SQL_Tutorial&redirect=no)
 
 ##Database Management Systems (DBMSs)
-To complicate things further, there are lots of different kinds of systems for letting a user and other applications communicate with a database. Popular DBMSs include PostGreSQL, MySQL, Microsoft SQL Server, Oracle and SQLite. They all have slightly different advantages and disadvantages. Of these, SQLite is the major odd one out as it doesn't have a client-server architecture (the database lives on a computer server, and is accessed from a separate machine, which is the client); SQLite is actually embedded in the end program itself. This makes it a good DBMS to start playing around with, as you don't need to fiddle around with servers.
+To complicate things further, there are lots of different kinds of systems for letting a user and other applications communicate with a database. Popular DBMSs include PostgreSQL, MySQL, Microsoft SQL Server, Oracle and SQLite. They all have slightly different advantages and disadvantages. Of these, SQLite is the major odd one out as it doesn't have a client-server architecture (the database lives on a computer server, and is accessed from a separate machine, which is the client); SQLite is actually embedded in the end program itself. This makes it a good DBMS to start playing around with, as you don't need to fiddle around with servers.
 
 ##What about NoSQL??
 Sigh. Just when you thought you were getting the hang of things, you find out there is another kind of database called NoSQL. NoSQL is a kind of non-relational database with a completely different kind of architecture. NoSQL is supposed to be more scalable and fixes problems with the relational model. People on the internet seem to treating it like it is the hot new thing. I don't even want to think about this right now; I'll mentally bookmark it for later.
