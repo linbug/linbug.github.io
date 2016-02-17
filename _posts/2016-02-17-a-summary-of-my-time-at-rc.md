@@ -33,7 +33,7 @@ I also learned less tangible stuff:
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/bad_code.jpg" title="Universal solution" style="height: auto;margin: 0 auto;"/>
 
-#The best bits
+# The best bits
 
 Here's my RC highlights reel:
 

@@ -10,13 +10,13 @@ I think many developers have tools or techniques that they're scared of using. S
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/19360-black-chinese-dragon-1920x1080-artistic-wallpaper.jpg" title= "here be SQL" style="margin: 0 auto;"/>
 
-##What is a relational database?
+## What is a relational database?
 
 A [relational database](https://en.wikipedia.org/wiki/Relational_database) is a digital database organised according to the [relational model](https://en.wikipedia.org/wiki/Relational_model) of data: a simple set of concepts that allows us to build very complex data structures. In essence, relational databases contain one or more tables with rows and columns, where each row has a unique key for identification. Rows in one table can be linked to rows in another table by storing the value of the row key to be linked to. A useful analogy I saw [here](http://sql.learncodethehardway.org/book/introduction.html) is that a database is analogous to a whole Excel spreadsheet file, whereas the individual database tables are like the tabs/worksheets in that Excel file.
 
 Different relationships can link columns within and between tables in a relational database. You can have [one-to-one](http://www.databaseprimer.com/pages/relationship_1to1/) relationships, [one-to-many](http://www.databaseprimer.com/pages/relationship_1tox/) relationships and [many-to-many](http://www.databaseprimer.com/pages/relationship_xtox/) relationships between rows in different tables.
 
-##Advantages of relational databases
+## Advantages of relational databases
 
 Why not just use one big flat table? Why bother with linking between different tables? There are several advantages to relational databases compared to a standard flat file:
 
@@ -46,7 +46,7 @@ Why not just use one big flat table? Why bother with linking between different t
 
     It’s easy to add more data that are not yet needed, but might be in the future. For example, you might be going to a cheese rolling convention in Manhattan, where you anticipate making lots of new friends from around the world. In preparation for your trip, you could expand your cities table in you friend address database to include all of the cities in the world, even though they aren't being referenced by anything yet. You can’t do this with a flat table (well, you could, but not without adding a lot of ugly null values). Of course, designing a database from scratch that is extensible and maintainable can be really tricky, as demonstrated in this fun blog post about [designing the most egalitarian marriage database](http://qntm.org/gay).
 
-##Interacting with relational databases
+## Interacting with relational databases
 
 Data manipulation in relational databases is performed by making queries in Structured Query Language (SQL). All SQL operations do one of four fundamental types of operation:
 
@@ -67,11 +67,11 @@ Learning SQL syntax is a whole massive topic in itself. I found the following re
 - [Learn SQL the Hard Way](http://sql.learncodethehardway.org/book/)
 - [SQL zoo](http://sqlzoo.net/w/index.php?title=SQL_Tutorial&redirect=no)
 
-##Database Management Systems (DBMSs)
+## Database Management Systems (DBMSs)
 
 To complicate things further, there are lots of different kinds of systems for letting a user and other applications communicate with a database. Popular DBMSs include PostgreSQL, MySQL, Microsoft SQL Server, Oracle and SQLite. They all have slightly different advantages and disadvantages. Of these, SQLite is the major odd one out as it doesn't have a client-server architecture (the database lives on a computer server, and is accessed from a separate machine, which is the client); SQLite is actually embedded in the end program itself. This makes it a good DBMS to start playing around with, as you don't need to fiddle around with servers.
 
-##What about NoSQL??
+## What about NoSQL??
 
 Sigh. Just when you thought you were getting the hang of things, you find out there is another kind of database called NoSQL. NoSQL is a kind of non-relational database with a completely different kind of architecture. NoSQL is supposed to be more scalable and fixes problems with the relational model. People on the internet seem to treating it like it is the hot new thing. I don't even want to think about this right now; I'll mentally bookmark it for later.
 
