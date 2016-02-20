@@ -1,0 +1,211 @@
+/*Sass*/
+$small-text-size : 11px;
+$main-column-width :750px;
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-direction($value: row) {
+    @if $value == row-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: horizontal;
+    } @else if $value == column {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+    } @else if $value == column-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+    } @else {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+    }
+    -webkit-flex-direction: $value;
+    -moz-flex-direction: $value;
+    -ms-flex-direction: $value;
+    flex-direction: $value;
+}
+
+@mixin align-items($value: stretch) {
+    @if $value == flex-start {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+    } @else if $value == flex-end {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+    } @else {
+        -webkit-box-align: $value;
+        -ms-flex-align: $value;
+    }
+    -webkit-align-items: $value;
+    -moz-align-items: $value;
+    align-items: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+    @if $value == flex-start {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+    } @else if $value == flex-end {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+    } @else if $value == space-between {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    } @else if $value == space-around {
+        -ms-flex-pack: distribute;
+    } @else {
+        -webkit-box-pack: $value;
+        -ms-flex-pack: $value;
+    }
+    -webkit-justify-content: $value;
+    -moz-justify-content: $value;
+    justify-content: $value;
+}
+
+/*End of Sass*/
+
+
+html{
+  min-height:100%;
+}
+
+body{
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+}
+
+a:hover{
+
+    color:#437983;
+}
+
+h1{
+ margin:0;
+ width:100%;
+ font-size:40px;
+ font-family: 'Inconsolata', ;
+}
+
+h2{
+  margin:0.5em 0;
+  margin-bottom: 0.8em;
+  font-size: 1.3em;
+}
+h3{
+  margin:0;
+  margin-right:0.6em;
+  font-size:1em;
+}
+
+span{
+  @include justify-content(left);
+  flex:1;
+  text-align:left;
+  font-size: $small-text-size;
+}
+ul{
+  padding:0;
+  margin:0.8em 0;
+  font-size:13px;
+}
+
+li{
+  margin:inherit;
+  list-style-type: none;
+
+}
+
+hr{
+
+    margin:1em 0;
+}
+
+#container{
+  @include flexbox;
+  height:100%;
+  width : $main-column-width;
+}
+
+#maincontent{
+  padding:0 3em 0 0;
+  flex:2;
+
+}
+
+#sidecontent{
+  flex:0.8;
+
+}
+
+#topbar{
+  @include justify-content(left);
+  @include flexbox;
+  width:$main-column-width;
+  margin:2em 0 1.5em 0;
+}
+
+#links{
+
+  width:100%;
+  margin:0.67em;
+
+}
+
+
+#navlinks{
+  width:100%;
+  text-align:right;
+  margin:0;
+  font-family: 'Inconsolata', ;
+  font-size:14px;
+}
+
+.item{
+  margin:0 0 2em 0;
+}
+
+.itemtitle{
+  @include flexbox;
+  @include align-items(flex-end);
+
+}
+
+.date{
+  flex:1;
+  text-align:right;
+  font-size:13px;
+}
+
+#skillslist{
+  margin:0.1;
+
+}
+
+.technologies{
+    font-size : $small-text-size;
+}
+
+.location{
+    color:grey;
+    font-size:12px;
+}
+
+.ipython{
+   font-size: $small-text-size;
+
+}

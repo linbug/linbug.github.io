@@ -1,0 +1,150 @@
+/*Sass*/
+/*End of Sass*/
+html {
+  min-height: 100%; }
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  color: #437983; }
+
+h1 {
+  margin: 0;
+  width: 100%;
+  font-size: 40px;
+  font-family: "Inconsolata"; }
+
+h2 {
+  margin: 0.5em 0;
+  margin-bottom: 0.8em;
+  font-size: 1.3em; }
+
+h3 {
+  margin: 0;
+  margin-right: 0.6em;
+  font-size: 1em; }
+
+span {
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  -moz-justify-content: left;
+  justify-content: left;
+  flex: 1;
+  text-align: left;
+  font-size: 11px; }
+
+ul {
+  padding: 0;
+  margin: 0.8em 0;
+  font-size: 13px; }
+
+li {
+  margin: inherit;
+  list-style-type: none; }
+
+hr {
+  margin: 1em 0; }
+
+#container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 750px; }
+
+#maincontent {
+  padding: 0 3em 0 0;
+  flex: 2; }
+
+#sidecontent {
+  flex: 0.8; }
+
+#topbar {
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  -moz-justify-content: left;
+  justify-content: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 750px;
+  margin: 2em 0 1.5em 0; }
+
+#links {
+  width: 100%;
+  margin: 0.67em; }
+
+#navlinks {
+  width: 100%;
+  text-align: right;
+  margin: 0;
+  font-family: "Inconsolata";
+  font-size: 14px; }
+
+.item {
+  margin: 0 0 2em 0; }
+
+.itemtitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end; }
+
+.date {
+  flex: 1;
+  text-align: right;
+  font-size: 13px; }
+
+#skillslist {
+  margin: 0.1; }
+
+.technologies {
+  font-size: 11px; }
+
+.location {
+  color: grey;
+  font-size: 12px; }
+
+.ipython {
+  font-size: 11px; }
+
+/*# sourceMappingURL=style.css.map */
