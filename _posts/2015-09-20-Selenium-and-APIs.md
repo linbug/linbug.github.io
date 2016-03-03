@@ -7,7 +7,7 @@ comments: true
 
 An advantage of knowing how to code is that you can build things to make your digital life better. A nice analogy I've heard is that coding is like building structures out of Lego, except you never run out of bricks.
 
-> Remember that Lego tool you could buy to help you pry bricks apart? Imagine if you could build that tool out of Lego bricks. 
+> Remember that Lego tool you could buy to help you pry bricks apart? Imagine if you could build that tool out of Lego bricks.
 > We can use the skills we have for writing software to improve the tools we work with.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Lego_tower.jpg" title="There are a lot of pictures of lego on this blog" style="height: 600px;margin: 0 auto;"/>
@@ -16,7 +16,7 @@ An advantage of knowing how to code is that you can build things to make your di
 
 -------------------------------------------------------------------------------------------------------------------
 
-Recently, a friend asked me to build a tool for him that would take his day's points from [Fitocracy](https://www.fitocracy.com/) and log them to a goal on [Beeminder](https://www.beeminder.com/). Fitocracy gamifies exercise. You track your day's workout, be that running, swimming, or zumba (there are hundreds of obscure exercises available on the site) and Fitocracy calculates how many points you get, according to the duration and intensity of exercise. You can keep track of how many points you're getting every week, try and beat your personal best, or compete against your friends. 
+Recently, a friend asked me to build a tool for him that would take his day's points from [Fitocracy](https://www.fitocracy.com/) and log them to a goal on [Beeminder](https://www.beeminder.com/). Fitocracy gamifies exercise. You track your day's workout, be that running, swimming, or zumba (there are hundreds of obscure exercises available on the site) and Fitocracy calculates how many points you get, according to the duration and intensity of exercise. You can keep track of how many points you're getting every week, try and beat your personal best, or compete against your friends.
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/fitocracy.png" title="Fitocracy (don't judge my points)" style="margin: 0 auto;"/>
 
@@ -45,7 +45,7 @@ I used Selenium webdriver to scrape the data from Fitocracy. [Selenium](http://w
 
 -------------------------------------------------------------------------------------------------------------------
 
-###FitBee
+### FitBee
 
 My little program is called [FitBee](https://github.com/linbug/FitBee).
 
@@ -91,7 +91,7 @@ Next, I scrape the day's points from the Fitocracy homepage:
 
 todays_points = driver.find_elements_by_xpath("//div/a[contains(text(),'Today')]/preceding-sibling::span")
 total = 0
-for today in todays_points:   
+for today in todays_points:
 	points = today.find_elements_by_class_name("stream_total_points")[0].text
 	points = int(points[:-4].replace(',', ''))
 	total += points
@@ -108,12 +108,12 @@ my_beeminder.create_datapoint(
 	username = Beeminder_username,
 	goalname = Beeminder_goalname,
 	timestamp = int(time.time()),
-	value = total, 
+	value = total,
 	comment = 'Scraped from Fitocracy on ' + time.ctime())
 
 {% endhighlight %}
 
-Compared with the earlier complications of logging into Fitocracy and scraping the page, sending points to Beeminder via its API is beautifully simple. 
+Compared with the earlier complications of logging into Fitocracy and scraping the page, sending points to Beeminder via its API is beautifully simple.
 
 You can see my full code and documentation for this project [here](https://github.com/linbug/FitBee).
 
@@ -127,7 +127,7 @@ Although this little hack works ok, it's not optimum. Selenium opens a browser w
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'linbug';
-    
+
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

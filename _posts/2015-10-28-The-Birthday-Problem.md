@@ -9,9 +9,9 @@ I've been working through Harvard's [Statistics 101:Introduction to Probability 
 
 I'm currently on lecture 5, and so far we've covered counting and combinatronics, and conditional probability. Recently a friend and I got talking about the [Birthday Problem](https://en.wikipedia.org/wiki/Birthday_problem), a very famous problem in probability theory. Although this was covered in the course, I couldn't remember the intuitive reasoning for the answer. I thought I'd try and explain it here.
 
-##The Birthday Problem
+## The Birthday Problem
 
-The Birthday Problem asks: 
+The Birthday Problem asks:
 
 *How many people do we need at a party before there is a 50/50 chance that two of them share a birthday?*
 
@@ -19,7 +19,7 @@ The Birthday Problem (also known as the Birthday Paradox) is an example of proba
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-##A solution using maths 
+## A solution using maths
 
 How did we arrive at the answer 23?
 
@@ -41,19 +41,19 @@ $$P(A) = \frac{number \;of\;outcomes\;possible\;for\;A}{number\;of\;total\;possi
 
 In this case, \\(A\\) is the event that noone will share a birthday at the party. I'll break this down into two parts; the numerator and the denominator.
 
-###The denominator: number of total possible outcomes
+### The denominator: number of total possible outcomes
 
-For \\(k\\) people, the total number of possible combinations of birthdays that we could have is just \\(365^k\\), because we have \\(365\\)possible days for each person, and each person's birthday is independent of every other's, so we just use the multiplication rule to calculate the number of possible permutations. For example, if there are four people at the party, there will be: 
+For \\(k\\) people, the total number of possible combinations of birthdays that we could have is just \\(365^k\\), because we have \\(365\\)possible days for each person, and each person's birthday is independent of every other's, so we just use the multiplication rule to calculate the number of possible permutations. For example, if there are four people at the party, there will be:
 
 $$365 \times 365  \times 365  \times 365 = 1.8 \times 10^{10} $$
 
-...possibilities. This forms the denominator in our equation. 
+...possibilities. This forms the denominator in our equation.
 
-###The numerator: number of outcomes possible for A
+### The numerator: number of outcomes possible for A
 
-To work out how many possible outcomes there are where the \\(k\\) people don't share a birthday, let's imagine our four people are labelled from \\(1 - 4\\). Person \\(1\\) enters the room, and they can have any birthday they like, because they are the first one there. So person \\(1\\) has \\(365\\) possible birthdays. Person \\(2\\) arrives, and they are allowed to have any birthday *except the one that person 1 has*. So person \\(2\\) has \\(364\\) possible birthdays. Person \\(3\\) can then have any birthday except those of the previous two people, so they can have \\(363\\) possible birthdays, and so on. 
+To work out how many possible outcomes there are where the \\(k\\) people don't share a birthday, let's imagine our four people are labelled from \\(1 - 4\\). Person \\(1\\) enters the room, and they can have any birthday they like, because they are the first one there. So person \\(1\\) has \\(365\\) possible birthdays. Person \\(2\\) arrives, and they are allowed to have any birthday *except the one that person 1 has*. So person \\(2\\) has \\(364\\) possible birthdays. Person \\(3\\) can then have any birthday except those of the previous two people, so they can have \\(363\\) possible birthdays, and so on.
 
-So if \\(k = 4\\), the numerator for our equation is: 
+So if \\(k = 4\\), the numerator for our equation is:
 
 $$365 \times 364 \times 363 \times 362 = 1.7 \times 10^{10}$$
 
@@ -63,7 +63,7 @@ $$365\times 364\times 363 \times \cdots (365 - k + 1)$$
 
 This is how many possible combinations of non-matching birthdays there are if there are \\(k\\) people at the party.
 
-###Putting it all together
+### Putting it all together
 
 If we put our numerator and our denominator together, the general rule for finding the probability that *no people* in a party of \\(k\\) people will share the same birthday is:
 
@@ -77,7 +77,7 @@ Which, if we plug in \\(k = 23\\) returns just over 0.5.
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-##Thinking about intuition
+## Thinking about intuition
 
 Ok, ok, so maybe that explanation still doesn't feel all that intuitive yet. Try thinking about it like this: consider the number of *pairs* of people as the party size increases. For any group of people of size \\(k\\), there are \\(\binom{k}{2}\\) possible pairs (using the [binomial coefficient](https://www.khanacademy.org/math/probability/probability-and-combinatorics-topic/combinations-combinatorics/v/combination-formula)). So if there are 2 people at the party there is only \\(\binom{2}{2} = 1\\) possible pairing, with 10 people there are \\(\binom{10}{2} = 45\\) possible pairings, and with 23 people there are \\(\binom{23}{2} = 253\\) possible pairings. So, at a party of 23 people, there are 253 opportunities for two people to share a birthday. Now that 50% likelihood probability doesn't seem so unintuitive after all.
 
@@ -85,9 +85,9 @@ Another way to think about it is that when many people hear the birthday problem
 
 ---------------------------------------------------------------------------------------------------------------
 
-##The Birthday Problem in Python
+## The Birthday Problem in Python
 
-I thought I'd plot a probability distribution for this in Python. 
+I thought I'd plot a probability distribution for this in Python.
 
 {% highlight python linenos %}
 
@@ -145,11 +145,11 @@ What you'll notice on the resulting graph is that the greatest increase in proba
 
 ---------------------------------------------------------------------------------------------------------------
 
-##Does the Birthday Problem hold up in reality?
+## Does the Birthday Problem hold up in reality?
 
-It's all well and good accepting this proof, but it's also fun to test this out with SCIENCE. 
+It's all well and good accepting this proof, but it's also fun to test this out with SCIENCE.
 
-I exported all 340 of my facebook friend's birthdays to .ics format, and then loaded this into pandas. Some munging was needed but it's not very interesting; if you care about it you can see the ipython notebook [here](http://nbviewer.ipython.org/github/linbug/linbug.github.io/blob/master/_downloads/Birthdays.ipynb). 
+I exported all 340 of my facebook friend's birthdays to .ics format, and then loaded this into pandas. Some munging was needed but it's not very interesting; if you care about it you can see the ipython notebook [here](http://nbviewer.ipython.org/github/linbug/linbug.github.io/blob/master/_downloads/Birthdays.ipynb).
 
 I plotted out the frequency of birthdays per day on a histogram:
 
@@ -203,7 +203,7 @@ plt.savefig("fb_probabilities")
 
 <img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/fb_probabilities.png" title="Awkward fb parties" style="margin: 0 auto;"/>
 
-You can see that there's the same general shape as before. Aren't you glad that we didn't have to have thousands of actual parties to figure that out? Programming FTW! 
+You can see that there's the same general shape as before. Aren't you glad that we didn't have to have thousands of actual parties to figure that out? Programming FTW!
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -223,9 +223,9 @@ My ipython notebook for these analyses is available [here](http://nbviewer.ipyth
     */
     (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
-        
+
         s.src = '//linbug.disqus.com/embed.js';
-        
+
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

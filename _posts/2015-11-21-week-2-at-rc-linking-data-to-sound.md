@@ -61,9 +61,9 @@ and my favourite, a modified sine wave:
 
 Endless hours of fun! I tried encoding a tune with this but I think the output sound frequencies are lies, as it sounded really off. Props to [Javier](https://github.com/jvalen) who helped a lot with getting the mouseover stuff working correctly. Code for this project is available [here](https://github.com/linbug/d3/blob/master/pianoviz.html), or, if you want the exact code I used on this site, [here]().
 
-###Other stuff I did this week:
+### Other stuff I did this week:
 
-- I'm slowly working through Gelman and Hill's [Data Analysis Using Regression and Multilevel/Hierarchical Models](http://www.amazon.co.uk/Analysis-Regression-Multilevel-Hierarchical-Analytical/dp/052168689X/ref=sr_1_1?ie=UTF8&qid=1448212470&sr=8-1&keywords=gelman+hill), and learning how to implement linear models in R. 
+- I'm slowly working through Gelman and Hill's [Data Analysis Using Regression and Multilevel/Hierarchical Models](http://www.amazon.co.uk/Analysis-Regression-Multilevel-Hierarchical-Analytical/dp/052168689X/ref=sr_1_1?ie=UTF8&qid=1448212470&sr=8-1&keywords=gelman+hill), and learning how to implement linear models in R.
 
 - After [Mary's functional programming](http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming) talk, I paired with [Lauren](https://github.com/laurenzlong) on re-coding some of the [underscore.js](http://underscorejs.org/) library in Python. I thought I understood what functional programming was about, but I found this exercise really challenging and unintuitive. I guess I need more practice.
 
@@ -78,7 +78,7 @@ Endless hours of fun! I tried encoding a tune with this but I think the output s
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'linbug';
-    
+
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
