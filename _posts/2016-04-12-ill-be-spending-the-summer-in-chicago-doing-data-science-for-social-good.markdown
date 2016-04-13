@@ -11,6 +11,6 @@ A quick update on some career progression stuff. It's been a couple of months si
 
 > For three months in Chicago they learn, hone, and apply their data science, analytical, and coding skills, collaborate in a fast-paced atmosphere, and learn from mentors coming from industry and academia.
 
-I've known about this programme for some time and applied unsuccessfully last year, so it feels great to have a place this year. Whereas previous programmes I've done this year ([S2DS](http://www.s2ds.org/) and [RC](http://recurse.com/)) were mostly about experience and skill building, DSSG is also an opportunity to become aquainted with how data science works in a particular field: namely, in the social good realm. I know others who have done DSSG and have gotten a lot out of it, so I think that this is going to be a very valuable experience.
+I've known about this programme for some time and applied unsuccessfully last year, so it feels great to have a place this year. Whereas previous programmes I've done this year ([S2DS](http://www.s2ds.org/) and [RC](http://recurse.com/)) were mostly about experience and skill building, DSSG is also an opportunity to become acquainted with how data science works in a particular field: namely, in the social good realm. I know others who have done DSSG and have gotten a lot out of it, so I think that this is going to be a very valuable experience.
 
 You can see my happy face on the [2016 fellows page!](http://dssg.uchicago.edu/people/2016-fellows-mentors/)
