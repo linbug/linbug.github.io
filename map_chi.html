@@ -1,0 +1,4669 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_2974c461b1ac4d59be4cbbbbd218ca3c {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.2/leaflet-dvf.markers.min.js"></script>
+        
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_2974c461b1ac4d59be4cbbbbd218ca3c" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_2974c461b1ac4d59be4cbbbbd218ca3c = L.map('map_2974c461b1ac4d59be4cbbbbd218ca3c', {
+                                           center:[41.8781,-87.6298],
+                                           zoom: 13,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_ab85ce41f2fe4ef5b950e94c3ec64049 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+
+        
+        
+            
+            var regular_polygon_marker_6360c6354e5445a78e72da6664a9ae86 = new L.RegularPolygonMarker(
+                new L.LatLng(41.885737,-87.630886),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2a8e2b87ea864645a9a311a8dee0e536 = L.popup({maxWidth: '300'});
+
+            
+                var html_9ed017405eba491ba039119fadc40399 = $('         <div id="html_9ed017405eba491ba039119fadc40399"                 style="width: 100.0%; height: 100.0%;">                 Clark/Lake</div>                 ')[0];
+                popup_2a8e2b87ea864645a9a311a8dee0e536.setContent(html_9ed017405eba491ba039119fadc40399);
+            
+
+            regular_polygon_marker_6360c6354e5445a78e72da6664a9ae86.bindPopup(popup_2a8e2b87ea864645a9a311a8dee0e536);
+
+            
+        
+        
+            
+            var regular_polygon_marker_0a7b963f06a3478593c181ada837c607 = new L.RegularPolygonMarker(
+                new L.LatLng(41.884809,-87.627813),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a95e019b10ef47668ce2d5d5db05debf = L.popup({maxWidth: '300'});
+
+            
+                var html_8ad6186627434db2b0315e7e8634cf2a = $('         <div id="html_8ad6186627434db2b0315e7e8634cf2a"                 style="width: 100.0%; height: 100.0%;">                 Lake/State</div>                 ')[0];
+                popup_a95e019b10ef47668ce2d5d5db05debf.setContent(html_8ad6186627434db2b0315e7e8634cf2a);
+            
+
+            regular_polygon_marker_0a7b963f06a3478593c181ada837c607.bindPopup(popup_a95e019b10ef47668ce2d5d5db05debf);
+
+            
+        
+        
+            
+            var regular_polygon_marker_0f394ae5e89c43dd88200dd977a67855 = new L.RegularPolygonMarker(
+                new L.LatLng(41.896671,-87.628176),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_8b492df4d32c43e58e588e4e309bfc5b = L.popup({maxWidth: '300'});
+
+            
+                var html_5c7d40617db1458cbbccbc10e78b26fb = $('         <div id="html_5c7d40617db1458cbbccbc10e78b26fb"                 style="width: 100.0%; height: 100.0%;">                 Chicago/State</div>                 ')[0];
+                popup_8b492df4d32c43e58e588e4e309bfc5b.setContent(html_5c7d40617db1458cbbccbc10e78b26fb);
+            
+
+            regular_polygon_marker_0f394ae5e89c43dd88200dd977a67855.bindPopup(popup_8b492df4d32c43e58e588e4e309bfc5b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_408689acb2c54002a9b151f6123272dd = new L.RegularPolygonMarker(
+                new L.LatLng(41.722377,-87.624342),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_fee2ca54dd314d9fae2d154934a31693 = L.popup({maxWidth: '300'});
+
+            
+                var html_fcaae7c9be3e4482abd71ea122c17657 = $('         <div id="html_fcaae7c9be3e4482abd71ea122c17657"                 style="width: 100.0%; height: 100.0%;">                 95th/Dan Ryan</div>                 ')[0];
+                popup_fee2ca54dd314d9fae2d154934a31693.setContent(html_fcaae7c9be3e4482abd71ea122c17657);
+            
+
+            regular_polygon_marker_408689acb2c54002a9b151f6123272dd.bindPopup(popup_fee2ca54dd314d9fae2d154934a31693);
+
+            
+        
+        
+            
+            var regular_polygon_marker_b1cbb50ea5064a7eb0334786b326a2eb = new L.RegularPolygonMarker(
+                new L.LatLng(41.939751,-87.65338),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_cb30ef201a4f4e81813af0d8a50dcfe1 = L.popup({maxWidth: '300'});
+
+            
+                var html_dea8a9ad877043288d2cfec6979c6b98 = $('         <div id="html_dea8a9ad877043288d2cfec6979c6b98"                 style="width: 100.0%; height: 100.0%;">                 Belmont-North Main</div>                 ')[0];
+                popup_cb30ef201a4f4e81813af0d8a50dcfe1.setContent(html_dea8a9ad877043288d2cfec6979c6b98);
+            
+
+            regular_polygon_marker_b1cbb50ea5064a7eb0334786b326a2eb.bindPopup(popup_cb30ef201a4f4e81813af0d8a50dcfe1);
+
+            
+        
+        
+            
+            var regular_polygon_marker_d56965ba221841fabe649448e070f8f2 = new L.RegularPolygonMarker(
+                new L.LatLng(41.925051,-87.652866),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_3680a520be7a4c27a87a1e33726b0adb = L.popup({maxWidth: '300'});
+
+            
+                var html_9c42838bcf1d4b339a9a86d58d1dfed7 = $('         <div id="html_9c42838bcf1d4b339a9a86d58d1dfed7"                 style="width: 100.0%; height: 100.0%;">                 Fullerton</div>                 ')[0];
+                popup_3680a520be7a4c27a87a1e33726b0adb.setContent(html_9c42838bcf1d4b339a9a86d58d1dfed7);
+            
+
+            regular_polygon_marker_d56965ba221841fabe649448e070f8f2.bindPopup(popup_3680a520be7a4c27a87a1e33726b0adb);
+
+            
+        
+        
+            
+            var regular_polygon_marker_aa7c412cffb441149e1f3943c71026aa = new L.RegularPolygonMarker(
+                new L.LatLng(41.891665,-87.628021),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_d28e8ba2926b4df0a948c76c0bbb64de = L.popup({maxWidth: '300'});
+
+            
+                var html_4430a3c037d541778ac6f13c12ffb8b6 = $('         <div id="html_4430a3c037d541778ac6f13c12ffb8b6"                 style="width: 100.0%; height: 100.0%;">                 Grand/State</div>                 ')[0];
+                popup_d28e8ba2926b4df0a948c76c0bbb64de.setContent(html_4430a3c037d541778ac6f13c12ffb8b6);
+            
+
+            regular_polygon_marker_aa7c412cffb441149e1f3943c71026aa.bindPopup(popup_d28e8ba2926b4df0a948c76c0bbb64de);
+
+            
+        
+        
+            
+            var regular_polygon_marker_24d87328ba3a4bbab2bfbfde4df66006 = new L.RegularPolygonMarker(
+                new L.LatLng(41.878153,-87.627596),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_d295299fe22149d7b812242a8852923e = L.popup({maxWidth: '300'});
+
+            
+                var html_ea2e0efc851246b4b1dac8a290b84861 = $('         <div id="html_ea2e0efc851246b4b1dac8a290b84861"                 style="width: 100.0%; height: 100.0%;">                 Jackson/State</div>                 ')[0];
+                popup_d295299fe22149d7b812242a8852923e.setContent(html_ea2e0efc851246b4b1dac8a290b84861);
+            
+
+            regular_polygon_marker_24d87328ba3a4bbab2bfbfde4df66006.bindPopup(popup_d295299fe22149d7b812242a8852923e);
+
+            
+        
+        
+            
+            var regular_polygon_marker_5eb16c20501f4a25bdcb244e941c9f2d = new L.RegularPolygonMarker(
+                new L.LatLng(41.97766526,-87.90422307),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2ad0c732003e4e44a91fec1dde94e783 = L.popup({maxWidth: '300'});
+
+            
+                var html_45c219bdbabe4b8a88ce0d576f223e4e = $('         <div id="html_45c219bdbabe4b8a88ce0d576f223e4e"                 style="width: 100.0%; height: 100.0%;">                 O&#39;Hare Airport</div>                 ')[0];
+                popup_2ad0c732003e4e44a91fec1dde94e783.setContent(html_45c219bdbabe4b8a88ce0d576f223e4e);
+            
+
+            regular_polygon_marker_5eb16c20501f4a25bdcb244e941c9f2d.bindPopup(popup_2ad0c732003e4e44a91fec1dde94e783);
+
+            
+        
+        
+            
+            var regular_polygon_marker_ee3dc878a2a74a64a6672bba7d8af97e = new L.RegularPolygonMarker(
+                new L.LatLng(41.867405,-87.62659),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_1014cb1433394099ad717c9cb324fb6f = L.popup({maxWidth: '300'});
+
+            
+                var html_93e10b3e2fdd4f7cbfa3ef1edadbe994 = $('         <div id="html_93e10b3e2fdd4f7cbfa3ef1edadbe994"                 style="width: 100.0%; height: 100.0%;">                 Roosevelt</div>                 ')[0];
+                popup_1014cb1433394099ad717c9cb324fb6f.setContent(html_93e10b3e2fdd4f7cbfa3ef1edadbe994);
+            
+
+            regular_polygon_marker_ee3dc878a2a74a64a6672bba7d8af97e.bindPopup(popup_1014cb1433394099ad717c9cb324fb6f);
+
+            
+        
+        
+            
+            var regular_polygon_marker_5e632956c2ec47f48901c886533e89b7 = new L.RegularPolygonMarker(
+                new L.LatLng(41.88574,-87.627835),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_df6ad37f8d9b420d8ca1f2cbf745982d = L.popup({maxWidth: '300'});
+
+            
+                var html_35b104a077ee400a93ff41bdbcd62197 = $('         <div id="html_35b104a077ee400a93ff41bdbcd62197"                 style="width: 100.0%; height: 100.0%;">                 State/Lake</div>                 ')[0];
+                popup_df6ad37f8d9b420d8ca1f2cbf745982d.setContent(html_35b104a077ee400a93ff41bdbcd62197);
+            
+
+            regular_polygon_marker_5e632956c2ec47f48901c886533e89b7.bindPopup(popup_df6ad37f8d9b420d8ca1f2cbf745982d);
+
+            
+        
+        
+            
+            var regular_polygon_marker_3e0ce553a73749e7968de3cd250aead6 = new L.RegularPolygonMarker(
+                new L.LatLng(41.883164,-87.62944),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_ea4a675ebc594d7b8f47012ac3888064 = L.popup({maxWidth: '300'});
+
+            
+                var html_ce7d79c9a32249c98db32d20507e761e = $('         <div id="html_ce7d79c9a32249c98db32d20507e761e"                 style="width: 100.0%; height: 100.0%;">                 Washington/Dearborn</div>                 ')[0];
+                popup_ea4a675ebc594d7b8f47012ac3888064.setContent(html_ce7d79c9a32249c98db32d20507e761e);
+            
+
+            regular_polygon_marker_3e0ce553a73749e7968de3cd250aead6.bindPopup(popup_ea4a675ebc594d7b8f47012ac3888064);
+
+            
+        
+        
+            
+            var regular_polygon_marker_4cb02c1337144b82957cb7bbe40e9197 = new L.RegularPolygonMarker(
+                new L.LatLng(41.78661,-87.737875),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9461c',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_e85a5233118f4509bb1e4a85c5a9a7db = L.popup({maxWidth: '300'});
+
+            
+                var html_2c4623e54c1c4f8bb1016997ce246c53 = $('         <div id="html_2c4623e54c1c4f8bb1016997ce246c53"                 style="width: 100.0%; height: 100.0%;">                 Midway Airport</div>                 ')[0];
+                popup_e85a5233118f4509bb1e4a85c5a9a7db.setContent(html_2c4623e54c1c4f8bb1016997ce246c53);
+            
+
+            regular_polygon_marker_4cb02c1337144b82957cb7bbe40e9197.bindPopup(popup_e85a5233118f4509bb1e4a85c5a9a7db);
+
+            
+        
+        
+            
+            var regular_polygon_marker_21f2dd5727ba42b2a247a1e7a0f41a11 = new L.RegularPolygonMarker(
+                new L.LatLng(41.947428,-87.653626),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_93a39f8abf174e6aae282dc70ff44e9b = L.popup({maxWidth: '300'});
+
+            
+                var html_49d9f81fc2554a5883d4515d1c3efebd = $('         <div id="html_49d9f81fc2554a5883d4515d1c3efebd"                 style="width: 100.0%; height: 100.0%;">                 Addison-North Main</div>                 ')[0];
+                popup_93a39f8abf174e6aae282dc70ff44e9b.setContent(html_49d9f81fc2554a5883d4515d1c3efebd);
+            
+
+            regular_polygon_marker_21f2dd5727ba42b2a247a1e7a0f41a11.bindPopup(popup_93a39f8abf174e6aae282dc70ff44e9b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_b266b60afade459897b68f29e736c8db = new L.RegularPolygonMarker(
+                new L.LatLng(41.880745,-87.627696),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_c292de500ca643b7ae9def71de2f58a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_8b404af84e1c431b8f945dd4bfb05e66 = $('         <div id="html_8b404af84e1c431b8f945dd4bfb05e66"                 style="width: 100.0%; height: 100.0%;">                 Monroe/State</div>                 ')[0];
+                popup_c292de500ca643b7ae9def71de2f58a4.setContent(html_8b404af84e1c431b8f945dd4bfb05e66);
+            
+
+            regular_polygon_marker_b266b60afade459897b68f29e736c8db.bindPopup(popup_c292de500ca643b7ae9def71de2f58a4);
+
+            
+        
+        
+            
+            var regular_polygon_marker_a3a2177fcdb34bfc9e98e7cbb0d00a30 = new L.RegularPolygonMarker(
+                new L.LatLng(41.750419,-87.625112),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a84d9038f08f45cab75535996424a6a0 = L.popup({maxWidth: '300'});
+
+            
+                var html_c6d43e7803904e978684e16c70d5eae8 = $('         <div id="html_c6d43e7803904e978684e16c70d5eae8"                 style="width: 100.0%; height: 100.0%;">                 79th</div>                 ')[0];
+                popup_a84d9038f08f45cab75535996424a6a0.setContent(html_c6d43e7803904e978684e16c70d5eae8);
+            
+
+            regular_polygon_marker_a3a2177fcdb34bfc9e98e7cbb0d00a30.bindPopup(popup_a84d9038f08f45cab75535996424a6a0);
+
+            
+        
+        
+            
+            var regular_polygon_marker_978f29a418b94666af283144451eb2e8 = new L.RegularPolygonMarker(
+                new L.LatLng(41.90392,-87.631412),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_762c731530d448728c489e3820f65125 = L.popup({maxWidth: '300'});
+
+            
+                var html_98ed8dbcfd11440b880d41fca21d3911 = $('         <div id="html_98ed8dbcfd11440b880d41fca21d3911"                 style="width: 100.0%; height: 100.0%;">                 Clark/Division</div>                 ')[0];
+                popup_762c731530d448728c489e3820f65125.setContent(html_98ed8dbcfd11440b880d41fca21d3911);
+            
+
+            regular_polygon_marker_978f29a418b94666af283144451eb2e8.bindPopup(popup_762c731530d448728c489e3820f65125);
+
+            
+        
+        
+            
+            var regular_polygon_marker_e2953a590327496590cd08a2c8714376 = new L.RegularPolygonMarker(
+                new L.LatLng(41.879507,-87.626037),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_7ec2027fab69410c824ef9a787d07f0c = L.popup({maxWidth: '300'});
+
+            
+                var html_89625a8e3f9747269bf4aa668ebc26be = $('         <div id="html_89625a8e3f9747269bf4aa668ebc26be"                 style="width: 100.0%; height: 100.0%;">                 Adams/Wabash</div>                 ')[0];
+                popup_7ec2027fab69410c824ef9a787d07f0c.setContent(html_89625a8e3f9747269bf4aa668ebc26be);
+            
+
+            regular_polygon_marker_e2953a590327496590cd08a2c8714376.bindPopup(popup_7ec2027fab69410c824ef9a787d07f0c);
+
+            
+        
+        
+            
+            var regular_polygon_marker_9559fe583ea3426e8d112231b4b447d8 = new L.RegularPolygonMarker(
+                new L.LatLng(41.878183,-87.629296),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a4599b0998f24d6b8cca34f20d45f2d3 = L.popup({maxWidth: '300'});
+
+            
+                var html_dc33e772d1934aad92afe20a6ccefd89 = $('         <div id="html_dc33e772d1934aad92afe20a6ccefd89"                 style="width: 100.0%; height: 100.0%;">                 Jackson/Dearborn</div>                 ')[0];
+                popup_a4599b0998f24d6b8cca34f20d45f2d3.setContent(html_dc33e772d1934aad92afe20a6ccefd89);
+            
+
+            regular_polygon_marker_9559fe583ea3426e8d112231b4b447d8.bindPopup(popup_a4599b0998f24d6b8cca34f20d45f2d3);
+
+            
+        
+        
+            
+            var regular_polygon_marker_1dadd6cfacc047a3b58e309a619390b6 = new L.RegularPolygonMarker(
+                new L.LatLng(41.884431,-87.626149),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_6c62bce56db44a0985fc6b1dbce00ba3 = L.popup({maxWidth: '300'});
+
+            
+                var html_278d6682799e4f588f03d51952a3ee47 = $('         <div id="html_278d6682799e4f588f03d51952a3ee47"                 style="width: 100.0%; height: 100.0%;">                 Randolph/Wabash</div>                 ')[0];
+                popup_6c62bce56db44a0985fc6b1dbce00ba3.setContent(html_278d6682799e4f588f03d51952a3ee47);
+            
+
+            regular_polygon_marker_1dadd6cfacc047a3b58e309a619390b6.bindPopup(popup_6c62bce56db44a0985fc6b1dbce00ba3);
+
+            
+        
+        
+            
+            var regular_polygon_marker_6a205a2bcd63443abe3fdf1a7fda2bbf = new L.RegularPolygonMarker(
+                new L.LatLng(41.878723,-87.63374),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_c977c96aac944ed391b86feb2682459c = L.popup({maxWidth: '300'});
+
+            
+                var html_21514f610d2346babc0a4f477da0711a = $('         <div id="html_21514f610d2346babc0a4f477da0711a"                 style="width: 100.0%; height: 100.0%;">                 Quincy/Wells</div>                 ')[0];
+                popup_c977c96aac944ed391b86feb2682459c.setContent(html_21514f610d2346babc0a4f477da0711a);
+            
+
+            regular_polygon_marker_6a205a2bcd63443abe3fdf1a7fda2bbf.bindPopup(popup_c977c96aac944ed391b86feb2682459c);
+
+            
+        
+        
+            
+            var regular_polygon_marker_8e2ff652a705409a9bc4e6d3f0f1d999 = new L.RegularPolygonMarker(
+                new L.LatLng(42.019063,-87.672892),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a820659083874ae7800bd433a4f859f3 = L.popup({maxWidth: '300'});
+
+            
+                var html_8b22f05d45e642eaba06de9ddf2b4525 = $('         <div id="html_8b22f05d45e642eaba06de9ddf2b4525"                 style="width: 100.0%; height: 100.0%;">                 Howard</div>                 ')[0];
+                popup_a820659083874ae7800bd433a4f859f3.setContent(html_8b22f05d45e642eaba06de9ddf2b4525);
+            
+
+            regular_polygon_marker_8e2ff652a705409a9bc4e6d3f0f1d999.bindPopup(popup_a820659083874ae7800bd433a4f859f3);
+
+            
+        
+        
+            
+            var regular_polygon_marker_dbd3004eed6046fba73e77dd2a854e85 = new L.RegularPolygonMarker(
+                new L.LatLng(41.970634,-87.760892),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_69df1f07fb6e4d61b6c62214b324b877 = L.popup({maxWidth: '300'});
+
+            
+                var html_ffbc3b6de6d5470883d49846cacb815d = $('         <div id="html_ffbc3b6de6d5470883d49846cacb815d"                 style="width: 100.0%; height: 100.0%;">                 Jefferson Park</div>                 ')[0];
+                popup_69df1f07fb6e4d61b6c62214b324b877.setContent(html_ffbc3b6de6d5470883d49846cacb815d);
+            
+
+            regular_polygon_marker_dbd3004eed6046fba73e77dd2a854e85.bindPopup(popup_69df1f07fb6e4d61b6c62214b324b877);
+
+            
+        
+        
+            
+            var regular_polygon_marker_9fa02b81a20c4a999fc6528a0763ea1a = new L.RegularPolygonMarker(
+                new L.LatLng(41.882695,-87.63378),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_44ff1bb7c2ee430cae8779db387819ce = L.popup({maxWidth: '300'});
+
+            
+                var html_63deb5e0e78c470cb33f2220965fbfde = $('         <div id="html_63deb5e0e78c470cb33f2220965fbfde"                 style="width: 100.0%; height: 100.0%;">                 Washington/Wells</div>                 ')[0];
+                popup_44ff1bb7c2ee430cae8779db387819ce.setContent(html_63deb5e0e78c470cb33f2220965fbfde);
+            
+
+            regular_polygon_marker_9fa02b81a20c4a999fc6528a0763ea1a.bindPopup(popup_44ff1bb7c2ee430cae8779db387819ce);
+
+            
+        
+        
+            
+            var regular_polygon_marker_4ada94f49ef54715bdb32e5fd84d53ef = new L.RegularPolygonMarker(
+                new L.LatLng(41.768367,-87.625724),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_fd8cf1f3f0c74b678760db0cccca9f77 = L.popup({maxWidth: '300'});
+
+            
+                var html_4a55b8ab28014f94b60205775e76aa8c = $('         <div id="html_4a55b8ab28014f94b60205775e76aa8c"                 style="width: 100.0%; height: 100.0%;">                 69th</div>                 ')[0];
+                popup_fd8cf1f3f0c74b678760db0cccca9f77.setContent(html_4a55b8ab28014f94b60205775e76aa8c);
+            
+
+            regular_polygon_marker_4ada94f49ef54715bdb32e5fd84d53ef.bindPopup(popup_fd8cf1f3f0c74b678760db0cccca9f77);
+
+            
+        
+        
+            
+            var regular_polygon_marker_444b920617fa40dcb80cbb4ac729456a = new L.RegularPolygonMarker(
+                new L.LatLng(41.964273,-87.657588),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_408aef1e673f48d89455e8ce80bd476c = L.popup({maxWidth: '300'});
+
+            
+                var html_fbf782045d8649bf8000b00c8cf5eae9 = $('         <div id="html_fbf782045d8649bf8000b00c8cf5eae9"                 style="width: 100.0%; height: 100.0%;">                 Wilson</div>                 ')[0];
+                popup_408aef1e673f48d89455e8ce80bd476c.setContent(html_fbf782045d8649bf8000b00c8cf5eae9);
+            
+
+            regular_polygon_marker_444b920617fa40dcb80cbb4ac729456a.bindPopup(popup_408aef1e673f48d89455e8ce80bd476c);
+
+            
+        
+        
+            
+            var regular_polygon_marker_8657227b36c6407e8f9a0b042cdaaf09 = new L.RegularPolygonMarker(
+                new L.LatLng(41.929728,-87.708541),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_782c098d7e8649babeb7cdb5c9cf63bf = L.popup({maxWidth: '300'});
+
+            
+                var html_294d61e009a04753924b984ab3cb966c = $('         <div id="html_294d61e009a04753924b984ab3cb966c"                 style="width: 100.0%; height: 100.0%;">                 Logan Square</div>                 ')[0];
+                popup_782c098d7e8649babeb7cdb5c9cf63bf.setContent(html_294d61e009a04753924b984ab3cb966c);
+            
+
+            regular_polygon_marker_8657227b36c6407e8f9a0b042cdaaf09.bindPopup(popup_782c098d7e8649babeb7cdb5c9cf63bf);
+
+            
+        
+        
+            
+            var regular_polygon_marker_e27f1b9396f740a9b3eb695dcf3d9876 = new L.RegularPolygonMarker(
+                new L.LatLng(41.880703,-87.629378),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_6e6f95c2ff654fa7a80bd3a9cddb4ff2 = L.popup({maxWidth: '300'});
+
+            
+                var html_701d5624806746458f358bd6d926751b = $('         <div id="html_701d5624806746458f358bd6d926751b"                 style="width: 100.0%; height: 100.0%;">                 Monroe/Dearborn</div>                 ')[0];
+                popup_6e6f95c2ff654fa7a80bd3a9cddb4ff2.setContent(html_701d5624806746458f358bd6d926751b);
+            
+
+            regular_polygon_marker_e27f1b9396f740a9b3eb695dcf3d9876.bindPopup(popup_6e6f95c2ff654fa7a80bd3a9cddb4ff2);
+
+            
+        
+        
+            
+            var regular_polygon_marker_9bf31ad359b44cd4a718c13041a1e3cd = new L.RegularPolygonMarker(
+                new L.LatLng(41.888969,-87.633924),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_b852f9f994ef44c68066d7fb7d6f7797 = L.popup({maxWidth: '300'});
+
+            
+                var html_dcac087bf51a43749cd32837320a767a = $('         <div id="html_dcac087bf51a43749cd32837320a767a"                 style="width: 100.0%; height: 100.0%;">                 Merchandise Mart</div>                 ')[0];
+                popup_b852f9f994ef44c68066d7fb7d6f7797.setContent(html_dcac087bf51a43749cd32837320a767a);
+            
+
+            regular_polygon_marker_9bf31ad359b44cd4a718c13041a1e3cd.bindPopup(popup_b852f9f994ef44c68066d7fb7d6f7797);
+
+            
+        
+        
+            
+            var regular_polygon_marker_fb8922c00f54408a92100e2389f46e77 = new L.RegularPolygonMarker(
+                new L.LatLng(42.001073,-87.661061),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a8a168bd64a445cb8e047d961827a563 = L.popup({maxWidth: '300'});
+
+            
+                var html_08d436ce30b54139b57d410cd4e0e3f8 = $('         <div id="html_08d436ce30b54139b57d410cd4e0e3f8"                 style="width: 100.0%; height: 100.0%;">                 Loyola</div>                 ')[0];
+                popup_a8a168bd64a445cb8e047d961827a563.setContent(html_08d436ce30b54139b57d410cd4e0e3f8);
+            
+
+            regular_polygon_marker_fb8922c00f54408a92100e2389f46e77.bindPopup(popup_a8a168bd64a445cb8e047d961827a563);
+
+            
+        
+        
+            
+            var regular_polygon_marker_b719c6210d9b4a02a902e8f231e7a5d2 = new L.RegularPolygonMarker(
+                new L.LatLng(41.909744,-87.677437),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a0e3dbdddf144ee69c562e3509d5b57d = L.popup({maxWidth: '300'});
+
+            
+                var html_d8f9debd96784d128b8b3659dbb616d8 = $('         <div id="html_d8f9debd96784d128b8b3659dbb616d8"                 style="width: 100.0%; height: 100.0%;">                 Damen/Milwaukee</div>                 ')[0];
+                popup_a0e3dbdddf144ee69c562e3509d5b57d.setContent(html_d8f9debd96784d128b8b3659dbb616d8);
+            
+
+            regular_polygon_marker_b719c6210d9b4a02a902e8f231e7a5d2.bindPopup(popup_a0e3dbdddf144ee69c562e3509d5b57d);
+
+            
+        
+        
+            
+            var regular_polygon_marker_90ea3f23aecd4f96aa2263bbdd2cf5e6 = new L.RegularPolygonMarker(
+                new L.LatLng(41.983507,-87.859388),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_16c13e4479ae47b3a05d0972f6c24007 = L.popup({maxWidth: '300'});
+
+            
+                var html_2ecd92373d974eb1b29044a993f12948 = $('         <div id="html_2ecd92373d974eb1b29044a993f12948"                 style="width: 100.0%; height: 100.0%;">                 Rosemont</div>                 ')[0];
+                popup_16c13e4479ae47b3a05d0972f6c24007.setContent(html_2ecd92373d974eb1b29044a993f12948);
+            
+
+            regular_polygon_marker_90ea3f23aecd4f96aa2263bbdd2cf5e6.bindPopup(popup_16c13e4479ae47b3a05d0972f6c24007);
+
+            
+        
+        
+            
+            var regular_polygon_marker_c7a8b3e89281453f9c0b317ed6804bd0 = new L.RegularPolygonMarker(
+                new L.LatLng(41.953775,-87.654929),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_809446790bd745d4acefa07c10e6701e = L.popup({maxWidth: '300'});
+
+            
+                var html_e56ddbf613fb408ca127d73a9717ca5f = $('         <div id="html_e56ddbf613fb408ca127d73a9717ca5f"                 style="width: 100.0%; height: 100.0%;">                 Sheridan</div>                 ')[0];
+                popup_809446790bd745d4acefa07c10e6701e.setContent(html_e56ddbf613fb408ca127d73a9717ca5f);
+            
+
+            regular_polygon_marker_c7a8b3e89281453f9c0b317ed6804bd0.bindPopup(popup_809446790bd745d4acefa07c10e6701e);
+
+            
+        
+        
+            
+            var regular_polygon_marker_4b131ab62e04483cbd3ec77c9a3a7fa4 = new L.RegularPolygonMarker(
+                new L.LatLng(41.903355,-87.666496),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a2baed8b6fd04498a41d1d11eb1479c0 = L.popup({maxWidth: '300'});
+
+            
+                var html_9c4fa234286a470693a5e29dde7c6182 = $('         <div id="html_9c4fa234286a470693a5e29dde7c6182"                 style="width: 100.0%; height: 100.0%;">                 Division/Milwaukee</div>                 ')[0];
+                popup_a2baed8b6fd04498a41d1d11eb1479c0.setContent(html_9c4fa234286a470693a5e29dde7c6182);
+            
+
+            regular_polygon_marker_4b131ab62e04483cbd3ec77c9a3a7fa4.bindPopup(popup_a2baed8b6fd04498a41d1d11eb1479c0);
+
+            
+        
+        
+            
+            var regular_polygon_marker_6455e41dcf4147488f2921cc97422abb = new L.RegularPolygonMarker(
+                new L.LatLng(41.910655,-87.649177),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_9bde15c4dbe04db685f5208e3fe7b774 = L.popup({maxWidth: '300'});
+
+            
+                var html_4e603d0eb88d4f74a447a603464f6c8b = $('         <div id="html_4e603d0eb88d4f74a447a603464f6c8b"                 style="width: 100.0%; height: 100.0%;">                 North/Clybourn</div>                 ')[0];
+                popup_9bde15c4dbe04db685f5208e3fe7b774.setContent(html_4e603d0eb88d4f74a447a603464f6c8b);
+            
+
+            regular_polygon_marker_6455e41dcf4147488f2921cc97422abb.bindPopup(popup_9bde15c4dbe04db685f5208e3fe7b774);
+
+            
+        
+        
+            
+            var regular_polygon_marker_db62e1149ec84f9c8c3eccb36a0d466f = new L.RegularPolygonMarker(
+                new L.LatLng(41.89681,-87.635924),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_485e20f88828495d867defefa20279b1 = L.popup({maxWidth: '300'});
+
+            
+                var html_d55d91de948240e1a248805d1c590ef4 = $('         <div id="html_d55d91de948240e1a248805d1c590ef4"                 style="width: 100.0%; height: 100.0%;">                 Chicago/Franklin</div>                 ')[0];
+                popup_485e20f88828495d867defefa20279b1.setContent(html_d55d91de948240e1a248805d1c590ef4);
+            
+
+            regular_polygon_marker_db62e1149ec84f9c8c3eccb36a0d466f.bindPopup(popup_485e20f88828495d867defefa20279b1);
+
+            
+        
+        
+            
+            var regular_polygon_marker_49f11950907046a1bac2a9ca1373c398 = new L.RegularPolygonMarker(
+                new L.LatLng(41.735372,-87.624717),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_9b80e7e1e4964ac3a315282fc0fbaf38 = L.popup({maxWidth: '300'});
+
+            
+                var html_c7bd4f1ca6d14fe18c216729222c9931 = $('         <div id="html_c7bd4f1ca6d14fe18c216729222c9931"                 style="width: 100.0%; height: 100.0%;">                 87th</div>                 ')[0];
+                popup_9b80e7e1e4964ac3a315282fc0fbaf38.setContent(html_c7bd4f1ca6d14fe18c216729222c9931);
+            
+
+            regular_polygon_marker_49f11950907046a1bac2a9ca1373c398.bindPopup(popup_9b80e7e1e4964ac3a315282fc0fbaf38);
+
+            
+        
+        
+            
+            var regular_polygon_marker_a53d288a034a4d96aa40470a410afc8d = new L.RegularPolygonMarker(
+                new L.LatLng(41.882023,-87.626098),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_923d2ce292514845b0ec9416ffaa9cfd = L.popup({maxWidth: '300'});
+
+            
+                var html_f0860bfefce34b9582fc27bfde365bf9 = $('         <div id="html_f0860bfefce34b9582fc27bfde365bf9"                 style="width: 100.0%; height: 100.0%;">                 Madison/Wabash</div>                 ')[0];
+                popup_923d2ce292514845b0ec9416ffaa9cfd.setContent(html_f0860bfefce34b9582fc27bfde365bf9);
+            
+
+            regular_polygon_marker_a53d288a034a4d96aa40470a410afc8d.bindPopup(popup_923d2ce292514845b0ec9416ffaa9cfd);
+
+            
+        
+        
+            
+            var regular_polygon_marker_c2a173a26ecd4325ae19aa1f4757b3fe = new L.RegularPolygonMarker(
+                new L.LatLng(41.938132,-87.712359),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_70ed5f83d287477581ece288fb9306f3 = L.popup({maxWidth: '300'});
+
+            
+                var html_27fe26e665864fd3833fa717673ef2c9 = $('         <div id="html_27fe26e665864fd3833fa717673ef2c9"                 style="width: 100.0%; height: 100.0%;">                 Belmont-O&#39;Hare</div>                 ')[0];
+                popup_70ed5f83d287477581ece288fb9306f3.setContent(html_27fe26e665864fd3833fa717673ef2c9);
+            
+
+            regular_polygon_marker_c2a173a26ecd4325ae19aa1f4757b3fe.bindPopup(popup_70ed5f83d287477581ece288fb9306f3);
+
+            
+        
+        
+            
+            var regular_polygon_marker_2cbc311d9ffd4087995948f2f309646a = new L.RegularPolygonMarker(
+                new L.LatLng(41.799756,-87.724493),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9461c',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_185f4f3ce9a440208ba8156ba51bf650 = L.popup({maxWidth: '300'});
+
+            
+                var html_9fa5011ad5cf43f5be61020d53b11dd8 = $('         <div id="html_9fa5011ad5cf43f5be61020d53b11dd8"                 style="width: 100.0%; height: 100.0%;">                 Pulaski-Orange</div>                 ')[0];
+                popup_185f4f3ce9a440208ba8156ba51bf650.setContent(html_9fa5011ad5cf43f5be61020d53b11dd8);
+            
+
+            regular_polygon_marker_2cbc311d9ffd4087995948f2f309646a.bindPopup(popup_185f4f3ce9a440208ba8156ba51bf650);
+
+            
+        
+        
+            
+            var regular_polygon_marker_5dcbf2041681422a8426d5782011e7da = new L.RegularPolygonMarker(
+                new L.LatLng(41.983504,-87.65884),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_94d2fb918a504f27a5355fede7149b63 = L.popup({maxWidth: '300'});
+
+            
+                var html_49b6434f06224115a050216f7ce12def = $('         <div id="html_49b6434f06224115a050216f7ce12def"                 style="width: 100.0%; height: 100.0%;">                 Bryn Mawr</div>                 ')[0];
+                popup_94d2fb918a504f27a5355fede7149b63.setContent(html_49b6434f06224115a050216f7ce12def);
+            
+
+            regular_polygon_marker_5dcbf2041681422a8426d5782011e7da.bindPopup(popup_94d2fb918a504f27a5355fede7149b63);
+
+            
+        
+        
+            
+            var regular_polygon_marker_ff97ccfcb7b84767870f49eef2c36093 = new L.RegularPolygonMarker(
+                new L.LatLng(41.984246,-87.838028),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_c5ddec38c0b042b8ba51a2fe7f77633d = L.popup({maxWidth: '300'});
+
+            
+                var html_5e146f5b2d434e0da288a8cacf904f7a = $('         <div id="html_5e146f5b2d434e0da288a8cacf904f7a"                 style="width: 100.0%; height: 100.0%;">                 Cumberland</div>                 ')[0];
+                popup_c5ddec38c0b042b8ba51a2fe7f77633d.setContent(html_5e146f5b2d434e0da288a8cacf904f7a);
+            
+
+            regular_polygon_marker_ff97ccfcb7b84767870f49eef2c36093.bindPopup(popup_c5ddec38c0b042b8ba51a2fe7f77633d);
+
+            
+        
+        
+            
+            var regular_polygon_marker_0e3e4652de7243e2bfb1a10e2dfb8888 = new L.RegularPolygonMarker(
+                new L.LatLng(41.875474,-87.649707),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_197b65ef0cb74507b2d61bbf5cd7b80b = L.popup({maxWidth: '300'});
+
+            
+                var html_d9c1c0b7023440df933ff8ae30db047b = $('         <div id="html_d9c1c0b7023440df933ff8ae30db047b"                 style="width: 100.0%; height: 100.0%;">                 UIC-Halsted</div>                 ')[0];
+                popup_197b65ef0cb74507b2d61bbf5cd7b80b.setContent(html_d9c1c0b7023440df933ff8ae30db047b);
+            
+
+            regular_polygon_marker_0e3e4652de7243e2bfb1a10e2dfb8888.bindPopup(popup_197b65ef0cb74507b2d61bbf5cd7b80b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_0dac1e18a2d34f2f84c6cc55bae0fc9e = new L.RegularPolygonMarker(
+                new L.LatLng(41.932732,-87.653131),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_4ebb43dfaf8b4b99b224eca12e42197b = L.popup({maxWidth: '300'});
+
+            
+                var html_85af9d62dc134b729c994915440d9c5c = $('         <div id="html_85af9d62dc134b729c994915440d9c5c"                 style="width: 100.0%; height: 100.0%;">                 Diversey</div>                 ')[0];
+                popup_4ebb43dfaf8b4b99b224eca12e42197b.setContent(html_85af9d62dc134b729c994915440d9c5c);
+            
+
+            regular_polygon_marker_0dac1e18a2d34f2f84c6cc55bae0fc9e.bindPopup(popup_4ebb43dfaf8b4b99b224eca12e42197b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_9998dd4ae9c1417bbaceac580698a82d = new L.RegularPolygonMarker(
+                new L.LatLng(41.831191,-87.630636),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_f2bc3c3c47604587928b774057fcea9e = L.popup({maxWidth: '300'});
+
+            
+                var html_7a1e6de805534d0997bc3d22ef08dfc7 = $('         <div id="html_7a1e6de805534d0997bc3d22ef08dfc7"                 style="width: 100.0%; height: 100.0%;">                 Sox-35th-Dan Ryan</div>                 ')[0];
+                popup_f2bc3c3c47604587928b774057fcea9e.setContent(html_7a1e6de805534d0997bc3d22ef08dfc7);
+            
+
+            regular_polygon_marker_9998dd4ae9c1417bbaceac580698a82d.bindPopup(popup_f2bc3c3c47604587928b774057fcea9e);
+
+            
+        
+        
+            
+            var regular_polygon_marker_fa5226c8532340bb8b9c91fa37e67ff0 = new L.RegularPolygonMarker(
+                new L.LatLng(42.008362,-87.665909),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a3c23cb5b59d496aaa73f3d0ee492196 = L.popup({maxWidth: '300'});
+
+            
+                var html_a42ae600a4724ea386feff21c4f33c7c = $('         <div id="html_a42ae600a4724ea386feff21c4f33c7c"                 style="width: 100.0%; height: 100.0%;">                 Morse</div>                 ')[0];
+                popup_a3c23cb5b59d496aaa73f3d0ee492196.setContent(html_a42ae600a4724ea386feff21c4f33c7c);
+            
+
+            regular_polygon_marker_fa5226c8532340bb8b9c91fa37e67ff0.bindPopup(popup_a3c23cb5b59d496aaa73f3d0ee492196);
+
+            
+        
+        
+            
+            var regular_polygon_marker_d252da2e5789486eb42493f9d6d0e9a2 = new L.RegularPolygonMarker(
+                new L.LatLng(41.916157,-87.687364),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_0ba8e37136c546beaed176a4dff76c34 = L.popup({maxWidth: '300'});
+
+            
+                var html_7e10937ac50a4fc4bb76d3a034968900 = $('         <div id="html_7e10937ac50a4fc4bb76d3a034968900"                 style="width: 100.0%; height: 100.0%;">                 Western/Milwaukee</div>                 ')[0];
+                popup_0ba8e37136c546beaed176a4dff76c34.setContent(html_7e10937ac50a4fc4bb76d3a034968900);
+            
+
+            regular_polygon_marker_d252da2e5789486eb42493f9d6d0e9a2.bindPopup(popup_0ba8e37136c546beaed176a4dff76c34);
+
+            
+        
+        
+            
+            var regular_polygon_marker_80d4a5f97fcf4d389a6f105d6f3a1399 = new L.RegularPolygonMarker(
+                new L.LatLng(41.853206,-87.630968),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_ac14aae214c34782ad1a4d869aa106c1 = L.popup({maxWidth: '300'});
+
+            
+                var html_ba7fd1dd537344bd875210860af1276c = $('         <div id="html_ba7fd1dd537344bd875210860af1276c"                 style="width: 100.0%; height: 100.0%;">                 Cermak-Chinatown</div>                 ')[0];
+                popup_ac14aae214c34782ad1a4d869aa106c1.setContent(html_ba7fd1dd537344bd875210860af1276c);
+            
+
+            regular_polygon_marker_80d4a5f97fcf4d389a6f105d6f3a1399.bindPopup(popup_ac14aae214c34782ad1a4d869aa106c1);
+
+            
+        
+        
+            
+            var regular_polygon_marker_66fb5d2672e24e2e985b4158aa10dd81 = new L.RegularPolygonMarker(
+                new L.LatLng(41.79542,-87.631157),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_b8a29bb36a4540c998de0718e17782e0 = L.popup({maxWidth: '300'});
+
+            
+                var html_4356c0ad2c764e99a0f3abbed3a1bfdb = $('         <div id="html_4356c0ad2c764e99a0f3abbed3a1bfdb"                 style="width: 100.0%; height: 100.0%;">                 Garfield-Dan Ryan</div>                 ')[0];
+                popup_b8a29bb36a4540c998de0718e17782e0.setContent(html_4356c0ad2c764e99a0f3abbed3a1bfdb);
+            
+
+            regular_polygon_marker_66fb5d2672e24e2e985b4158aa10dd81.bindPopup(popup_b8a29bb36a4540c998de0718e17782e0);
+
+            
+        
+        
+            
+            var regular_polygon_marker_e7113717952248e7ad9d56dacfade2ef = new L.RegularPolygonMarker(
+                new L.LatLng(41.952925,-87.729229),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_45b9663be97e4cb1b724a721079edbf7 = L.popup({maxWidth: '300'});
+
+            
+                var html_4dacf18a6db94b11828c7e849600be7a = $('         <div id="html_4dacf18a6db94b11828c7e849600be7a"                 style="width: 100.0%; height: 100.0%;">                 Irving Park-O&#39;Hare</div>                 ')[0];
+                popup_45b9663be97e4cb1b724a721079edbf7.setContent(html_4dacf18a6db94b11828c7e849600be7a);
+            
+
+            regular_polygon_marker_e7113717952248e7ad9d56dacfade2ef.bindPopup(popup_45b9663be97e4cb1b724a721079edbf7);
+
+            
+        
+        
+            
+            var regular_polygon_marker_e9bf27f8458048dcb9deaaa469db23cb = new L.RegularPolygonMarker(
+                new L.LatLng(42.04771,-87.683543),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_9222aa4e3d644974be0722afc942b355 = L.popup({maxWidth: '300'});
+
+            
+                var html_13c587d4bed84237917aab35c7d07060 = $('         <div id="html_13c587d4bed84237917aab35c7d07060"                 style="width: 100.0%; height: 100.0%;">                 Davis</div>                 ')[0];
+                popup_9222aa4e3d644974be0722afc942b355.setContent(html_13c587d4bed84237917aab35c7d07060);
+            
+
+            regular_polygon_marker_e9bf27f8458048dcb9deaaa469db23cb.bindPopup(popup_9222aa4e3d644974be0722afc942b355);
+
+            
+        
+        
+            
+            var regular_polygon_marker_977c8f44c8cb44c689b2eb2e81941c08 = new L.RegularPolygonMarker(
+                new L.LatLng(41.993664,-87.659202),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_655920b25ca34851b0303eba0b14aad7 = L.popup({maxWidth: '300'});
+
+            
+                var html_7cfe2d7787a54ba0854ab59a61facd4d = $('         <div id="html_7cfe2d7787a54ba0854ab59a61facd4d"                 style="width: 100.0%; height: 100.0%;">                 Granville</div>                 ')[0];
+                popup_655920b25ca34851b0303eba0b14aad7.setContent(html_7cfe2d7787a54ba0854ab59a61facd4d);
+            
+
+            regular_polygon_marker_977c8f44c8cb44c689b2eb2e81941c08.bindPopup(popup_655920b25ca34851b0303eba0b14aad7);
+
+            
+        
+        
+            
+            var regular_polygon_marker_ecf059d6358c4fb2a50492c19c6ebbf6 = new L.RegularPolygonMarker(
+                new L.LatLng(41.921939,-87.69689),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_6f047258359847c291d39c279c92bbf4 = L.popup({maxWidth: '300'});
+
+            
+                var html_e57eb2a616664be79c6484c0491e5fb4 = $('         <div id="html_e57eb2a616664be79c6484c0491e5fb4"                 style="width: 100.0%; height: 100.0%;">                 California/Milwaukee</div>                 ')[0];
+                popup_6f047258359847c291d39c279c92bbf4.setContent(html_e57eb2a616664be79c6484c0491e5fb4);
+            
+
+            regular_polygon_marker_ecf059d6358c4fb2a50492c19c6ebbf6.bindPopup(popup_6f047258359847c291d39c279c92bbf4);
+
+            
+        
+        
+            
+            var regular_polygon_marker_d9f83060c5e142ad8d48f29a610f9940 = new L.RegularPolygonMarker(
+                new L.LatLng(41.967901,-87.713065),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_c82d4e8c6ad24767bb84dc6afeb64876 = L.popup({maxWidth: '300'});
+
+            
+                var html_d49fca6a6ecb439d9556d0d55f2e5357 = $('         <div id="html_d49fca6a6ecb439d9556d0d55f2e5357"                 style="width: 100.0%; height: 100.0%;">                 Kimball</div>                 ')[0];
+                popup_c82d4e8c6ad24767bb84dc6afeb64876.setContent(html_d49fca6a6ecb439d9556d0d55f2e5357);
+            
+
+            regular_polygon_marker_d9f83060c5e142ad8d48f29a610f9940.bindPopup(popup_c82d4e8c6ad24767bb84dc6afeb64876);
+
+            
+        
+        
+            
+            var regular_polygon_marker_8186434040464c5c9aa3bc64e0fa0898 = new L.RegularPolygonMarker(
+                new L.LatLng(41.966163,-87.688502),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_29c8bbca9f2d49b58371a3d94dcee4d4 = L.popup({maxWidth: '300'});
+
+            
+                var html_d60f2c99b564488387dd7ba62d65ca6d = $('         <div id="html_d60f2c99b564488387dd7ba62d65ca6d"                 style="width: 100.0%; height: 100.0%;">                 Western-Brown</div>                 ')[0];
+                popup_29c8bbca9f2d49b58371a3d94dcee4d4.setContent(html_d60f2c99b564488387dd7ba62d65ca6d);
+            
+
+            regular_polygon_marker_8186434040464c5c9aa3bc64e0fa0898.bindPopup(popup_29c8bbca9f2d49b58371a3d94dcee4d4);
+
+            
+        
+        
+            
+            var regular_polygon_marker_9620074426cf4e58a237064e7592310b = new L.RegularPolygonMarker(
+                new L.LatLng(41.918217,-87.652644),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_b83757c94ee34ce092cbe666b877906f = L.popup({maxWidth: '300'});
+
+            
+                var html_d8ee52012c9244c58aa011a55cfa26f6 = $('         <div id="html_d8ee52012c9244c58aa011a55cfa26f6"                 style="width: 100.0%; height: 100.0%;">                 Armitage</div>                 ')[0];
+                popup_b83757c94ee34ce092cbe666b877906f.setContent(html_d8ee52012c9244c58aa011a55cfa26f6);
+            
+
+            regular_polygon_marker_9620074426cf4e58a237064e7592310b.bindPopup(popup_b83757c94ee34ce092cbe666b877906f);
+
+            
+        
+        
+            
+            var regular_polygon_marker_0f97ab7e1aaf4ff9b1cee8ac57b7bd6d = new L.RegularPolygonMarker(
+                new L.LatLng(41.874257,-87.817318),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_e7fd6973ee284f0aaf682f3c1dc461d7 = L.popup({maxWidth: '300'});
+
+            
+                var html_fc168c6e18bb45d5aa7f7cc11741bdd0 = $('         <div id="html_fc168c6e18bb45d5aa7f7cc11741bdd0"                 style="width: 100.0%; height: 100.0%;">                 Forest Park</div>                 ')[0];
+                popup_e7fd6973ee284f0aaf682f3c1dc461d7.setContent(html_fc168c6e18bb45d5aa7f7cc11741bdd0);
+            
+
+            regular_polygon_marker_0f97ab7e1aaf4ff9b1cee8ac57b7bd6d.bindPopup(popup_e7fd6973ee284f0aaf682f3c1dc461d7);
+
+            
+        
+        
+            
+            var regular_polygon_marker_3bbaf203192648f78fa6ac2e146bdd4c = new L.RegularPolygonMarker(
+                new L.LatLng(41.874039,-87.627479),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_68e07fc993c847f5b8c9822c175542cb = L.popup({maxWidth: '300'});
+
+            
+                var html_c48bcadc327847c78835c93879d9b724 = $('         <div id="html_c48bcadc327847c78835c93879d9b724"                 style="width: 100.0%; height: 100.0%;">                 Harrison</div>                 ')[0];
+                popup_68e07fc993c847f5b8c9822c175542cb.setContent(html_c48bcadc327847c78835c93879d9b724);
+            
+
+            regular_polygon_marker_3bbaf203192648f78fa6ac2e146bdd4c.bindPopup(popup_68e07fc993c847f5b8c9822c175542cb);
+
+            
+        
+        
+            
+            var regular_polygon_marker_aa3acbf50a804d1881f6983d3fbc4022 = new L.RegularPolygonMarker(
+                new L.LatLng(41.886848,-87.803176),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_251cfdeb9d184a4cae9991e9b15e4f76 = L.popup({maxWidth: '300'});
+
+            
+                var html_00cd86b3db68440ba7059ec1eaf60af2 = $('         <div id="html_00cd86b3db68440ba7059ec1eaf60af2"                 style="width: 100.0%; height: 100.0%;">                 Harlem-Lake</div>                 ')[0];
+                popup_251cfdeb9d184a4cae9991e9b15e4f76.setContent(html_00cd86b3db68440ba7059ec1eaf60af2);
+            
+
+            regular_polygon_marker_aa3acbf50a804d1881f6983d3fbc4022.bindPopup(popup_251cfdeb9d184a4cae9991e9b15e4f76);
+
+            
+        
+        
+            
+            var regular_polygon_marker_770368cc62f44a9aa454b61d2b224e95 = new L.RegularPolygonMarker(
+                new L.LatLng(41.977984,-87.658668),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_63ecc5f01ed144ccba27bdfad6758d0d = L.popup({maxWidth: '300'});
+
+            
+                var html_333972fa9c394a48b6f1c78892bc8b7b = $('         <div id="html_333972fa9c394a48b6f1c78892bc8b7b"                 style="width: 100.0%; height: 100.0%;">                 Berwyn</div>                 ')[0];
+                popup_63ecc5f01ed144ccba27bdfad6758d0d.setContent(html_333972fa9c394a48b6f1c78892bc8b7b);
+            
+
+            regular_polygon_marker_770368cc62f44a9aa454b61d2b224e95.bindPopup(popup_63ecc5f01ed144ccba27bdfad6758d0d);
+
+            
+        
+        
+            
+            var regular_polygon_marker_a6d8d4e72f7b4dcbb846ab4033213173 = new L.RegularPolygonMarker(
+                new L.LatLng(41.780536,-87.630952),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_ad0c949308484aa38471e49d74c70ce8 = L.popup({maxWidth: '300'});
+
+            
+                var html_805094686dab4f7f89fdf5397a5dbec9 = $('         <div id="html_805094686dab4f7f89fdf5397a5dbec9"                 style="width: 100.0%; height: 100.0%;">                 63rd-Dan Ryan</div>                 ')[0];
+                popup_ad0c949308484aa38471e49d74c70ce8.setContent(html_805094686dab4f7f89fdf5397a5dbec9);
+            
+
+            regular_polygon_marker_a6d8d4e72f7b4dcbb846ab4033213173.bindPopup(popup_ad0c949308484aa38471e49d74c70ce8);
+
+            
+        
+        
+            
+            var regular_polygon_marker_463860b7996d4808838c112e4609846a = new L.RegularPolygonMarker(
+                new L.LatLng(41.804546,-87.684019),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9461c',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_d2a5f723f79847f9855d2cefad13d2be = L.popup({maxWidth: '300'});
+
+            
+                var html_156da72e0f2848e3b46208614bcf6295 = $('         <div id="html_156da72e0f2848e3b46208614bcf6295"                 style="width: 100.0%; height: 100.0%;">                 Western-Orange</div>                 ')[0];
+                popup_d2a5f723f79847f9855d2cefad13d2be.setContent(html_156da72e0f2848e3b46208614bcf6295);
+            
+
+            regular_polygon_marker_463860b7996d4808838c112e4609846a.bindPopup(popup_d2a5f723f79847f9855d2cefad13d2be);
+
+            
+        
+        
+            
+            var regular_polygon_marker_a457508c1dbb4089ac7dbd53d12fbfc4 = new L.RegularPolygonMarker(
+                new L.LatLng(41.876862,-87.628196),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_e9b190446076490d99267d378f5e8611 = L.popup({maxWidth: '300'});
+
+            
+                var html_9d4d160af7aa45c8b80db88ad5c72569 = $('         <div id="html_9d4d160af7aa45c8b80db88ad5c72569"                 style="width: 100.0%; height: 100.0%;">                 Library</div>                 ')[0];
+                popup_e9b190446076490d99267d378f5e8611.setContent(html_9d4d160af7aa45c8b80db88ad5c72569);
+            
+
+            regular_polygon_marker_a457508c1dbb4089ac7dbd53d12fbfc4.bindPopup(popup_e9b190446076490d99267d378f5e8611);
+
+            
+        
+        
+            
+            var regular_polygon_marker_892b2772eb3b42e29e49120e25978d04 = new L.RegularPolygonMarker(
+                new L.LatLng(41.910409,-87.639302),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_d9ebe5059acd45339194e4e8b8638b83 = L.popup({maxWidth: '300'});
+
+            
+                var html_3abd7687d1824cefad7b587f2aca8f3d = $('         <div id="html_3abd7687d1824cefad7b587f2aca8f3d"                 style="width: 100.0%; height: 100.0%;">                 Sedgwick</div>                 ')[0];
+                popup_d9ebe5059acd45339194e4e8b8638b83.setContent(html_3abd7687d1824cefad7b587f2aca8f3d);
+            
+
+            regular_polygon_marker_892b2772eb3b42e29e49120e25978d04.bindPopup(popup_d9ebe5059acd45339194e4e8b8638b83);
+
+            
+        
+        
+            
+            var regular_polygon_marker_551786c7f7334634a516ddf4cfb8a349 = new L.RegularPolygonMarker(
+                new L.LatLng(41.969139,-87.658493),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_ce3339d036bc4218aba98f99c706f887 = L.popup({maxWidth: '300'});
+
+            
+                var html_35832212c96e495183f03d1e38a59ff9 = $('         <div id="html_35832212c96e495183f03d1e38a59ff9"                 style="width: 100.0%; height: 100.0%;">                 Lawrence</div>                 ')[0];
+                popup_ce3339d036bc4218aba98f99c706f887.setContent(html_35832212c96e495183f03d1e38a59ff9);
+            
+
+            regular_polygon_marker_551786c7f7334634a516ddf4cfb8a349.bindPopup(popup_ce3339d036bc4218aba98f99c706f887);
+
+            
+        
+        
+            
+            var regular_polygon_marker_8cba427a6703435b87e184bbc0c43c97 = new L.RegularPolygonMarker(
+                new L.LatLng(41.896075,-87.655214),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_97391817803c4f3ab43e63aede2d6090 = L.popup({maxWidth: '300'});
+
+            
+                var html_04ba0d7226eb4b4299488055f0324948 = $('         <div id="html_04ba0d7226eb4b4299488055f0324948"                 style="width: 100.0%; height: 100.0%;">                 Chicago/Milwaukee</div>                 ')[0];
+                popup_97391817803c4f3ab43e63aede2d6090.setContent(html_04ba0d7226eb4b4299488055f0324948);
+            
+
+            regular_polygon_marker_8cba427a6703435b87e184bbc0c43c97.bindPopup(popup_97391817803c4f3ab43e63aede2d6090);
+
+            
+        
+        
+            
+            var regular_polygon_marker_f1a49dcfe92c4b7f948b0c39d0506e48 = new L.RegularPolygonMarker(
+                new L.LatLng(41.885678,-87.641782),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_64f21567c76f4c2cb556f351c419ff99 = L.popup({maxWidth: '300'});
+
+            
+                var html_de185a20d78142d0a6877978dbe52643 = $('         <div id="html_de185a20d78142d0a6877978dbe52643"                 style="width: 100.0%; height: 100.0%;">                 Clinton-Lake</div>                 ')[0];
+                popup_64f21567c76f4c2cb556f351c419ff99.setContent(html_de185a20d78142d0a6877978dbe52643);
+            
+
+            regular_polygon_marker_f1a49dcfe92c4b7f948b0c39d0506e48.bindPopup(popup_64f21567c76f4c2cb556f351c419ff99);
+
+            
+        
+        
+            
+            var regular_polygon_marker_d428fb21dfb4466192300938b747b570 = new L.RegularPolygonMarker(
+                new L.LatLng(41.810318,-87.63094),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_3fb23a02a5a343fcb56f3668f03f502e = L.popup({maxWidth: '300'});
+
+            
+                var html_38c680b46b5344ff8b1143570731c419 = $('         <div id="html_38c680b46b5344ff8b1143570731c419"                 style="width: 100.0%; height: 100.0%;">                 47th-Dan Ryan</div>                 ')[0];
+                popup_3fb23a02a5a343fcb56f3668f03f502e.setContent(html_38c680b46b5344ff8b1143570731c419);
+            
+
+            regular_polygon_marker_d428fb21dfb4466192300938b747b570.bindPopup(popup_3fb23a02a5a343fcb56f3668f03f502e);
+
+            
+        
+        
+            
+            var regular_polygon_marker_413b0c7860084199a24c7a316b453de9 = new L.RegularPolygonMarker(
+                new L.LatLng(41.804236,-87.704406),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9461c',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_fb5a1bb0548e436588f24f9024d9123b = L.popup({maxWidth: '300'});
+
+            
+                var html_d312f0ae4a7a4c4d8e148f05b6f2bf0c = $('         <div id="html_d312f0ae4a7a4c4d8e148f05b6f2bf0c"                 style="width: 100.0%; height: 100.0%;">                 Kedzie-Midway</div>                 ')[0];
+                popup_fb5a1bb0548e436588f24f9024d9123b.setContent(html_d312f0ae4a7a4c4d8e148f05b6f2bf0c);
+            
+
+            regular_polygon_marker_413b0c7860084199a24c7a316b453de9.bindPopup(popup_fb5a1bb0548e436588f24f9024d9123b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_2abf9c8226654271ab4448600f3ae184 = new L.RegularPolygonMarker(
+                new L.LatLng(41.990259,-87.659076),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2e4a151db42045499d7d6eb87133c314 = L.popup({maxWidth: '300'});
+
+            
+                var html_e6aebf9a9d1d48ceb8d0c9c1a427f333 = $('         <div id="html_e6aebf9a9d1d48ceb8d0c9c1a427f333"                 style="width: 100.0%; height: 100.0%;">                 Thorndale</div>                 ')[0];
+                popup_2e4a151db42045499d7d6eb87133c314.setContent(html_e6aebf9a9d1d48ceb8d0c9c1a427f333);
+            
+
+            regular_polygon_marker_2abf9c8226654271ab4448600f3ae184.bindPopup(popup_2e4a151db42045499d7d6eb87133c314);
+
+            
+        
+        
+            
+            var regular_polygon_marker_179ae3fb180b43d8903a64d83eb2b7db = new L.RegularPolygonMarker(
+                new L.LatLng(41.973453,-87.65853),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_28febd30160e45939282ee533f0bf5a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_21114794c112448788a8508b2cdef193 = $('         <div id="html_21114794c112448788a8508b2cdef193"                 style="width: 100.0%; height: 100.0%;">                 Argyle</div>                 ')[0];
+                popup_28febd30160e45939282ee533f0bf5a4.setContent(html_21114794c112448788a8508b2cdef193);
+            
+
+            regular_polygon_marker_179ae3fb180b43d8903a64d83eb2b7db.bindPopup(popup_28febd30160e45939282ee533f0bf5a4);
+
+            
+        
+        
+            
+            var regular_polygon_marker_8cee56c86f834fae8990b9a478dda9a4 = new L.RegularPolygonMarker(
+                new L.LatLng(41.875539,-87.640984),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_d517d2126bfe4c27a4c8cb8ea9f8eea3 = L.popup({maxWidth: '300'});
+
+            
+                var html_90b9304535214ef6978522214a9217c8 = $('         <div id="html_90b9304535214ef6978522214a9217c8"                 style="width: 100.0%; height: 100.0%;">                 Clinton-Forest Park</div>                 ')[0];
+                popup_d517d2126bfe4c27a4c8cb8ea9f8eea3.setContent(html_90b9304535214ef6978522214a9217c8);
+            
+
+            regular_polygon_marker_8cee56c86f834fae8990b9a478dda9a4.bindPopup(popup_d517d2126bfe4c27a4c8cb8ea9f8eea3);
+
+            
+        
+        
+            
+            var regular_polygon_marker_b4d6d7370fbe43ebad6fb93d5eb5f5b4 = new L.RegularPolygonMarker(
+                new L.LatLng(41.943744,-87.663619),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_aafa8b1ca19846adaca9dfdaef83abae = L.popup({maxWidth: '300'});
+
+            
+                var html_7ff021c9c5f4401c8f84fb17d8ccb62b = $('         <div id="html_7ff021c9c5f4401c8f84fb17d8ccb62b"                 style="width: 100.0%; height: 100.0%;">                 Southport</div>                 ')[0];
+                popup_aafa8b1ca19846adaca9dfdaef83abae.setContent(html_7ff021c9c5f4401c8f84fb17d8ccb62b);
+            
+
+            regular_polygon_marker_b4d6d7370fbe43ebad6fb93d5eb5f5b4.bindPopup(popup_aafa8b1ca19846adaca9dfdaef83abae);
+
+            
+        
+        
+            
+            var regular_polygon_marker_7d686aac0a584f04bf0b5b296ad773da = new L.RegularPolygonMarker(
+                new L.LatLng(41.871551,-87.66953),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_26fd293c51974410b08dbcd96592f221 = L.popup({maxWidth: '300'});
+
+            
+                var html_784ca2ef1dd645a9970d52079ef4cbb4 = $('         <div id="html_784ca2ef1dd645a9970d52079ef4cbb4"                 style="width: 100.0%; height: 100.0%;">                 Polk</div>                 ')[0];
+                popup_26fd293c51974410b08dbcd96592f221.setContent(html_784ca2ef1dd645a9970d52079ef4cbb4);
+            
+
+            regular_polygon_marker_7d686aac0a584f04bf0b5b296ad773da.bindPopup(popup_26fd293c51974410b08dbcd96592f221);
+
+            
+        
+        
+            
+            var regular_polygon_marker_efd10c2622de4de7971fccebcd8cc926 = new L.RegularPolygonMarker(
+                new L.LatLng(41.98227,-87.8089),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2ad0b19d9ab54d2a82f1a018e83a96bf = L.popup({maxWidth: '300'});
+
+            
+                var html_1469beb741134472a946db5b9e43f291 = $('         <div id="html_1469beb741134472a946db5b9e43f291"                 style="width: 100.0%; height: 100.0%;">                 Harlem-O&#39;Hare</div>                 ')[0];
+                popup_2ad0b19d9ab54d2a82f1a018e83a96bf.setContent(html_1469beb741134472a946db5b9e43f291);
+            
+
+            regular_polygon_marker_efd10c2622de4de7971fccebcd8cc926.bindPopup(popup_2ad0b19d9ab54d2a82f1a018e83a96bf);
+
+            
+        
+        
+            
+            var regular_polygon_marker_b567f26f897a4fc299ac941b038304d5 = new L.RegularPolygonMarker(
+                new L.LatLng(41.875706,-87.673932),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_1dfc789d088141d8816a607d2227b3e4 = L.popup({maxWidth: '300'});
+
+            
+                var html_1c326bd0261e40308c7c4fee5f263bfe = $('         <div id="html_1c326bd0261e40308c7c4fee5f263bfe"                 style="width: 100.0%; height: 100.0%;">                 Medical Center</div>                 ')[0];
+                popup_1dfc789d088141d8816a607d2227b3e4.setContent(html_1c326bd0261e40308c7c4fee5f263bfe);
+            
+
+            regular_polygon_marker_b567f26f897a4fc299ac941b038304d5.bindPopup(popup_1dfc789d088141d8816a607d2227b3e4);
+
+            
+        
+        
+            
+            var regular_polygon_marker_c81ae13f6f64435bae3de3776ee5a2ea = new L.RegularPolygonMarker(
+                new L.LatLng(41.8768,-87.631739),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2dd8c889bc8342799764501456b6156a = L.popup({maxWidth: '300'});
+
+            
+                var html_bd375d4729244f4091ad776ecd45987e = $('         <div id="html_bd375d4729244f4091ad776ecd45987e"                 style="width: 100.0%; height: 100.0%;">                 LaSalle/Van Buren</div>                 ')[0];
+                popup_2dd8c889bc8342799764501456b6156a.setContent(html_bd375d4729244f4091ad776ecd45987e);
+            
+
+            regular_polygon_marker_c81ae13f6f64435bae3de3776ee5a2ea.bindPopup(popup_2dd8c889bc8342799764501456b6156a);
+
+            
+        
+        
+            
+            var regular_polygon_marker_aa8671c0f2924f29bc53813faa911153 = new L.RegularPolygonMarker(
+                new L.LatLng(41.829353,-87.680622),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9461c',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_24e9178fc148474286a2c4a3c038a6d2 = L.popup({maxWidth: '300'});
+
+            
+                var html_281f5bf0256448a688bea4771e35e172 = $('         <div id="html_281f5bf0256448a688bea4771e35e172"                 style="width: 100.0%; height: 100.0%;">                 35th/Archer</div>                 ')[0];
+                popup_24e9178fc148474286a2c4a3c038a6d2.setContent(html_281f5bf0256448a688bea4771e35e172);
+            
+
+            regular_polygon_marker_aa8671c0f2924f29bc53813faa911153.bindPopup(popup_24e9178fc148474286a2c4a3c038a6d2);
+
+            
+        
+        
+            
+            var regular_polygon_marker_998f57d22b114d6f87449d41e841f3d6 = new L.RegularPolygonMarker(
+                new L.LatLng(41.94738,-87.71906),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_9e38721fd9904aa1b510144b4dfa2e83 = L.popup({maxWidth: '300'});
+
+            
+                var html_fd68306e68274f4eb56d515c9ec9bedc = $('         <div id="html_fd68306e68274f4eb56d515c9ec9bedc"                 style="width: 100.0%; height: 100.0%;">                 Addison-O&#39;Hare</div>                 ')[0];
+                popup_9e38721fd9904aa1b510144b4dfa2e83.setContent(html_fd68306e68274f4eb56d515c9ec9bedc);
+            
+
+            regular_polygon_marker_998f57d22b114d6f87449d41e841f3d6.bindPopup(popup_9e38721fd9904aa1b510144b4dfa2e83);
+
+            
+        
+        
+            
+            var regular_polygon_marker_ece50a96b03e40258cc43255b6c2c06f = new L.RegularPolygonMarker(
+                new L.LatLng(41.875568,-87.631722),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_bcab01c4d94240ab87d45d0899de036a = L.popup({maxWidth: '300'});
+
+            
+                var html_844d47c607084cea9679ad8246a25656 = $('         <div id="html_844d47c607084cea9679ad8246a25656"                 style="width: 100.0%; height: 100.0%;">                 LaSalle</div>                 ')[0];
+                popup_bcab01c4d94240ab87d45d0899de036a.setContent(html_844d47c607084cea9679ad8246a25656);
+            
+
+            regular_polygon_marker_ece50a96b03e40258cc43255b6c2c06f.bindPopup(popup_bcab01c4d94240ab87d45d0899de036a);
+
+            
+        
+        
+            
+            var regular_polygon_marker_f50982f809fe46df99513c0b4d51811d = new L.RegularPolygonMarker(
+                new L.LatLng(41.84678,-87.648088),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9461c',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_752477830bb94c3aa937bf8650afcbef = L.popup({maxWidth: '300'});
+
+            
+                var html_4f4295f774944ced9500d230545ba12f = $('         <div id="html_4f4295f774944ced9500d230545ba12f"                 style="width: 100.0%; height: 100.0%;">                 Halsted-Orange</div>                 ')[0];
+                popup_752477830bb94c3aa937bf8650afcbef.setContent(html_4f4295f774944ced9500d230545ba12f);
+            
+
+            regular_polygon_marker_f50982f809fe46df99513c0b4d51811d.bindPopup(popup_752477830bb94c3aa937bf8650afcbef);
+
+            
+        
+        
+            
+            var regular_polygon_marker_76bc23590b6e42358fab446fef5a5410 = new L.RegularPolygonMarker(
+                new L.LatLng(41.954521,-87.674868),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_172815187fd8423d971e5b3b67dfa631 = L.popup({maxWidth: '300'});
+
+            
+                var html_0799c0fb853449889e40c9c917e2336b = $('         <div id="html_0799c0fb853449889e40c9c917e2336b"                 style="width: 100.0%; height: 100.0%;">                 Irving Park-Brown</div>                 ')[0];
+                popup_172815187fd8423d971e5b3b67dfa631.setContent(html_0799c0fb853449889e40c9c917e2336b);
+            
+
+            regular_polygon_marker_76bc23590b6e42358fab446fef5a5410.bindPopup(popup_172815187fd8423d971e5b3b67dfa631);
+
+            
+        
+        
+            
+            var regular_polygon_marker_1578e508734a431891a20a667ec3e09d = new L.RegularPolygonMarker(
+                new L.LatLng(41.936033,-87.653266),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_80fe353670914dbc8aab39d12eb292ac = L.popup({maxWidth: '300'});
+
+            
+                var html_6ece772faeda422a96b56e9a3a5267b2 = $('         <div id="html_6ece772faeda422a96b56e9a3a5267b2"                 style="width: 100.0%; height: 100.0%;">                 Wellington</div>                 ')[0];
+                popup_80fe353670914dbc8aab39d12eb292ac.setContent(html_6ece772faeda422a96b56e9a3a5267b2);
+            
+
+            regular_polygon_marker_1578e508734a431891a20a667ec3e09d.bindPopup(popup_80fe353670914dbc8aab39d12eb292ac);
+
+            
+        
+        
+            
+            var regular_polygon_marker_f61e37f5f31d4246b38365c4e673d624 = new L.RegularPolygonMarker(
+                new L.LatLng(41.887389,-87.76565),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_630472659bae4ac79f60ef2c17dfce14 = L.popup({maxWidth: '300'});
+
+            
+                var html_d68002ab4ff14cc0bfce4020f405fb24 = $('         <div id="html_d68002ab4ff14cc0bfce4020f405fb24"                 style="width: 100.0%; height: 100.0%;">                 Central-Lake</div>                 ')[0];
+                popup_630472659bae4ac79f60ef2c17dfce14.setContent(html_d68002ab4ff14cc0bfce4020f405fb24);
+            
+
+            regular_polygon_marker_f61e37f5f31d4246b38365c4e673d624.bindPopup(popup_630472659bae4ac79f60ef2c17dfce14);
+
+            
+        
+        
+            
+            var regular_polygon_marker_4f7bf59511a64daa8f5b8683885b82d4 = new L.RegularPolygonMarker(
+                new L.LatLng(41.943623,-87.670907),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_c482a5fbd03e4443996b46bbb6c21cf3 = L.popup({maxWidth: '300'});
+
+            
+                var html_df3e410dcec546dc91d94c3bdac0ee0e = $('         <div id="html_df3e410dcec546dc91d94c3bdac0ee0e"                 style="width: 100.0%; height: 100.0%;">                 Paulina</div>                 ')[0];
+                popup_c482a5fbd03e4443996b46bbb6c21cf3.setContent(html_df3e410dcec546dc91d94c3bdac0ee0e);
+            
+
+            regular_polygon_marker_4f7bf59511a64daa8f5b8683885b82d4.bindPopup(popup_c482a5fbd03e4443996b46bbb6c21cf3);
+
+            
+        
+        
+            
+            var regular_polygon_marker_6f929e386fea4d0b80b0b2943ce7434e = new L.RegularPolygonMarker(
+                new L.LatLng(41.961756,-87.675047),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_5e988ef007de47dc806c0aad23f46c0e = L.popup({maxWidth: '300'});
+
+            
+                var html_f9ad70ffb1c8490b83092d516d743440 = $('         <div id="html_f9ad70ffb1c8490b83092d516d743440"                 style="width: 100.0%; height: 100.0%;">                 Montrose-Brown</div>                 ')[0];
+                popup_5e988ef007de47dc806c0aad23f46c0e.setContent(html_f9ad70ffb1c8490b83092d516d743440);
+            
+
+            regular_polygon_marker_6f929e386fea4d0b80b0b2943ce7434e.bindPopup(popup_5e988ef007de47dc806c0aad23f46c0e);
+
+            
+        
+        
+            
+            var regular_polygon_marker_a3ed7a10fda6495ba14d0f2682bb9b3c = new L.RegularPolygonMarker(
+                new L.LatLng(41.831677,-87.625826),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_fecf722da38a47388cbdcb7c9080be99 = L.popup({maxWidth: '300'});
+
+            
+                var html_164202a0da674bb3a2bf718b1aca4a90 = $('         <div id="html_164202a0da674bb3a2bf718b1aca4a90"                 style="width: 100.0%; height: 100.0%;">                 35-Bronzeville-IIT</div>                 ')[0];
+                popup_fecf722da38a47388cbdcb7c9080be99.setContent(html_164202a0da674bb3a2bf718b1aca4a90);
+            
+
+            regular_polygon_marker_a3ed7a10fda6495ba14d0f2682bb9b3c.bindPopup(popup_fecf722da38a47388cbdcb7c9080be99);
+
+            
+        
+        
+            
+            var regular_polygon_marker_e62e215a1da54e28ac9f88d5c3e69d5f = new L.RegularPolygonMarker(
+                new L.LatLng(41.87592,-87.659458),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_b5400450d39344e29a87e5b30869c8ef = L.popup({maxWidth: '300'});
+
+            
+                var html_093d5da4ce35439ca652590231393906 = $('         <div id="html_093d5da4ce35439ca652590231393906"                 style="width: 100.0%; height: 100.0%;">                 Racine</div>                 ')[0];
+                popup_b5400450d39344e29a87e5b30869c8ef.setContent(html_093d5da4ce35439ca652590231393906);
+            
+
+            regular_polygon_marker_e62e215a1da54e28ac9f88d5c3e69d5f.bindPopup(popup_b5400450d39344e29a87e5b30869c8ef);
+
+            
+        
+        
+            
+            var regular_polygon_marker_03a92ce5828546ddb6cd0e0b3b2fcd31 = new L.RegularPolygonMarker(
+                new L.LatLng(41.885269,-87.666969),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_0ee0926894994dab8a46ed84c0e4e356 = L.popup({maxWidth: '300'});
+
+            
+                var html_9f35d1f4d07d47aca2a88d4b995d80ac = $('         <div id="html_9f35d1f4d07d47aca2a88d4b995d80ac"                 style="width: 100.0%; height: 100.0%;">                 Ashland-Lake</div>                 ')[0];
+                popup_0ee0926894994dab8a46ed84c0e4e356.setContent(html_9f35d1f4d07d47aca2a88d4b995d80ac);
+            
+
+            regular_polygon_marker_03a92ce5828546ddb6cd0e0b3b2fcd31.bindPopup(popup_0ee0926894994dab8a46ed84c0e4e356);
+
+            
+        
+        
+            
+            var regular_polygon_marker_78e8647242ba4fb6a9f47cbfc4cdf2bd = new L.RegularPolygonMarker(
+                new L.LatLng(41.966286,-87.678639),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_6dc66bb043cd452ea76bf6a2f7b3f29d = L.popup({maxWidth: '300'});
+
+            
+                var html_a31357572a2e46b18f49a05a5092ddd4 = $('         <div id="html_a31357572a2e46b18f49a05a5092ddd4"                 style="width: 100.0%; height: 100.0%;">                 Damen-Brown</div>                 ')[0];
+                popup_6dc66bb043cd452ea76bf6a2f7b3f29d.setContent(html_a31357572a2e46b18f49a05a5092ddd4);
+            
+
+            regular_polygon_marker_78e8647242ba4fb6a9f47cbfc4cdf2bd.bindPopup(popup_6dc66bb043cd452ea76bf6a2f7b3f29d);
+
+            
+        
+        
+            
+            var regular_polygon_marker_88afc9c220414da0a9e8baf1f589effd = new L.RegularPolygonMarker(
+                new L.LatLng(41.961539,-87.743574),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_60cb21d7779d4e65b4f8031d71c35425 = L.popup({maxWidth: '300'});
+
+            
+                var html_9ab6417452134cbba63d039ed08cc2ae = $('         <div id="html_9ab6417452134cbba63d039ed08cc2ae"                 style="width: 100.0%; height: 100.0%;">                 Montrose-O&#39;Hare</div>                 ')[0];
+                popup_60cb21d7779d4e65b4f8031d71c35425.setContent(html_9ab6417452134cbba63d039ed08cc2ae);
+            
+
+            regular_polygon_marker_88afc9c220414da0a9e8baf1f589effd.bindPopup(popup_60cb21d7779d4e65b4f8031d71c35425);
+
+            
+        
+        
+            
+            var regular_polygon_marker_47fdc08c00a748ae96fddafba0e49818 = new L.RegularPolygonMarker(
+                new L.LatLng(41.947028,-87.674642),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_29de4e29286e4ace946fbbb95845093f = L.popup({maxWidth: '300'});
+
+            
+                var html_dcb66e2dc616480b928fe33ac50a2fa5 = $('         <div id="html_dcb66e2dc616480b928fe33ac50a2fa5"                 style="width: 100.0%; height: 100.0%;">                 Addison-Brown</div>                 ')[0];
+                popup_29de4e29286e4ace946fbbb95845093f.setContent(html_dcb66e2dc616480b928fe33ac50a2fa5);
+            
+
+            regular_polygon_marker_47fdc08c00a748ae96fddafba0e49818.bindPopup(popup_29de4e29286e4ace946fbbb95845093f);
+
+            
+        
+        
+            
+            var regular_polygon_marker_58960842465348a1bd044fbebbdaf9cd = new L.RegularPolygonMarker(
+                new L.LatLng(41.887293,-87.774135),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_4e93db153d704c4ba31c5bdbce19aef3 = L.popup({maxWidth: '300'});
+
+            
+                var html_7a4e57f1faec4ce496deda7a595f7ce2 = $('         <div id="html_7a4e57f1faec4ce496deda7a595f7ce2"                 style="width: 100.0%; height: 100.0%;">                 Austin-Lake</div>                 ')[0];
+                popup_4e93db153d704c4ba31c5bdbce19aef3.setContent(html_7a4e57f1faec4ce496deda7a595f7ce2);
+            
+
+            regular_polygon_marker_58960842465348a1bd044fbebbdaf9cd.bindPopup(popup_4e93db153d704c4ba31c5bdbce19aef3);
+
+            
+        
+        
+            
+            var regular_polygon_marker_96132565e3f34ad39c2bbfc09b384922 = new L.RegularPolygonMarker(
+                new L.LatLng(41.874341,-87.70604),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2f4a8be5e4df459cbb84581573e12b81 = L.popup({maxWidth: '300'});
+
+            
+                var html_1b16abfd4ed4420bb98f749295445581 = $('         <div id="html_1b16abfd4ed4420bb98f749295445581"                 style="width: 100.0%; height: 100.0%;">                 Kedzie-Homan-Forest Park</div>                 ')[0];
+                popup_2f4a8be5e4df459cbb84581573e12b81.setContent(html_1b16abfd4ed4420bb98f749295445581);
+            
+
+            regular_polygon_marker_96132565e3f34ad39c2bbfc09b384922.bindPopup(popup_2f4a8be5e4df459cbb84581573e12b81);
+
+            
+        
+        
+            
+            var regular_polygon_marker_ac1572e3171a403c815a7a4296d2cb06 = new L.RegularPolygonMarker(
+                new L.LatLng(41.965996,-87.708821),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_38e768356eb7499b94931e9487739466 = L.popup({maxWidth: '300'});
+
+            
+                var html_9e1989294779496eaad8e428da8e3522 = $('         <div id="html_9e1989294779496eaad8e428da8e3522"                 style="width: 100.0%; height: 100.0%;">                 Kedzie-Brown</div>                 ')[0];
+                popup_38e768356eb7499b94931e9487739466.setContent(html_9e1989294779496eaad8e428da8e3522);
+            
+
+            regular_polygon_marker_ac1572e3171a403c815a7a4296d2cb06.bindPopup(popup_38e768356eb7499b94931e9487739466);
+
+            
+        
+        
+            
+            var regular_polygon_marker_38853eacc7e74938b7cc2eab81f5ced6 = new L.RegularPolygonMarker(
+                new L.LatLng(41.891189,-87.647578),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_34d061974bc543cf8c78763c0c88d0f9 = L.popup({maxWidth: '300'});
+
+            
+                var html_3c686ca8455144058907e954d88cbef7 = $('         <div id="html_3c686ca8455144058907e954d88cbef7"                 style="width: 100.0%; height: 100.0%;">                 Grand/Milwaukee</div>                 ')[0];
+                popup_34d061974bc543cf8c78763c0c88d0f9.setContent(html_3c686ca8455144058907e954d88cbef7);
+            
+
+            regular_polygon_marker_38853eacc7e74938b7cc2eab81f5ced6.bindPopup(popup_34d061974bc543cf8c78763c0c88d0f9);
+
+            
+        
+        
+            
+            var regular_polygon_marker_ce9a664bcd7d47f99855af87f536d25f = new L.RegularPolygonMarker(
+                new L.LatLng(41.870851,-87.776812),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_74c96033a3fb471d9d5a9804b8fc5927 = L.popup({maxWidth: '300'});
+
+            
+                var html_cf65439beb6046e4b95b11b4cf3d8c75 = $('         <div id="html_cf65439beb6046e4b95b11b4cf3d8c75"                 style="width: 100.0%; height: 100.0%;">                 Austin-Forest Park</div>                 ')[0];
+                popup_74c96033a3fb471d9d5a9804b8fc5927.setContent(html_cf65439beb6046e4b95b11b4cf3d8c75);
+            
+
+            regular_polygon_marker_ce9a664bcd7d47f99855af87f536d25f.bindPopup(popup_74c96033a3fb471d9d5a9804b8fc5927);
+
+            
+        
+        
+            
+            var regular_polygon_marker_6be475fb8f914dac8acb7b5b9860f442 = new L.RegularPolygonMarker(
+                new L.LatLng(41.85177331,-87.75669201),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_1d5a53a421044e98b1aa8e581888bfde = L.popup({maxWidth: '300'});
+
+            
+                var html_bf88eda847444b9bafa3f1836e2f31aa = $('         <div id="html_bf88eda847444b9bafa3f1836e2f31aa"                 style="width: 100.0%; height: 100.0%;">                 54th/Cermak</div>                 ')[0];
+                popup_1d5a53a421044e98b1aa8e581888bfde.setContent(html_bf88eda847444b9bafa3f1836e2f31aa);
+            
+
+            regular_polygon_marker_6be475fb8f914dac8acb7b5b9860f442.bindPopup(popup_1d5a53a421044e98b1aa8e581888bfde);
+
+            
+        
+        
+            
+            var regular_polygon_marker_88b42d7e554240a1a564f054ed46f51b = new L.RegularPolygonMarker(
+                new L.LatLng(41.885412,-87.725404),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_cc25888d7caf4bba9ba953dd035f5215 = L.popup({maxWidth: '300'});
+
+            
+                var html_78bfc6ced7a04beb8f0b6b38bb9053a6 = $('         <div id="html_78bfc6ced7a04beb8f0b6b38bb9053a6"                 style="width: 100.0%; height: 100.0%;">                 Pulaski-Lake</div>                 ')[0];
+                popup_cc25888d7caf4bba9ba953dd035f5215.setContent(html_78bfc6ced7a04beb8f0b6b38bb9053a6);
+            
+
+            regular_polygon_marker_88b42d7e554240a1a564f054ed46f51b.bindPopup(popup_cc25888d7caf4bba9ba953dd035f5215);
+
+            
+        
+        
+            
+            var regular_polygon_marker_31dae8dd6b7741a18dea6adaf6cb3079 = new L.RegularPolygonMarker(
+                new L.LatLng(41.77886,-87.663766),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_b311677c56de439aa9a539553619b2da = L.popup({maxWidth: '300'});
+
+            
+                var html_9265742edac946ea9db4fbdb2c19ed13 = $('         <div id="html_9265742edac946ea9db4fbdb2c19ed13"                 style="width: 100.0%; height: 100.0%;">                 Ashland/63rd</div>                 ')[0];
+                popup_b311677c56de439aa9a539553619b2da.setContent(html_9265742edac946ea9db4fbdb2c19ed13);
+            
+
+            regular_polygon_marker_31dae8dd6b7741a18dea6adaf6cb3079.bindPopup(popup_b311677c56de439aa9a539553619b2da);
+
+            
+        
+        
+            
+            var regular_polygon_marker_3b575c84aa6c4dd49d7ec0e6e648ff0c = new L.RegularPolygonMarker(
+                new L.LatLng(41.795172,-87.618327),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_d0515419966d43c48231f7c8f7fa59ed = L.popup({maxWidth: '300'});
+
+            
+                var html_8cab9e711ce24b92a50ff589f1993c23 = $('         <div id="html_8cab9e711ce24b92a50ff589f1993c23"                 style="width: 100.0%; height: 100.0%;">                 Garfield-South Elevated</div>                 ')[0];
+                popup_d0515419966d43c48231f7c8f7fa59ed.setContent(html_8cab9e711ce24b92a50ff589f1993c23);
+            
+
+            regular_polygon_marker_3b575c84aa6c4dd49d7ec0e6e648ff0c.bindPopup(popup_d0515419966d43c48231f7c8f7fa59ed);
+
+            
+        
+        
+            
+            var regular_polygon_marker_544ae6631361434684d90123c71fc0a4 = new L.RegularPolygonMarker(
+                new L.LatLng(41.873797,-87.725663),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_d84a377541e54177a9f5fc2743adfd19 = L.popup({maxWidth: '300'});
+
+            
+                var html_25402601ee3b424d8f2cabd39ec5a005 = $('         <div id="html_25402601ee3b424d8f2cabd39ec5a005"                 style="width: 100.0%; height: 100.0%;">                 Pulaski-Forest Park</div>                 ')[0];
+                popup_d84a377541e54177a9f5fc2743adfd19.setContent(html_25402601ee3b424d8f2cabd39ec5a005);
+            
+
+            regular_polygon_marker_544ae6631361434684d90123c71fc0a4.bindPopup(popup_d84a377541e54177a9f5fc2743adfd19);
+
+            
+        
+        
+            
+            var regular_polygon_marker_78f8b854851348358f8cb84af501a95e = new L.RegularPolygonMarker(
+                new L.LatLng(42.038951,-87.751919),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9e300',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_84e7ed6775464a238f57c574691d5842 = L.popup({maxWidth: '300'});
+
+            
+                var html_b87de489d5954825ba2d9115fafa04aa = $('         <div id="html_b87de489d5954825ba2d9115fafa04aa"                 style="width: 100.0%; height: 100.0%;">                 Skokie</div>                 ')[0];
+                popup_84e7ed6775464a238f57c574691d5842.setContent(html_b87de489d5954825ba2d9115fafa04aa);
+            
+
+            regular_polygon_marker_78f8b854851348358f8cb84af501a95e.bindPopup(popup_84e7ed6775464a238f57c574691d5842);
+
+            
+        
+        
+            
+            var regular_polygon_marker_f75bbe769e064393a932e303f001c04d = new L.RegularPolygonMarker(
+                new L.LatLng(42.015876,-87.669092),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_c5ac88c008054a629cc6a32707d063b1 = L.popup({maxWidth: '300'});
+
+            
+                var html_933c8d68c9f049e1b30d140090654f44 = $('         <div id="html_933c8d68c9f049e1b30d140090654f44"                 style="width: 100.0%; height: 100.0%;">                 Jarvis</div>                 ')[0];
+                popup_c5ac88c008054a629cc6a32707d063b1.setContent(html_933c8d68c9f049e1b30d140090654f44);
+            
+
+            regular_polygon_marker_f75bbe769e064393a932e303f001c04d.bindPopup(popup_c5ac88c008054a629cc6a32707d063b1);
+
+            
+        
+        
+            
+            var regular_polygon_marker_e7c7e7083bab46ef805df1bed7c3eb0f = new L.RegularPolygonMarker(
+                new L.LatLng(41.872108,-87.791602),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_f9c75bc019cc4384b53aa3ce411a8c09 = L.popup({maxWidth: '300'});
+
+            
+                var html_4a2dba847cb640ceb3614a2849222ce0 = $('         <div id="html_4a2dba847cb640ceb3614a2849222ce0"                 style="width: 100.0%; height: 100.0%;">                 Oak Park-Forest Park</div>                 ')[0];
+                popup_f9c75bc019cc4384b53aa3ce411a8c09.setContent(html_4a2dba847cb640ceb3614a2849222ce0);
+            
+
+            regular_polygon_marker_e7c7e7083bab46ef805df1bed7c3eb0f.bindPopup(popup_f9c75bc019cc4384b53aa3ce411a8c09);
+
+            
+        
+        
+            
+            var regular_polygon_marker_94a81a6cfd67434d976ec3063cb6249a = new L.RegularPolygonMarker(
+                new L.LatLng(41.886988,-87.793783),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_34ee34eb24e94fc39e3197f7ba3ea8bc = L.popup({maxWidth: '300'});
+
+            
+                var html_f43c167344614a3a9f8fcc60972ccf9a = $('         <div id="html_f43c167344614a3a9f8fcc60972ccf9a"                 style="width: 100.0%; height: 100.0%;">                 Oak Park-Lake</div>                 ')[0];
+                popup_34ee34eb24e94fc39e3197f7ba3ea8bc.setContent(html_f43c167344614a3a9f8fcc60972ccf9a);
+            
+
+            regular_polygon_marker_94a81a6cfd67434d976ec3063cb6249a.bindPopup(popup_34ee34eb24e94fc39e3197f7ba3ea8bc);
+
+            
+        
+        
+            
+            var regular_polygon_marker_c73fb5f8d7824e39bed94f8d0f4aef11 = new L.RegularPolygonMarker(
+                new L.LatLng(41.966115,-87.6941),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_cf587020d1c945b4960da972ff4105a1 = L.popup({maxWidth: '300'});
+
+            
+                var html_884ae9de28fe43959f236143e3156b9f = $('         <div id="html_884ae9de28fe43959f236143e3156b9f"                 style="width: 100.0%; height: 100.0%;">                 Rockwell</div>                 ')[0];
+                popup_cf587020d1c945b4960da972ff4105a1.setContent(html_884ae9de28fe43959f236143e3156b9f);
+            
+
+            regular_polygon_marker_c73fb5f8d7824e39bed94f8d0f4aef11.bindPopup(popup_cf587020d1c945b4960da972ff4105a1);
+
+            
+        
+        
+            
+            var regular_polygon_marker_6834f0dd3a6448eda01f669ff89a8977 = new L.RegularPolygonMarker(
+                new L.LatLng(41.839234,-87.665317),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9461c',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_859034efeb254bd8be65364f54a75a4b = L.popup({maxWidth: '300'});
+
+            
+                var html_cb7ddc197c254bdc9acbb2ebd5b63541 = $('         <div id="html_cb7ddc197c254bdc9acbb2ebd5b63541"                 style="width: 100.0%; height: 100.0%;">                 Ashland-Orange</div>                 ')[0];
+                popup_859034efeb254bd8be65364f54a75a4b.setContent(html_cb7ddc197c254bdc9acbb2ebd5b63541);
+            
+
+            regular_polygon_marker_6834f0dd3a6448eda01f669ff89a8977.bindPopup(popup_859034efeb254bd8be65364f54a75a4b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_7364003180a14d3e824a0ddb489b5f48 = new L.RegularPolygonMarker(
+                new L.LatLng(41.857908,-87.669147),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_296f3288cbfc49dbb6e75cac2f60a210 = L.popup({maxWidth: '300'});
+
+            
+                var html_76a8b8f27ac840c7aa5dd72b0cf8da1b = $('         <div id="html_76a8b8f27ac840c7aa5dd72b0cf8da1b"                 style="width: 100.0%; height: 100.0%;">                 18th</div>                 ')[0];
+                popup_296f3288cbfc49dbb6e75cac2f60a210.setContent(html_76a8b8f27ac840c7aa5dd72b0cf8da1b);
+            
+
+            regular_polygon_marker_7364003180a14d3e824a0ddb489b5f48.bindPopup(popup_296f3288cbfc49dbb6e75cac2f60a210);
+
+            
+        
+        
+            
+            var regular_polygon_marker_084f56a540af4090b7e4c087fe76eebc = new L.RegularPolygonMarker(
+                new L.LatLng(41.886519,-87.744698),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2b0a555daa0740e29ad2d56786bc4a7a = L.popup({maxWidth: '300'});
+
+            
+                var html_22cce66269f34cbc893e8501ecdf2a92 = $('         <div id="html_22cce66269f34cbc893e8501ecdf2a92"                 style="width: 100.0%; height: 100.0%;">                 Cicero-Lake</div>                 ')[0];
+                popup_2b0a555daa0740e29ad2d56786bc4a7a.setContent(html_22cce66269f34cbc893e8501ecdf2a92);
+            
+
+            regular_polygon_marker_084f56a540af4090b7e4c087fe76eebc.bindPopup(popup_2b0a555daa0740e29ad2d56786bc4a7a);
+
+            
+        
+        
+            
+            var regular_polygon_marker_eeab0cc3c195400db353a9d193c86237 = new L.RegularPolygonMarker(
+                new L.LatLng(41.875478,-87.688436),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a48fc61ddb3448d4b31e4e632ab95bd0 = L.popup({maxWidth: '300'});
+
+            
+                var html_4b296772353f418aab62382928c6ef61 = $('         <div id="html_4b296772353f418aab62382928c6ef61"                 style="width: 100.0%; height: 100.0%;">                 Western-Forest Park</div>                 ')[0];
+                popup_a48fc61ddb3448d4b31e4e632ab95bd0.setContent(html_4b296772353f418aab62382928c6ef61);
+            
+
+            regular_polygon_marker_eeab0cc3c195400db353a9d193c86237.bindPopup(popup_a48fc61ddb3448d4b31e4e632ab95bd0);
+
+            
+        
+        
+            
+            var regular_polygon_marker_a4d754a2542c4e35a9a75b8c9735ba34 = new L.RegularPolygonMarker(
+                new L.LatLng(41.884321,-87.706155),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_63a73ddf2cca46158ccb9bfc79caca1e = L.popup({maxWidth: '300'});
+
+            
+                var html_6699d962a2534e9fb0272aea7b4c7c51 = $('         <div id="html_6699d962a2534e9fb0272aea7b4c7c51"                 style="width: 100.0%; height: 100.0%;">                 Kedzie-Lake</div>                 ')[0];
+                popup_63a73ddf2cca46158ccb9bfc79caca1e.setContent(html_6699d962a2534e9fb0272aea7b4c7c51);
+            
+
+            regular_polygon_marker_a4d754a2542c4e35a9a75b8c9735ba34.bindPopup(popup_63a73ddf2cca46158ccb9bfc79caca1e);
+
+            
+        
+        
+            
+            var regular_polygon_marker_7f8dbe7a93e7440f8d446f81cfe3bfa9 = new L.RegularPolygonMarker(
+                new L.LatLng(41.887163,-87.754986),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_fe869462b91641468db03219b0f849fc = L.popup({maxWidth: '300'});
+
+            
+                var html_392a8b8015d845c8b239a0f0ebd7a4dc = $('         <div id="html_392a8b8015d845c8b239a0f0ebd7a4dc"                 style="width: 100.0%; height: 100.0%;">                 Laramie</div>                 ')[0];
+                popup_fe869462b91641468db03219b0f849fc.setContent(html_392a8b8015d845c8b239a0f0ebd7a4dc);
+            
+
+            regular_polygon_marker_7f8dbe7a93e7440f8d446f81cfe3bfa9.bindPopup(popup_fe869462b91641468db03219b0f849fc);
+
+            
+        
+        
+            
+            var regular_polygon_marker_57ae392bf0214885b143982caa5e4ffa = new L.RegularPolygonMarker(
+                new L.LatLng(41.780309,-87.605857),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_1f4719d2233743878bb25ce29537a974 = L.popup({maxWidth: '300'});
+
+            
+                var html_c480fccbdcbd45c8b8c88045b9d9482d = $('         <div id="html_c480fccbdcbd45c8b8c88045b9d9482d"                 style="width: 100.0%; height: 100.0%;">                 East 63rd-Cottage Grove</div>                 ')[0];
+                popup_1f4719d2233743878bb25ce29537a974.setContent(html_c480fccbdcbd45c8b8c88045b9d9482d);
+            
+
+            regular_polygon_marker_57ae392bf0214885b143982caa5e4ffa.bindPopup(popup_1f4719d2233743878bb25ce29537a974);
+
+            
+        
+        
+            
+            var regular_polygon_marker_4a00a2deb56048928ef7aeabd2f553fc = new L.RegularPolygonMarker(
+                new L.LatLng(41.809209,-87.618826),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_8771de88f1234ddd8eec73bbbd820ffa = L.popup({maxWidth: '300'});
+
+            
+                var html_8882fc0eab22456c9bb04964185d691e = $('         <div id="html_8882fc0eab22456c9bb04964185d691e"                 style="width: 100.0%; height: 100.0%;">                 47th-South Elevated</div>                 ')[0];
+                popup_8771de88f1234ddd8eec73bbbd820ffa.setContent(html_8882fc0eab22456c9bb04964185d691e);
+            
+
+            regular_polygon_marker_4a00a2deb56048928ef7aeabd2f553fc.bindPopup(popup_8771de88f1234ddd8eec73bbbd820ffa);
+
+            
+        
+        
+            
+            var regular_polygon_marker_f0000c75edea4795ba3d388b0bc748a1 = new L.RegularPolygonMarker(
+                new L.LatLng(41.871574,-87.745154),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_f48c9c510bbd47ab8c68257061cdd413 = L.popup({maxWidth: '300'});
+
+            
+                var html_9bc0eb38184740238879b1711c1c1d50 = $('         <div id="html_9bc0eb38184740238879b1711c1c1d50"                 style="width: 100.0%; height: 100.0%;">                 Cicero-Forest Park</div>                 ')[0];
+                popup_f48c9c510bbd47ab8c68257061cdd413.setContent(html_9bc0eb38184740238879b1711c1c1d50);
+            
+
+            regular_polygon_marker_f0000c75edea4795ba3d388b0bc748a1.bindPopup(popup_f48c9c510bbd47ab8c68257061cdd413);
+
+            
+        
+        
+            
+            var regular_polygon_marker_357c16cc98844b0a8dd6948bcafa9d49 = new L.RegularPolygonMarker(
+                new L.LatLng(41.887159,-87.783661),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a0b612fa274a4c9d99430d90576ad1f4 = L.popup({maxWidth: '300'});
+
+            
+                var html_dec6bd5d3b654f88a432db480c66da8c = $('         <div id="html_dec6bd5d3b654f88a432db480c66da8c"                 style="width: 100.0%; height: 100.0%;">                 Ridgeland</div>                 ')[0];
+                popup_a0b612fa274a4c9d99430d90576ad1f4.setContent(html_dec6bd5d3b654f88a432db480c66da8c);
+            
+
+            regular_polygon_marker_357c16cc98844b0a8dd6948bcafa9d49.bindPopup(popup_a0b612fa274a4c9d99430d90576ad1f4);
+
+            
+        
+        
+            
+            var regular_polygon_marker_fa078089a57f4a1eb9cb0c6358e14fbd = new L.RegularPolygonMarker(
+                new L.LatLng(41.966046,-87.701644),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#62361b',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_b68d578fb2614c5aa36691c754749b06 = L.popup({maxWidth: '300'});
+
+            
+                var html_f311668ebeb844e78b14d58523efa282 = $('         <div id="html_f311668ebeb844e78b14d58523efa282"                 style="width: 100.0%; height: 100.0%;">                 Francisco</div>                 ')[0];
+                popup_b68d578fb2614c5aa36691c754749b06.setContent(html_f311668ebeb844e78b14d58523efa282);
+            
+
+            regular_polygon_marker_fa078089a57f4a1eb9cb0c6358e14fbd.bindPopup(popup_b68d578fb2614c5aa36691c754749b06);
+
+            
+        
+        
+            
+            var regular_polygon_marker_79033c43345c45b1b553bfff06cf1132 = new L.RegularPolygonMarker(
+                new L.LatLng(42.033456,-87.679538),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_5c4a628f0fcf4ab9b5b3ae40db595ddd = L.popup({maxWidth: '300'});
+
+            
+                var html_92742593b478499ba37c1023aabb1969 = $('         <div id="html_92742593b478499ba37c1023aabb1969"                 style="width: 100.0%; height: 100.0%;">                 Main</div>                 ')[0];
+                popup_5c4a628f0fcf4ab9b5b3ae40db595ddd.setContent(html_92742593b478499ba37c1023aabb1969);
+            
+
+            regular_polygon_marker_79033c43345c45b1b553bfff06cf1132.bindPopup(popup_5c4a628f0fcf4ab9b5b3ae40db595ddd);
+
+            
+        
+        
+            
+            var regular_polygon_marker_d64de1947ac44eedb604e4b6ad9e2a1d = new L.RegularPolygonMarker(
+                new L.LatLng(41.80209,-87.618487),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a385cc088af24a058c3246a7cdefb47b = L.popup({maxWidth: '300'});
+
+            
+                var html_8620ce1536d04c688cfdbdcadcbf2b12 = $('         <div id="html_8620ce1536d04c688cfdbdcadcbf2b12"                 style="width: 100.0%; height: 100.0%;">                 51st</div>                 ')[0];
+                popup_a385cc088af24a058c3246a7cdefb47b.setContent(html_8620ce1536d04c688cfdbdcadcbf2b12);
+            
+
+            regular_polygon_marker_d64de1947ac44eedb604e4b6ad9e2a1d.bindPopup(popup_a385cc088af24a058c3246a7cdefb47b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_2338cc5f75f34581bde24d36d2130cf0 = new L.RegularPolygonMarker(
+                new L.LatLng(41.854109,-87.694774),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_856017d47e9b45eb8c41335e3000c701 = L.popup({maxWidth: '300'});
+
+            
+                var html_c2db4ac5832841009a3d0b2d8a3b4821 = $('         <div id="html_c2db4ac5832841009a3d0b2d8a3b4821"                 style="width: 100.0%; height: 100.0%;">                 California-Cermak</div>                 ')[0];
+                popup_856017d47e9b45eb8c41335e3000c701.setContent(html_c2db4ac5832841009a3d0b2d8a3b4821);
+            
+
+            regular_polygon_marker_2338cc5f75f34581bde24d36d2130cf0.bindPopup(popup_856017d47e9b45eb8c41335e3000c701);
+
+            
+        
+        
+            
+            var regular_polygon_marker_35a91db9f88f416aaedcc8ffd495ffc5 = new L.RegularPolygonMarker(
+                new L.LatLng(41.85182,-87.745336),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_8a41f5fbccb94ad5bbd897dd325fbcae = L.popup({maxWidth: '300'});
+
+            
+                var html_ad1e6c019cc84607b28b2ad386094aef = $('         <div id="html_ad1e6c019cc84607b28b2ad386094aef"                 style="width: 100.0%; height: 100.0%;">                 Cicero-Cermak</div>                 ')[0];
+                popup_8a41f5fbccb94ad5bbd897dd325fbcae.setContent(html_ad1e6c019cc84607b28b2ad386094aef);
+            
+
+            regular_polygon_marker_35a91db9f88f416aaedcc8ffd495ffc5.bindPopup(popup_8a41f5fbccb94ad5bbd897dd325fbcae);
+
+            
+        
+        
+            
+            var regular_polygon_marker_91ad3533190e40c093f100a5fb1d6d41 = new L.RegularPolygonMarker(
+                new L.LatLng(41.854517,-87.675975),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_5a6b7264de834f5695f5005e0412d2bd = L.popup({maxWidth: '300'});
+
+            
+                var html_9d0d571e19d04e4388d8f87473868a83 = $('         <div id="html_9d0d571e19d04e4388d8f87473868a83"                 style="width: 100.0%; height: 100.0%;">                 Damen-Cermak</div>                 ')[0];
+                popup_5a6b7264de834f5695f5005e0412d2bd.setContent(html_9d0d571e19d04e4388d8f87473868a83);
+            
+
+            regular_polygon_marker_91ad3533190e40c093f100a5fb1d6d41.bindPopup(popup_5a6b7264de834f5695f5005e0412d2bd);
+
+            
+        
+        
+            
+            var regular_polygon_marker_0deecc3b419a445fa94dee8d357acd60 = new L.RegularPolygonMarker(
+                new L.LatLng(42.073153,-87.69073),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_970620973dec4ebf8036ddef8ceaf52b = L.popup({maxWidth: '300'});
+
+            
+                var html_9b2e0df8f5fd40a087e05deb99ae8d6f = $('         <div id="html_9b2e0df8f5fd40a087e05deb99ae8d6f"                 style="width: 100.0%; height: 100.0%;">                 Linden</div>                 ')[0];
+                popup_970620973dec4ebf8036ddef8ceaf52b.setContent(html_9b2e0df8f5fd40a087e05deb99ae8d6f);
+            
+
+            regular_polygon_marker_0deecc3b419a445fa94dee8d357acd60.bindPopup(popup_970620973dec4ebf8036ddef8ceaf52b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_3fcdb08cba41416699b881c6bf0dc347 = new L.RegularPolygonMarker(
+                new L.LatLng(41.88422,-87.696234),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_7e29b1852ca54645ab751933174c0dc3 = L.popup({maxWidth: '300'});
+
+            
+                var html_d9263d6944684ecab609f5f4d97a44d0 = $('         <div id="html_d9263d6944684ecab609f5f4d97a44d0"                 style="width: 100.0%; height: 100.0%;">                 California-Lake</div>                 ')[0];
+                popup_7e29b1852ca54645ab751933174c0dc3.setContent(html_d9263d6944684ecab609f5f4d97a44d0);
+            
+
+            regular_polygon_marker_3fcdb08cba41416699b881c6bf0dc347.bindPopup(popup_7e29b1852ca54645ab751933174c0dc3);
+
+            
+        
+        
+            
+            var regular_polygon_marker_ad1102f72439426899685460a0df9320 = new L.RegularPolygonMarker(
+                new L.LatLng(41.87349,-87.806961),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_cbac591be4174eba8eb5965fe2328add = L.popup({maxWidth: '300'});
+
+            
+                var html_42893fd472024af9b4e6c2bffb37fddb = $('         <div id="html_42893fd472024af9b4e6c2bffb37fddb"                 style="width: 100.0%; height: 100.0%;">                 Harlem-Forest Park</div>                 ')[0];
+                popup_cbac591be4174eba8eb5965fe2328add.setContent(html_42893fd472024af9b4e6c2bffb37fddb);
+            
+
+            regular_polygon_marker_ad1102f72439426899685460a0df9320.bindPopup(popup_cbac591be4174eba8eb5965fe2328add);
+
+            
+        
+        
+            
+            var regular_polygon_marker_44bfd6d96a6d46e292c42759f9f3d05c = new L.RegularPolygonMarker(
+                new L.LatLng(41.816462,-87.619021),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_ae5e11132b2d47cdb659c8158d07362a = L.popup({maxWidth: '300'});
+
+            
+                var html_810da12b2f9c411f856e35bd654930e7 = $('         <div id="html_810da12b2f9c411f856e35bd654930e7"                 style="width: 100.0%; height: 100.0%;">                 43rd</div>                 ')[0];
+                popup_ae5e11132b2d47cdb659c8158d07362a.setContent(html_810da12b2f9c411f856e35bd654930e7);
+            
+
+            regular_polygon_marker_44bfd6d96a6d46e292c42759f9f3d05c.bindPopup(popup_ae5e11132b2d47cdb659c8158d07362a);
+
+            
+        
+        
+            
+            var regular_polygon_marker_be2b11376d31475193e250d4f3b28cb2 = new L.RegularPolygonMarker(
+                new L.LatLng(41.854225,-87.685129),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_ff283e4c80c940bf990885d2fe328f02 = L.popup({maxWidth: '300'});
+
+            
+                var html_d8cafeefe25f48098eae6c01db1cb193 = $('         <div id="html_d8cafeefe25f48098eae6c01db1cb193"                 style="width: 100.0%; height: 100.0%;">                 Western-Cermak</div>                 ')[0];
+                popup_ff283e4c80c940bf990885d2fe328f02.setContent(html_d8cafeefe25f48098eae6c01db1cb193);
+            
+
+            regular_polygon_marker_be2b11376d31475193e250d4f3b28cb2.bindPopup(popup_ff283e4c80c940bf990885d2fe328f02);
+
+            
+        
+        
+            
+            var regular_polygon_marker_b7f505c45c0148ed82e6f54cb4d38335 = new L.RegularPolygonMarker(
+                new L.LatLng(41.853732,-87.724311),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a6a86e7a3c274ef6bebbf08b33a9d84b = L.popup({maxWidth: '300'});
+
+            
+                var html_01850c2c64354de082655b6a7d989a4a = $('         <div id="html_01850c2c64354de082655b6a7d989a4a"                 style="width: 100.0%; height: 100.0%;">                 Pulaski-Cermak</div>                 ')[0];
+                popup_a6a86e7a3c274ef6bebbf08b33a9d84b.setContent(html_01850c2c64354de082655b6a7d989a4a);
+            
+
+            regular_polygon_marker_b7f505c45c0148ed82e6f54cb4d38335.bindPopup(popup_a6a86e7a3c274ef6bebbf08b33a9d84b);
+
+            
+        
+        
+            
+            var regular_polygon_marker_38cae6682cc447478ce339b907ca9b0c = new L.RegularPolygonMarker(
+                new L.LatLng(42.063987,-87.685617),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_72ab81472df94cef94c683f1cf780ca0 = L.popup({maxWidth: '300'});
+
+            
+                var html_626ab50b2aa04e1f933f3c05520b64c1 = $('         <div id="html_626ab50b2aa04e1f933f3c05520b64c1"                 style="width: 100.0%; height: 100.0%;">                 Central-Evanston</div>                 ')[0];
+                popup_72ab81472df94cef94c683f1cf780ca0.setContent(html_626ab50b2aa04e1f933f3c05520b64c1);
+            
+
+            regular_polygon_marker_38cae6682cc447478ce339b907ca9b0c.bindPopup(popup_72ab81472df94cef94c683f1cf780ca0);
+
+            
+        
+        
+            
+            var regular_polygon_marker_f35dc12cf778422a8136c4bb61a493d9 = new L.RegularPolygonMarker(
+                new L.LatLng(41.853839,-87.714842),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2e551c72e6ea43ec90853f426beec37a = L.popup({maxWidth: '300'});
+
+            
+                var html_604b42188ecd45be901a12fe634d0420 = $('         <div id="html_604b42188ecd45be901a12fe634d0420"                 style="width: 100.0%; height: 100.0%;">                 Central Park</div>                 ')[0];
+                popup_2e551c72e6ea43ec90853f426beec37a.setContent(html_604b42188ecd45be901a12fe634d0420);
+            
+
+            regular_polygon_marker_f35dc12cf778422a8136c4bb61a493d9.bindPopup(popup_2e551c72e6ea43ec90853f426beec37a);
+
+            
+        
+        
+            
+            var regular_polygon_marker_68351b06046247f2952dbb50c1531dc6 = new L.RegularPolygonMarker(
+                new L.LatLng(42.041655,-87.681602),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_645524a68de9445eb46cb0ad9eae49a5 = L.popup({maxWidth: '300'});
+
+            
+                var html_696fa4d88ed34252aee9bf4e349b07e4 = $('         <div id="html_696fa4d88ed34252aee9bf4e349b07e4"                 style="width: 100.0%; height: 100.0%;">                 Dempster</div>                 ')[0];
+                popup_645524a68de9445eb46cb0ad9eae49a5.setContent(html_696fa4d88ed34252aee9bf4e349b07e4);
+            
+
+            regular_polygon_marker_68351b06046247f2952dbb50c1531dc6.bindPopup(popup_645524a68de9445eb46cb0ad9eae49a5);
+
+            
+        
+        
+            
+            var regular_polygon_marker_1c967bf71a264924b0895e1992b4bea0 = new L.RegularPolygonMarker(
+                new L.LatLng(41.778943,-87.644244),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_c11525a5ab7c496a87f1bc7a150ab7b2 = L.popup({maxWidth: '300'});
+
+            
+                var html_61f2904ad2e04ae7ab29de81d04757b1 = $('         <div id="html_61f2904ad2e04ae7ab29de81d04757b1"                 style="width: 100.0%; height: 100.0%;">                 Halsted/63rd</div>                 ')[0];
+                popup_c11525a5ab7c496a87f1bc7a150ab7b2.setContent(html_61f2904ad2e04ae7ab29de81d04757b1);
+            
+
+            regular_polygon_marker_1c967bf71a264924b0895e1992b4bea0.bindPopup(popup_c11525a5ab7c496a87f1bc7a150ab7b2);
+
+            
+        
+        
+            
+            var regular_polygon_marker_3e4b82132e944e09922007cb37f467b4 = new L.RegularPolygonMarker(
+                new L.LatLng(41.821732,-87.621371),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_0551c98e54634e148405014bf74b9d3f = L.popup({maxWidth: '300'});
+
+            
+                var html_b11e5cf9e98945d1bac3cf365ae088ee = $('         <div id="html_b11e5cf9e98945d1bac3cf365ae088ee"                 style="width: 100.0%; height: 100.0%;">                 Indiana</div>                 ')[0];
+                popup_0551c98e54634e148405014bf74b9d3f.setContent(html_b11e5cf9e98945d1bac3cf365ae088ee);
+            
+
+            regular_polygon_marker_3e4b82132e944e09922007cb37f467b4.bindPopup(popup_0551c98e54634e148405014bf74b9d3f);
+
+            
+        
+        
+            
+            var regular_polygon_marker_54793c93e0da44e6b07240eec8bb0c6d = new L.RegularPolygonMarker(
+                new L.LatLng(41.884904,-87.716523),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_4033ed29e8674fa9b7c2c2eeee21ab70 = L.popup({maxWidth: '300'});
+
+            
+                var html_58065754ce474eda86fb00758dd184f4 = $('         <div id="html_58065754ce474eda86fb00758dd184f4"                 style="width: 100.0%; height: 100.0%;">                 Conservatory</div>                 ')[0];
+                popup_4033ed29e8674fa9b7c2c2eeee21ab70.setContent(html_58065754ce474eda86fb00758dd184f4);
+            
+
+            regular_polygon_marker_54793c93e0da44e6b07240eec8bb0c6d.bindPopup(popup_4033ed29e8674fa9b7c2c2eeee21ab70);
+
+            
+        
+        
+            
+            var regular_polygon_marker_7857c36281fd40398bf0d9dd50e51fb2 = new L.RegularPolygonMarker(
+                new L.LatLng(42.027612,-87.678329),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_a4dfc501fd7a4feba5211930c73b0d0e = L.popup({maxWidth: '300'});
+
+            
+                var html_1ffe3187b9df457187dff6d52c73d1cb = $('         <div id="html_1ffe3187b9df457187dff6d52c73d1cb"                 style="width: 100.0%; height: 100.0%;">                 South Boulevard</div>                 ')[0];
+                popup_a4dfc501fd7a4feba5211930c73b0d0e.setContent(html_1ffe3187b9df457187dff6d52c73d1cb);
+            
+
+            regular_polygon_marker_7857c36281fd40398bf0d9dd50e51fb2.bindPopup(popup_a4dfc501fd7a4feba5211930c73b0d0e);
+
+            
+        
+        
+            
+            var regular_polygon_marker_63a69f84657541ebb3def35205ded8d2 = new L.RegularPolygonMarker(
+                new L.LatLng(42.05416,-87.68356),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_797edbdc8a2a4d52801dda9bf0ff0d8f = L.popup({maxWidth: '300'});
+
+            
+                var html_1b80ae21061047db92a128be5c9ac1fd = $('         <div id="html_1b80ae21061047db92a128be5c9ac1fd"                 style="width: 100.0%; height: 100.0%;">                 Foster</div>                 ')[0];
+                popup_797edbdc8a2a4d52801dda9bf0ff0d8f.setContent(html_1b80ae21061047db92a128be5c9ac1fd);
+            
+
+            regular_polygon_marker_63a69f84657541ebb3def35205ded8d2.bindPopup(popup_797edbdc8a2a4d52801dda9bf0ff0d8f);
+
+            
+        
+        
+            
+            var regular_polygon_marker_7dbb5895a03242018a5fb275139b6254 = new L.RegularPolygonMarker(
+                new L.LatLng(41.853964,-87.705408),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_34afdb7611b84462abe40805d41a1420 = L.popup({maxWidth: '300'});
+
+            
+                var html_465f495f2c594aa28469cac190b341c6 = $('         <div id="html_465f495f2c594aa28469cac190b341c6"                 style="width: 100.0%; height: 100.0%;">                 Kedzie-Cermak</div>                 ')[0];
+                popup_34afdb7611b84462abe40805d41a1420.setContent(html_465f495f2c594aa28469cac190b341c6);
+            
+
+            regular_polygon_marker_7dbb5895a03242018a5fb275139b6254.bindPopup(popup_34afdb7611b84462abe40805d41a1420);
+
+            
+        
+        
+            
+            var regular_polygon_marker_4098ebb290c749c5a6e1ec4a3ce19fec = new L.RegularPolygonMarker(
+                new L.LatLng(42.058282,-87.683337),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_2ca9717fe4784bfb95a9db166594d17c = L.popup({maxWidth: '300'});
+
+            
+                var html_9444513b659d4cba8bc4b0cefa344f2d = $('         <div id="html_9444513b659d4cba8bc4b0cefa344f2d"                 style="width: 100.0%; height: 100.0%;">                 Noyes</div>                 ')[0];
+                popup_2ca9717fe4784bfb95a9db166594d17c.setContent(html_9444513b659d4cba8bc4b0cefa344f2d);
+            
+
+            regular_polygon_marker_4098ebb290c749c5a6e1ec4a3ce19fec.bindPopup(popup_2ca9717fe4784bfb95a9db166594d17c);
+
+            
+        
+        
+            
+            var regular_polygon_marker_7020755cf49445ed94dafed041ed90ed = new L.RegularPolygonMarker(
+                new L.LatLng(41.78013,-87.615546),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_54795af5f05f4ba6b717de3322247f60 = L.popup({maxWidth: '300'});
+
+            
+                var html_037f1c23dcb244f09dc161239c309e23 = $('         <div id="html_037f1c23dcb244f09dc161239c309e23"                 style="width: 100.0%; height: 100.0%;">                 King Drive</div>                 ')[0];
+                popup_54795af5f05f4ba6b717de3322247f60.setContent(html_037f1c23dcb244f09dc161239c309e23);
+            
+
+            regular_polygon_marker_7020755cf49445ed94dafed041ed90ed.bindPopup(popup_54795af5f05f4ba6b717de3322247f60);
+
+            
+        
+        
+            
+            var regular_polygon_marker_320360c032b74898a22626a45d840f48 = new L.RegularPolygonMarker(
+                new L.LatLng(41.885586,-87.652193),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_85458eba5fb74e8f8487272ce28d88ff = L.popup({maxWidth: '300'});
+
+            
+                var html_e8745356404b46e1876a3e8d56e19078 = $('         <div id="html_e8745356404b46e1876a3e8d56e19078"                 style="width: 100.0%; height: 100.0%;">                 Morgan-Lake</div>                 ')[0];
+                popup_85458eba5fb74e8f8487272ce28d88ff.setContent(html_e8745356404b46e1876a3e8d56e19078);
+            
+
+            regular_polygon_marker_320360c032b74898a22626a45d840f48.bindPopup(popup_85458eba5fb74e8f8487272ce28d88ff);
+
+            
+        
+        
+            
+            var regular_polygon_marker_9880ff4145e2430c988495c27328b222 = new L.RegularPolygonMarker(
+                new L.LatLng(42.038951,-87.751919),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9e300',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_bc099d17cfff44b7b843ff3413cf4138 = L.popup({maxWidth: '300'});
+
+            
+                var html_60df5321301142258a30577cde999916 = $('         <div id="html_60df5321301142258a30577cde999916"                 style="width: 100.0%; height: 100.0%;">                 Dempster-Skokie</div>                 ')[0];
+                popup_bc099d17cfff44b7b843ff3413cf4138.setContent(html_60df5321301142258a30577cde999916);
+            
+
+            regular_polygon_marker_9880ff4145e2430c988495c27328b222.bindPopup(popup_bc099d17cfff44b7b843ff3413cf4138);
+
+            
+        
+        
+            
+            var regular_polygon_marker_c1fc5d9822c1475eb728c8c90c85684f = new L.RegularPolygonMarker(
+                new L.LatLng(41.853751,-87.733258),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#e27ea6',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_826997af9e05471ca8de050bb60d2c38 = L.popup({maxWidth: '300'});
+
+            
+                var html_3868e6f1ada647399c0ce49f075667ca = $('         <div id="html_3868e6f1ada647399c0ce49f075667ca"                 style="width: 100.0%; height: 100.0%;">                 Kostner</div>                 ')[0];
+                popup_826997af9e05471ca8de050bb60d2c38.setContent(html_3868e6f1ada647399c0ce49f075667ca);
+            
+
+            regular_polygon_marker_c1fc5d9822c1475eb728c8c90c85684f.bindPopup(popup_826997af9e05471ca8de050bb60d2c38);
+
+            
+        
+        
+            
+            var regular_polygon_marker_e6ac3a573b4542098331c4f19a8ca65d = new L.RegularPolygonMarker(
+                new L.LatLng(42.02624348,-87.74722084),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f9e300',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_ba9e4e918e094a81916015f9134af5c9 = L.popup({maxWidth: '300'});
+
+            
+                var html_27625331ef4e40059ce3ed6d08b76452 = $('         <div id="html_27625331ef4e40059ce3ed6d08b76452"                 style="width: 100.0%; height: 100.0%;">                 Oakton-Skokie</div>                 ')[0];
+                popup_ba9e4e918e094a81916015f9134af5c9.setContent(html_27625331ef4e40059ce3ed6d08b76452);
+            
+
+            regular_polygon_marker_e6ac3a573b4542098331c4f19a8ca65d.bindPopup(popup_ba9e4e918e094a81916015f9134af5c9);
+
+            
+        
+        
+            
+            var regular_polygon_marker_f574bfae666c4d78af13f51ee4a2d69a = new L.RegularPolygonMarker(
+                new L.LatLng(41.853115,-87.626402),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#009b3a',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_2974c461b1ac4d59be4cbbbbd218ca3c);
+            
+        
+            
+            var popup_43de9dd8617d4c62be61a474d65527f8 = L.popup({maxWidth: '300'});
+
+            
+                var html_f4d7091684b1490699a25903fca15bfa = $('         <div id="html_f4d7091684b1490699a25903fca15bfa"                 style="width: 100.0%; height: 100.0%;">                 Cermak-McCormick Place</div>                 ')[0];
+                popup_43de9dd8617d4c62be61a474d65527f8.setContent(html_f4d7091684b1490699a25903fca15bfa);
+            
+
+            regular_polygon_marker_f574bfae666c4d78af13f51ee4a2d69a.bindPopup(popup_43de9dd8617d4c62be61a474d65527f8);
+
+            
+        
+        
+        
+        </script>
+        

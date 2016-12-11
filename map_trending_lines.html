@@ -1,0 +1,329 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_b71be1c62f7943998c379deefcb80c02 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.2/leaflet-dvf.markers.min.js"></script>
+        
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_b71be1c62f7943998c379deefcb80c02" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_b71be1c62f7943998c379deefcb80c02 = L.map('map_b71be1c62f7943998c379deefcb80c02', {
+                                           center:[41.884809,-87.627813],
+                                           zoom: 15,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_73cc6badc8d649ddbca556754307713c = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_b71be1c62f7943998c379deefcb80c02);
+
+        
+        
+            
+            var regular_polygon_marker_01e7372d12214f86bbdbec9a47c08a54 = new L.RegularPolygonMarker(
+                new L.LatLng(41.885737,-87.630886),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: 'black',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_b71be1c62f7943998c379deefcb80c02);
+            
+        
+            
+            var popup_6d7e0a8599f44cf4a2f65baa5b882f60 = L.popup({maxWidth: '300'});
+
+            
+                var html_1077a2d4173c44ccbb755bdf1b428526 = $('         <div id="html_1077a2d4173c44ccbb755bdf1b428526"                 style="width: 100.0%; height: 100.0%;">                 Clark/Lake</div>                 ')[0];
+                popup_6d7e0a8599f44cf4a2f65baa5b882f60.setContent(html_1077a2d4173c44ccbb755bdf1b428526);
+            
+
+            regular_polygon_marker_01e7372d12214f86bbdbec9a47c08a54.bindPopup(popup_6d7e0a8599f44cf4a2f65baa5b882f60);
+
+            
+        
+        
+            
+            var regular_polygon_marker_a167c77b57bf49b3846d5fe42ab51f59 = new L.RegularPolygonMarker(
+                new L.LatLng(41.884809,-87.627813),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_b71be1c62f7943998c379deefcb80c02);
+            
+        
+            
+            var popup_862094abda95414d8d5fbfd920ba7e7c = L.popup({maxWidth: '300'});
+
+            
+                var html_69b5c673a39e480db1e8a9bd257e3a00 = $('         <div id="html_69b5c673a39e480db1e8a9bd257e3a00"                 style="width: 100.0%; height: 100.0%;">                 Lake/State</div>                 ')[0];
+                popup_862094abda95414d8d5fbfd920ba7e7c.setContent(html_69b5c673a39e480db1e8a9bd257e3a00);
+            
+
+            regular_polygon_marker_a167c77b57bf49b3846d5fe42ab51f59.bindPopup(popup_862094abda95414d8d5fbfd920ba7e7c);
+
+            
+        
+        
+            
+            var regular_polygon_marker_6b6c4eede5c64b68a65f72fb8aa903f9 = new L.RegularPolygonMarker(
+                new L.LatLng(41.891665,-87.628021),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_b71be1c62f7943998c379deefcb80c02);
+            
+        
+            
+            var popup_3bf9aeeee35245d3a89a7ad824c991c2 = L.popup({maxWidth: '300'});
+
+            
+                var html_76fe769708d041fc9b65e448cc985735 = $('         <div id="html_76fe769708d041fc9b65e448cc985735"                 style="width: 100.0%; height: 100.0%;">                 Grand/State</div>                 ')[0];
+                popup_3bf9aeeee35245d3a89a7ad824c991c2.setContent(html_76fe769708d041fc9b65e448cc985735);
+            
+
+            regular_polygon_marker_6b6c4eede5c64b68a65f72fb8aa903f9.bindPopup(popup_3bf9aeeee35245d3a89a7ad824c991c2);
+
+            
+        
+        
+            
+            var regular_polygon_marker_22a853a22f434da0b6455bc7e533a594 = new L.RegularPolygonMarker(
+                new L.LatLng(41.883164,-87.62944),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#00a1de',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_b71be1c62f7943998c379deefcb80c02);
+            
+        
+            
+            var popup_22e0dc6196524a349b5f14cc902510c7 = L.popup({maxWidth: '300'});
+
+            
+                var html_737ad9722dc34372bad24ce146350409 = $('         <div id="html_737ad9722dc34372bad24ce146350409"                 style="width: 100.0%; height: 100.0%;">                 Washington/Dearborn</div>                 ')[0];
+                popup_22e0dc6196524a349b5f14cc902510c7.setContent(html_737ad9722dc34372bad24ce146350409);
+            
+
+            regular_polygon_marker_22a853a22f434da0b6455bc7e533a594.bindPopup(popup_22e0dc6196524a349b5f14cc902510c7);
+
+            
+        
+        
+            
+            var regular_polygon_marker_c6a97dc09fdc49ff8d7bf717b658bacd = new L.RegularPolygonMarker(
+                new L.LatLng(41.880745,-87.627696),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#c60c30',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 90,
+                    radius: 15
+                    }
+                )
+                .addTo(map_b71be1c62f7943998c379deefcb80c02);
+            
+        
+            
+            var popup_3a441b428f35467490a39154979aecff = L.popup({maxWidth: '300'});
+
+            
+                var html_53839774d0564793a26dbe28ce32a2d0 = $('         <div id="html_53839774d0564793a26dbe28ce32a2d0"                 style="width: 100.0%; height: 100.0%;">                 Monroe/State</div>                 ')[0];
+                popup_3a441b428f35467490a39154979aecff.setContent(html_53839774d0564793a26dbe28ce32a2d0);
+            
+
+            regular_polygon_marker_c6a97dc09fdc49ff8d7bf717b658bacd.bindPopup(popup_3a441b428f35467490a39154979aecff);
+
+            
+        
+        
+        
+        </script>
+        
