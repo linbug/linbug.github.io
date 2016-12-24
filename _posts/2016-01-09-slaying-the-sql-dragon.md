@@ -8,7 +8,7 @@ tags: []
 
 I think many developers have tools or techniques that they're scared of using. Some magic that doesn't make sense, so they avoid using it in the hopes it will go away. Maybe for some people it is multiple inheritence, for others functional programming. For me, it's databases. I'm not really sure where my fear of databases came from. Maybe it's because you have to use a special alien language to speak to them. Maybe it's because they can be large and unwieldy and difficult to look at all at once. I don't really know. All I know is, it's time to slay this dragon. Or rather, not slay it, but learn how to speak to it nicely so that it will give me gold :D. What follows below is my brief introduction to <s>dragons</s> relational databases.
 
-<img src="https://commons.wikimedia.org/wiki/Dragon#/media/File:Saint_Michael_and_the_Dragon.jpg" title= "here be SQL" style="margin: 0 auto;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Saint_Michael_and_the_Dragon.jpg" title= "here be SQL" style="margin: 0 auto;"/>
 
 ## What is a relational database?
 
