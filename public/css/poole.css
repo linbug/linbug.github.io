@@ -109,6 +109,12 @@ p {
   margin-bottom: 1rem;
 }
 
+.captions {
+  font-size:70%;
+  text-align: center;
+  font-style: italic;
+}
+
 strong {
   color: #303030;
 }
