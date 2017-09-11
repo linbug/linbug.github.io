@@ -22,7 +22,7 @@ An analogy I came up with to explain the difference between these two concepts i
 
 
 ### Concurrency
-The first scenario works fine, but it's slow. Sometimes there are pauses which cause bottlenecks. Maybe someone forgot avocadoes for their guacamole, so everyone in the line has to wait while she goes and finds them (how selfish!). During this pause, instead of waiting (as he did in scenario one), the till assistant starts scanning some items from the other customers. When the first customer returns with her avocadoes, the assistant resumes from where he was before. This is like how *concurrency* works.
+The first scenario works fine, but it's slow. Sometimes there are pauses which cause bottlenecks. Maybe someone forgot avocadoes for their guacamole, so everyone in the line has to wait while she goes and finds them (how selfish!). In scenario two, instead of waiting during this pause (as he did in scenario one), the till assistant starts scanning some items from the other customers. When the first customer returns with her avocadoes, the assistant resumes from where he was before. This is like how *concurrency* works.
 
 *Concurrency* is when two or more tasks are being performed during overlapping time periods, but they're never being executed at exactly the same time. A real-world example would be a computer with a single core that is running multiple drivers for the mouse, keyboard and display driver at the same time. The computer isn't ever running more than one process at a time; rather, it sneakily switches between them so fast that you don't notice the gaps.
 
@@ -38,7 +38,7 @@ Back to the supermarket. Another thing that could happen when the queue gets too
 In other words, you could have hundreds of *concurrent* processes happening on just one core, but for *multiprocessing* you need multiple cores. 
 
 Note that if you start reading around about this topic, you'll find people saying that multiprocessing is trivial to implement whereas concurrency is really hard; it's been decribed by [Dave Beazley](http://www.dabeaz.com/) as 'one of the most difficult topics
-in computer science (usually best avoided)'. It seems to me that when people say this they are referring specifically to multi-threaded code, whereas there are lots of different architectures that you can use to implement concurrency. You can read about some of them in [Seven Concurrency Models in Seven Weeks](https://pragprog.com/book/pb7con/seven-concurrency-models-in-seven-weeks) (it also looks like it's a good intro to parallel programming architectures in general).
+in computer science (usually best avoided)'. It seems to me that when people say this they are referring specifically to multi-threaded code, whereas there are lots of alternative architectures to this that you can use to implement concurrency. You can read about some of them in [Seven Concurrency Models in Seven Weeks](https://pragprog.com/book/pb7con/seven-concurrency-models-in-seven-weeks) (it also looks like it's a good intro to parallel programming architectures in general).
 
 ## Sounds great. Can I do parallelisation in Python?
 Yes you can, but it's not as trivial to implement as in other languages.
@@ -202,12 +202,12 @@ urls = [
 ]
 
 def open_url(url):
-	time.sleep(3)
-	return requests.get(url)
+    time.sleep(3)
+    return requests.get(url)
 
 if __name__ == '__main__':
     with ThreadPoolExecutor(max_workers=5) as pool:
-	    results = pool.map(open_url, urls)
+        results = pool.map(open_url, urls)
 
 {% endhighlight %}
 
@@ -226,7 +226,7 @@ Reasons you might not:
 [In general, the advice seems to be](https://stackoverflow.com/questions/20776189/concurrent-futures-vs-multiprocessing-in-python-3) to use `concurrent.futures` if you can, since it's intended to mostly replace `multiprocessing` and `threading` in the long-term.
 
 ## `async.io`
-`async.io` is apparently really hot right now. It's part of the standard library from Python 3.4 onwards. Luciano Ramalho in Fluent Python describes it as 'one of the largest and most ambitious libraries ever added to Python'.
+`async.io` is apparently really hot right now. It's part of the standard library from Python 3.4 onwards. Luciano Ramalho in [Fluent Python](http://shop.oreilly.com/product/0636920032519.do) describes it as 'one of the largest and most ambitious libraries ever added to Python'.
 
 Like `threading` and `concurrent.futures`, it is a package that implements concurrency. Also like `concurrent.futures`, Futures objects form a foundation of the `async.io` package. However, unlike any of the packages mentioned previously, `async.io` uses some different contructs (**event loops** and **coroutines**) to implement a completely different concurrency architecture.
 
@@ -234,15 +234,15 @@ Like `threading` and `concurrent.futures`, it is a package that implements concu
 
 - A [coroutine](https://docs.python.org/3/library/asyncio-task.html) is a Python contruct that is an extension to a generator. How they work is beyond the scope of this post (there's a whole chapter dedicated to them in Fluent Python if you want to learn more, and [this](http://www.dabeaz.com/coroutines/Coroutines.pdf) is an interesting and funny slide deck about them), but just know that where a **generator only generates values, a coroutine can consume them** - i.e. you can send values to a coroutine. As such, they are able to receive values from an event loop.  Importantly, you can use coroutines instead of threads to implement concurrent activities.
 
-The key difference to how `async.io` works compared tp `threading` is that it uses a main event loop to drive coroutines that are executing concurrent activities, and it does so *with a single thread of execution*.
+The key difference to how `async.io` works compared tp `threading` is that it uses a main event loop to drive coroutines that are executing concurrent activities, and it does so *with a single thread of execution*. Where `threading` cycles between threads in order to see whether they're still blocked, `asyncio` uses the event loop to keep track of and schedule all the coroutines that want time on the thread.
 
-One tricky thing with `asyncio` is that you can't necessarily just use the same libraries that you would normally use, because they can block the event loop. You instead have to use special aync versions of the libaraies. For example, I use the `requests` library above to fetch web content over HTTP, but if I was using `asyncio` I'd have to use something like [`aiohttp`](https://github.com/aio-libs/aiohttp).
+One tricky thing with `asyncio` is that you can't necessarily just use the same libraries that you would normally use synchronously, because they can block the event loop. You instead have to use special aync versions of the libaraies. For example, I use the `requests` library above to fetch web content over HTTP, but if I was using `asyncio` I'd have to use something like [`aiohttp`](https://github.com/aio-libs/aiohttp).
 
-I've been looking at the PEPs that were included in Python 3.5 and 3.6, and looks like you can now do [coroutines with a different syntax](https://www.python.org/dev/peps/pep-0492/) and [asynchronous versions of list, set, dictionary comprehensions](https://www.python.org/dev/peps/pep-0530/) , as well as [generators](https://www.python.org/dev/peps/pep-0525/). There's also plans for formalising new keywords related to asynchronous programming `async` and `await` in Python 3.7. Clearly developing these features is a priority right now, and the `async.io` ecosystem is maturing rapidly to keep pace with developments in other languages. 
+I've been looking at the PEPs that were included in Python 3.5 and 3.6, and looks like you can now use [coroutines with a different syntax](https://www.python.org/dev/peps/pep-0492/) and [asynchronous versions of list, set, dictionary comprehensions](https://www.python.org/dev/peps/pep-0530/) , as well as [generators](https://www.python.org/dev/peps/pep-0525/). There's also plans for formalising new keywords related to asynchronous programming `async` and `await` in Python 3.7. Clearly developing these features is a priority right now, and the `async.io` ecosystem is maturing rapidly to keep pace with developments in other languages. 
 
-I was going to give an equivalent example here showing how `async.io` works like the other above. However, I took a look at a lot of examples and the chapter in Fluent Python, and I'm still confused about how it works. [It looks like I'm not the only one](http://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/). Instead I'm going to pass the buck to https://www.blog.pythonlibrary.org/2016/07/26/python-3-an-intro-to-asyncio/...
+I _really_ tried to put together an equivalent example here showing how `async.io` works like the other above. I came up with something that kinda sorta works but I don't understand what it's doing. There are a lot of new concepts to take in with `asyncio` and I'm struggling to understand how they all fit together. [It looks like I'm not the only one](http://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/). Instead of trying to explain something I don't understand, I'm going to admit defeat at this point. Maybe I'll revisit `async.io` at a later date.
 
-So when should you use `async.io` over `concurrent.futures` or `threading`? According to [this person](http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/), `async.io` is better if your I/O-bound operation is low and has many connections. This is because `async.io` specifically keeps track of which coroutines are ready and which are still awaiting I/O. So `async.io` incurs fewer switching costs than `threading` might do. The asynchronous model also seems to use less memory 
+If, unlike me, you can figure out how to use it, when should you use `async.io` over `concurrent.futures` or `threading`? According to [this person](http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/), `async.io` is better if your I/O-bound operation is low and has many connections. This is because `async.io` specifically keeps track of which coroutines are ready and which are still awaiting I/O. So `async.io` incurs fewer switching costs than `threading` might do. 
 
 # Summary
 
