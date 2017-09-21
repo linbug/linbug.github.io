@@ -9,7 +9,7 @@ permalink:        pretty
 # Setup
 title:            Linbug
 tagline:          'A blog about data science'
-description:
+description:          'A blog about data science'
 url:              http://linbug.github.io/
 baseurl:          "/"
 
