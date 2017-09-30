@@ -11,7 +11,7 @@ title:            Linbug
 tagline:          'A blog about data science'
 description:      'A blog about data science'
 url:              http://linbug.github.io/
-baseurl:          "/"
+baseurl:          "/linbug.github.io"
 
 author:
   name:           'Lin Taylor'
