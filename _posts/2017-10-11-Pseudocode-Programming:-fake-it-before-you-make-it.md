@@ -5,6 +5,8 @@ category: programming
 comments: true
 ---
 
+<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/last_supper.jpg" title="One of Da Vinci's preparatory sketches for The Last Supper. You don't think you're better than him, do you?" style="height: auto;margin: 0 auto;"/>
+
 I'm interested in exploring ways to write better code.  Ways of organising your workflow or your thoughts that are more advanced than 'write down the first thing that comes into your head'. Techniques that will help to produce clean, reliable and fault-tolerant code, or at least help you to arrive at the same conclusion you would have anyway but more efficiently.
 
 Something that I learned about when skimming through [Code Complete 2 by Steve McConnell](https://www.amazon.co.uk/Code-Complete-Practical-Handbook-Construction/dp/0735619670) is the Pseudocode Programming Process. He seems to have been the one who invented it as I can't find references to it outside of this context.
@@ -12,9 +14,6 @@ Something that I learned about when skimming through [Code Complete 2 by Steve M
 The idea is a simple one: before you start writing code, plan what you will do in pseudocode first. It's very similar to what you would do in a whiteboarding interview, except without the sweaty anxiety of having to perform in front of a group of strangers.
 
 The theory is that any kind of design process starts off with a bunch of preparatory work. You start off with drafts, wireframes or maquettes and iterate on these, front-loading your exploratory work while making mistakes is cheap. You don't think about touching your final medium until you have most of the fundamentals worked out. This applies to building a bridge, making a painting, writing a book, or coding some software. That's the idea, anyway. 
-
-<img src="https://raw.githubusercontent.com/linbug/linbug.github.io/master/_downloads/last_supper.jpg" title="One of Da Vinci's preparatory sketches for The Last Supper. You don't think you're better than him, do you?" style="height: auto;margin: 0 auto;"/>
-
 
 McConnell goes into a lot more detail than that, which I've heavily summarised below.
 
