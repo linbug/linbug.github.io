@@ -10,12 +10,12 @@ permalink:        pretty
 title:            Linbug
 tagline:          'A blog about data science'
 description:      'A blog about data science'
-url:              http://linbug.github.io/
+url:              https://linbug.github.io/
 baseurl:          "/linbug.github.io"
 
 author:
   name:           'Lin Taylor'
-  url:            http://linbug.github.io/
+  url:            https://linbug.github.io/
 
 paginate:         5
 
